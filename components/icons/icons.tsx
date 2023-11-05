@@ -216,3 +216,66 @@ export const Scale = ({
     </svg>
   );
 };
+export const PersonIcon = ({ fill, size, height, width, ...props }: any) => {
+  return (
+    <svg
+      fill="none"
+      height={size || height || 24}
+      viewBox="0 0 24 24"
+      width={size || width || 24}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M12 1C6.48 1 2 5.48 2 11s4.48 10 10 10 10-4.48 10-10S17.52 1 12 1zM12 13c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z"
+        stroke={fill}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      />
+    </svg>
+  );
+};
+
+export const CartIcon = ({ fill, size, height, width, ...props }: any) => {
+  return (
+    <svg
+      fill="none"
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M3 3h2.26l3.716 11.472c0.359 1.106 1.393 1.856 2.552 1.856h9c1.104 0 2-0.896 2-2s-0.896-2-2-2h-7.848l-0.708-2.124c-0.142-0.426-0.539-0.776-0.986-0.776h-6.196c-0.891 0-1.611 0.72-1.611 1.611 0 0.891 0.72 1.611 1.611 1.611h5.042l0.726 2.176c0.134 0.402 0.492 0.689 0.911 0.689h7.26c0.88 0 1.595-0.72 1.595-1.611 0-0.888-0.715-1.608-1.595-1.608h-9c-0.665 0-1.289-0.289-1.722-0.792l-5-7c-0.266-0.372-0.328-0.861-0.154-1.285s0.568-0.686 1.046-0.686h16.726c0.88 0 1.595-0.72 1.595-1.611 0-0.888-0.715-1.608-1.595-1.608h-18c-0.091 0-0.183 0.009-0.273 0.026-0.74 0.104-1.27 0.773-1.27 1.474 0 0.757 0.493 1.413 1.203 1.639l6.722 2.43c0.181 0.065 0.37 0.096 0.565 0.096h6.904c0.88 0 1.595-0.72 1.595-1.611 0-0.888-0.715-1.608-1.595-1.608h-6.104l-0.726-2.176c-0.132-0.396-0.481-0.683-0.891-0.683h-8c-0.828 0-1.5-0.672-1.5-1.5s0.672-1.5 1.5-1.5z"
+        stroke={fill}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      />
+    </svg>
+  );
+};
+
+
+export const SearchIcon = ({ fill, size, height, width, ...props }: any) => {
+  return (
+    <svg
+      fill="none"
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M10.5 17c-2.481 0-4.5-2.019-4.5-4.5s2.019-4.5 4.5-4.5 4.5 2.019 4.5 4.5-2.019 4.5-4.5 4.5ZM18 18l-4.142-4.142"
+        stroke={fill}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+      />
+    </svg>
+  );
+};
