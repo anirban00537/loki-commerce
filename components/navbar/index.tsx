@@ -48,13 +48,13 @@ function NavbarComp() {
             <Navbar.Toggle />
           </div>
           <Navbar.Collapse>
-            <Navbar.Link href="#" active>
+            <Navbar.Link href="#" className="text-base" active>
               Men
             </Navbar.Link>
-            <Navbar.Link href="#">Women</Navbar.Link>
-            <Navbar.Link href="#">Moden</Navbar.Link>
-            <Navbar.Link href="#">Legend</Navbar.Link>
-            <Navbar.Link href="#">
+            <Navbar.Link href="#" className="text-base">Women</Navbar.Link>
+            <Navbar.Link href="#" className="text-base">Moden</Navbar.Link>
+            <Navbar.Link href="#" className="text-base">Legend</Navbar.Link>
+            <Navbar.Link href="#" className="text-base">
               <Dropdown label="Our Collection" inline>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
