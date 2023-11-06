@@ -14,19 +14,16 @@ function NavbarComp() {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center border-b">
       <div className="container">
         <Navbar fluid rounded>
-          <Navbar.Brand href="https://flowbite-react.com">
+          <div>
             <img
               src="/logo.png"
-              className="mr-3 h-6 sm:h-9"
-              alt="LokiCommerce "
+              className="mr-3 h-14"
+              alt="LokiCommerce"
             />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              LokiCommerce
-            </span>
-          </Navbar.Brand>
+          </div>
           <div className="flex md:order-2">
             <div className="flex md:order-3">
               <div className="flex items-center">
@@ -42,7 +39,7 @@ function NavbarComp() {
                       addToCart(); // Increment cart count
                     }}
                   />
-                  <div className="bg-primary bg-green-400 text-white text-xs w-5 h-5 rounded-full flex justify-center items-center absolute -top-2 -right-2">
+                  <div className="bg-primary text-white text-xs w-5 h-5 rounded-full flex justify-center items-center absolute -top-2 -right-2">
                     {cartCount}
                   </div>
                 </div>
