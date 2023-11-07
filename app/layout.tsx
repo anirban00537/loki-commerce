@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <BannerWithTitle
+        {/* <BannerWithTitle
           link="ecommerce.com"
           linkTitle="Click to visit"
           title="LokiCommerce Sale is going on! please hurryup    ! "
-        />
+        /> */}
         <NavbarComp />
         {children}
       </body>
