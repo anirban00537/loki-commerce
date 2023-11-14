@@ -5,10 +5,8 @@ import { IoIosArrowDown, IoIosNotifications } from 'react-icons/io';
 import { Button, Dropdown, Navbar } from 'flowbite-react';
 
 function NavbarComp() {
-  // State to hold the cart count
   const [cartCount, setCartCount] = useState(0);
 
-  // Function to increment the cart count
   const addToCart = () => {
     setCartCount(cartCount + 1);
   };
@@ -18,7 +16,11 @@ function NavbarComp() {
       <div className='container'>
         <Navbar fluid rounded>
           <div>
-            <img src='/images/logo.png' className='mr-3 h-14' alt='LokiCommerce' />
+            <img
+              src='/images/logo.png'
+              className='mr-3 h-12'
+              alt='LokiCommerce'
+            />
           </div>
           <div className='flex md:order-2'>
             <div className='flex md:order-3'>
@@ -32,10 +34,10 @@ function NavbarComp() {
                     className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
                     onClick={() => {
                       console.log('Cart clicked');
-                      addToCart(); // Increment cart count
+                      addToCart();
                     }}
                   />
-                  <div className='bg-primary absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
+                  <div className='bg-primary text-white-background absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
                     {cartCount}
                   </div>
                 </div>
@@ -44,20 +46,18 @@ function NavbarComp() {
             <Navbar.Toggle />
           </div>
           <Navbar.Collapse>
-            <Navbar.Link href='#' active>
-              Men
-            </Navbar.Link>
-            <Navbar.Link href='#'>Women</Navbar.Link>
-            <Navbar.Link href='#'>Moden</Navbar.Link>
-            <Navbar.Link href='#'>Legend</Navbar.Link>
+            <Navbar.Link href='#'>Home</Navbar.Link>
             <Navbar.Link href='#'>
-              <Dropdown label='Our Collection' inline>
+              <Dropdown label='Brands' inline className='bg-white-background'>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Item>Sign out</Dropdown.Item>
               </Dropdown>
             </Navbar.Link>
+            <Navbar.Link href='#'>Recent Products</Navbar.Link>
+            <Navbar.Link href='#'>Contact</Navbar.Link>
+            <Navbar.Link href='#'>About</Navbar.Link>
           </Navbar.Collapse>
         </Navbar>
       </div>
