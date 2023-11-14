@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const HeroSection = () => {
   return (
-    <div className='relative m-5 overflow-hidden rounded-3xl bg-gradient-to-r from-green-100 to-pink-100'>
+    <div className='relative m-5 mt-20 overflow-hidden rounded-3xl bg-gradient-to-r from-green-100 to-pink-100'>
       <Carousel
         showStatus={false}
         showThumbs={false}

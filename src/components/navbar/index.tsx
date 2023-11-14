@@ -1,8 +1,7 @@
 'use client';
+import { Dropdown, Navbar } from 'flowbite-react';
 import React, { useState } from 'react';
-import { RiShoppingCart2Line, RiSearchLine } from 'react-icons/ri';
-import { IoIosArrowDown, IoIosNotifications } from 'react-icons/io';
-import { Button, Dropdown, Navbar } from 'flowbite-react';
+import { RiSearchLine, RiShoppingCart2Line } from 'react-icons/ri';
 
 function NavbarComp() {
   const [cartCount, setCartCount] = useState(0);
@@ -12,7 +11,7 @@ function NavbarComp() {
   };
 
   return (
-    <div className='flex w-full items-center justify-center border-b'>
+    <div className='fixed top-0 z-10 flex w-full items-center justify-center border-b border-gray-100 bg-white'>
       <div className='container'>
         <Navbar fluid rounded>
           <div>
@@ -64,4 +63,5 @@ function NavbarComp() {
     </div>
   );
 }
+
 export default NavbarComp;
