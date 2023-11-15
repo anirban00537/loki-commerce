@@ -43,7 +43,7 @@ const Products = () => {
   };
 
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto mt-28'>
       <div className='mb-4 flex items-center justify-between'>
         <h2 className='text-2xl font-bold'>New Arrivals</h2>
         <Link
@@ -55,7 +55,7 @@ const Products = () => {
         </Link>
       </div>
       <Slider {...settings}>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Bag'
             image='https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -64,7 +64,7 @@ const Products = () => {
             reviews={25}
           />
         </div>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Bag'
             image='https://images.unsplash.com/photo-1667237346955-7b6cbb0815e4?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -73,7 +73,7 @@ const Products = () => {
             reviews={25}
           />
         </div>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Cup'
             image='https://images.unsplash.com/photo-1536238202089-6ce355328a96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -82,7 +82,7 @@ const Products = () => {
             reviews={25}
           />
         </div>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Ball With curve'
             image='https://images.unsplash.com/photo-1510172951991-856a654063f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -91,7 +91,7 @@ const Products = () => {
             reviews={25}
           />
         </div>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Airpod'
             image='https://images.unsplash.com/photo-1606746448655-6d7d999ebf31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -100,19 +100,10 @@ const Products = () => {
             reviews={25}
           />
         </div>
-        <div className='mx-3'>
+        <div className='mr-3'>
           <ProductCard
             name='Fashion Chair'
             image='https://images.unsplash.com/photo-1504198458649-3128b932f49e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-        <div className='mx-3'>
-          <ProductCard
-            name='Fashion Bag'
-            image='https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             price='33'
             rating={5}
             reviews={25}
