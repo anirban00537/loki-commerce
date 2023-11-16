@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 const HeroSection = () => {
   return (
-    <div className='relative m-5 mt-20 overflow-hidden rounded-3xl bg-gradient-to-r from-green-100 to-pink-100'>
+    <div className='relative m-10 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r'>
       <Carousel
         showStatus={false}
         showThumbs={false}
@@ -13,19 +14,10 @@ const HeroSection = () => {
         autoPlay={true}
         interval={3000}
         showArrows={false}
-        
       >
         <div className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'>
           <div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <div className='flex'>
-              <div className='relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
-                <a href='#' className='flex items-center gap-x-1'>
-                  <span className='absolute inset-0' aria-hidden='true' />
-                  See open positions
-                </a>
-              </div>
-            </div>
-            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl'>
+            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
               Exclusive Collection for Everyone
             </h1>
             <p className='mt-6 text-left text-lg text-gray-600'>
@@ -50,15 +42,7 @@ const HeroSection = () => {
 
         <div className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'>
           <div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <div className='flex'>
-              <div className='relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
-                <a href='#' className='flex items-center gap-x-1'>
-                  <span className='absolute inset-0' aria-hidden='true' />
-                  See open positions
-                </a>
-              </div>
-            </div>
-            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-6xl'>
+            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
               Exclusive Collection for Everyone
             </h1>
             <p className='mt-6 text-left text-lg text-gray-600'>

@@ -10,13 +10,13 @@ const CtaSection = () => {
           className='mx-auto w-full max-w-7xl rounded-[48px] bg-cover bg-center bg-no-repeat py-20 text-white '
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+              'url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
           }}
         >
           <div className='mx-auto max-w-3xl text-center'>
             {/* Heading Div */}
             <div className='mb-6 max-w-[720px] lg:mb-12'>
-              <h2 className='mb-4 text-3xl text-white-background font-semibold md:text-5xl'>
+              <h2 className='text-white-background mb-4 text-3xl font-semibold md:text-5xl'>
                 Lightning Fast Webflow Dev Made Easy
               </h2>
               <div className='mx-auto max-w-[630px]'>
@@ -29,7 +29,7 @@ const CtaSection = () => {
             </div>
             <a
               href='#'
-              className='[ inline-block rounded-xl bg-primary px-8 py-4 text-white-background font-semibold text-white'
+              className='[ bg-primary text-white-background inline-block rounded-xl px-8 py-4 font-semibold text-white'
             >
               Get Started
             </a>

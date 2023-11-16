@@ -44,8 +44,8 @@ const Products = () => {
 
   return (
     <div className='container mx-auto mt-28'>
-      <div className='mb-4 flex items-center justify-between'>
-        <h2 className='text-2xl font-bold'>New Arrivals</h2>
+      <div className='mb-8 flex items-center justify-between '>
+        <h2 className='text-4xl font-bold'>New Arrivals</h2>
         <Link
           href='/all-products'
           className='flex items-center justify-center rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-gray-200 hover:text-gray-700'

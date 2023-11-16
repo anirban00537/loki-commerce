@@ -1,5 +1,3 @@
-import { CornerUpRight } from 'lucide-react';
-import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
 
@@ -44,15 +42,8 @@ const Brands = () => {
 
   return (
     <div className='container mx-auto mt-24'>
-      <div className='mb-4 flex items-center justify-between'>
-        <h2 className='text-2xl font-bold'>Top Brand's</h2>
-        <Link
-          href='/all-Brands'
-          className='flex items-center justify-center rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-gray-200 hover:text-gray-700'
-        >
-          <CornerUpRight size={15} className='mr-2' />
-          Show All
-        </Link>
+      <div className='mb-8 flex items-center justify-between '>
+        <h2 className='text-4xl font-bold'>Top Brand's</h2>
       </div>
       <Slider {...settings}>
         <div className='mr-3'>
