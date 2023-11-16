@@ -1,11 +1,18 @@
 'use client';
-import HeroSection from '@/section/landing/hero';
 import React from 'react';
+
+import Brands from '@/section/landing/brands';
+import CtaSection from '@/section/landing/cta';
+import HeroSection from '@/section/landing/hero';
+import Products from '@/section/landing/products';
 
 const page = () => {
   return (
-    <div>
+    <div className=''>
       <HeroSection />
+      <Brands />
+      <Products />
+      <CtaSection />
     </div>
   );
 };
