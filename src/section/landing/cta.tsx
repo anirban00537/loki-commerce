@@ -17,16 +17,24 @@ const CtaSection = () => {
             {/* Heading Div */}
             <div className='mb-6 max-w-[720px] lg:mb-12'>
               <h2 className='text-white-background mb-4 text-3xl font-semibold md:text-5xl'>
-                Lightning Fast Webflow Dev Made Easy
+                Lightning Fast Ecommerce Delivery
               </h2>
               <div className='mx-auto max-w-[630px]'>
                 <p className='text-[#e0e0e0]'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna
+                  Explore seamless ecommerce with us and experience delivery at
+                  the speed of light! Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit ut aliquam, purus sit amet luctus venenatis,
+                  lectus magna fringilla urna.
+                </p>
+                <p className='mt-4 text-[#e0e0e0]'>
+                  Say goodbye to waiting! We take pride in delivering your
+                  orders within the blink of an eye. Shop now for a
+                  lightning-fast ecommerce experience that puts your
+                  satisfaction first.
                 </p>
               </div>
             </div>
+
             <a
               href='#'
               className='[ bg-primary text-white-background inline-block rounded-xl px-8 py-4 font-semibold text-white'
