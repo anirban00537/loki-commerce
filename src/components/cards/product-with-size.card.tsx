@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import ProductDetailsModal from '@/components/modals/product-detail.modal';
+import Link from 'next/link';
 
 type ProductCardWithSizeProps = {
   image: string;
@@ -49,59 +50,64 @@ export function ProductCardWithSize({
   const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
 
   return (
-    <Card className={cn('relative w-[320px]', className)} {...props}>
-      <div className='group relative overflow-hidden p-2'>
-        <img
-          src={image}
-          alt={name}
-          className=' h-80 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
-        />
-        <button
-          className='absolute right-4 top-4 rounded-full bg-white p-2'
-          onClick={() => setFavorite(!isFavorite)}
-        >
-          <Heart
-            className={`h-6 w-6 ${
-              isFavorite ? 'text-red-500' : 'text-gray-500'
-            }`}
+    <Link href='/details'>
+      <Card className={cn('relative w-[320px]', className)} {...props}>
+        <div className='group relative overflow-hidden p-2'>
+          <img
+            src={image}
+            alt={name}
+            className=' h-80 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
           />
-        </button>
-      </div>
-      <CardContent className='mt-3 grid gap-4'>
-        <CardHeader className='p-0'>
-          <CardTitle>{name}</CardTitle>
-          <div className='flex items-center '>
-            <div className='my-2 flex'>
-              {sizeOptions.map((size: any, index) => (
-                <SizeOption
-                  key={index}
-                  size={size}
-                  isSelected={selectedSize === size}
-                  onSelect={() => setSelectedSize(size)}
-                />
-              ))}
+          <button
+            className='absolute right-4 top-4 rounded-full bg-white p-2'
+            onClick={(e) => {
+              e.preventDefault();
+              setFavorite(!isFavorite);
+            }}
+          >
+            <Heart
+              className={`h-6 w-6 ${
+                isFavorite ? 'text-red-500' : 'text-gray-500'
+              }`}
+            />
+          </button>
+        </div>
+        <CardContent className='mt-3 grid gap-4'>
+          <CardHeader className='p-0'>
+            <CardTitle>{name}</CardTitle>
+            <div className='flex items-center '>
+              <div className='my-2 flex'>
+                {sizeOptions.map((size: any, index) => (
+                  <SizeOption
+                    key={index}
+                    size={size}
+                    isSelected={selectedSize === size}
+                    onSelect={() => setSelectedSize(size)}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-          <div className='flex items-center justify-between'>
-            <CardDescription>{price}</CardDescription>
-            <div className='flex items-center'>
-              <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400'>
-                <Star className='mr-1' size={15} color='#f0932b' /> {rating}
-              </p>
-              <p className='text-sm font-medium leading-none text-gray-400'>
-                ({reviews} reviews)
-              </p>
+            <div className='flex items-center justify-between'>
+              <CardDescription>{price}</CardDescription>
+              <div className='flex items-center'>
+                <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400'>
+                  <Star className='mr-1' size={15} color='#f0932b' /> {rating}
+                </p>
+                <p className='text-sm font-medium leading-none text-gray-400'>
+                  ({reviews} reviews)
+                </p>
+              </div>
             </div>
-          </div>
-        </CardHeader>
-      </CardContent>
-      <CardFooter>
-        <Button className='w-full'>
-          <ShoppingCart className='mr-2' size={20} />
-          Add to Cart
-        </Button>
-        <ProductDetailsModal modalTitle='Shoe by addidas' placeModal='center' />
-      </CardFooter>
-    </Card>
+          </CardHeader>
+        </CardContent>
+        <CardFooter>
+          <Button className='w-full'>
+            <ShoppingCart className='mr-2' size={20} />
+            Add to Cart
+          </Button>
+          <ProductDetailsModal placeModal='center' />
+        </CardFooter>
+      </Card>
+    </Link>
   );
 }

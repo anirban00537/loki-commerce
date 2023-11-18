@@ -6,12 +6,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
 const productFeatures = [
   'Made with premium, breathable materials for a high-quality and comfortable experience.',
@@ -31,7 +26,7 @@ const SizeOption = ({ size, isSelected, onSelect }: any) => (
   </div>
 );
 
-let productImages = [
+const productImages = [
   'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1595780662105-fa76460ddb04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -39,10 +34,8 @@ let productImages = [
 
 function ProductDetailsModal({
   placeModal = 'center',
-  modalTitle = 'modal title',
 }: {
   placeModal: string;
-  modalTitle: string;
 }) {
   const [openModal, setOpenModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(productImages[0]);
