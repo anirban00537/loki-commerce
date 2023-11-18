@@ -12,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import ProductDetailsModal from '@/components/modals/product-detail.modal';
 
 type ProductCardWithSizeProps = {
   image: string;
@@ -25,7 +26,7 @@ const SizeOption = ({ size, isSelected, onSelect }: any) => (
   <div
     onClick={onSelect}
     className={cn(
-      'mr-2 px-2 py-1 cursor-pointer rounded border text-xs flex items-center justify-center border-gray-300',
+      'mr-2 flex cursor-pointer items-center justify-center rounded border border-gray-300 px-2 py-1 text-xs',
       isSelected ? `border-2 border-blue-500` : ''
     )}
   >
@@ -99,9 +100,7 @@ export function ProductCardWithSize({
           <ShoppingCart className='mr-2' size={20} />
           Add to Cart
         </Button>
-        <Button className='ml-2 w-full border bg-white text-black hover:bg-slate-100'>
-          <View className='mr-2' size={20} /> View
-        </Button>
+        <ProductDetailsModal modalTitle='Shoe by addidas' placeModal='center' />
       </CardFooter>
     </Card>
   );

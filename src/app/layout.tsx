@@ -1,3 +1,4 @@
+import { Poppins } from 'next/font/google';
 import { Metadata } from 'next';
 import * as React from 'react';
 
@@ -43,14 +44,19 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/images/og.jpg`],
   },
 };
-
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className={`${poppins.variable}`}>
       <body>
         <NavbarComp />
         {children}
