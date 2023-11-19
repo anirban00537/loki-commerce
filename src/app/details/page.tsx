@@ -1,6 +1,6 @@
 'use client';
 // Import necessary components and styles
-import { Modal } from 'flowbite-react';
+import { Modal, Rating } from 'flowbite-react';
 import { Plus, ShoppingCart, Star, View, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -24,15 +24,25 @@ const SizeOption = ({ size, isSelected, onSelect }: any) => (
     {size}
   </div>
 );
-
+const ColorOption = ({ color, isSelected, onSelect }: any) => (
+  <div
+    onClick={onSelect}
+    className={cn(
+      'mr-2 h-8 w-8 cursor-pointer rounded-full border border-gray-300',
+      isSelected ? `border-2 border-blue-500` : ''
+    )}
+    style={{ backgroundColor: color }}
+  ></div>
+);
 const productImages = [
   'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1595780662105-fa76460ddb04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
+const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
 
 const Details = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(null);
   const [selectedImage, setSelectedImage] = useState(productImages[0]);
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -44,7 +54,7 @@ const Details = () => {
     <div className='container mt-28'>
       <div className='grid grid-cols-1 gap-8 px-4  sm:grid-cols-2 sm:px-7'>
         <div className='h-auto'>
-          <div className='flex h-5/5 justify-center '>
+          <div className='h-5/5 flex justify-center '>
             <img
               src={selectedImage}
               alt='Product'
@@ -75,14 +85,28 @@ const Details = () => {
           </h2>
 
           <div className='my-6 flex items-center justify-between'>
-            <p className='text-xl font-semibold sm:text-4xl'>$99.99</p>
+            <div className='mt-5 flex items-center '>
+              <div className='text-heading pr-2 text-base font-bold md:pr-0 md:text-xl lg:pr-2 lg:text-2xl 2xl:pr-0 2xl:text-4xl'>
+                $40.00
+              </div>
+              <span className='font-segoe pl-2 text-sm text-gray-400 line-through md:text-base lg:text-lg xl:text-xl'>
+                $50.00
+              </span>
+            </div>
             <div className='flex items-center'>
-              <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400 sm:text-base'>
+              {/* <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400 sm:text-base'>
                 <Star className='mr-1' size={15} color='#f0932b' /> {5}
-              </p>
-              <p className='text-sm font-medium leading-none text-gray-400 sm:text-base'>
-                ({55} reviews)
-              </p>
+              </p> */}
+              <Rating>
+                <Rating.Star />
+                <Rating.Star />
+                <Rating.Star />
+                <Rating.Star />
+                <Rating.Star filled={false} />
+                <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
+                  4.95 out of 5
+                </p>
+              </Rating>
             </div>
           </div>
           <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Description</h3>
@@ -117,6 +141,7 @@ const Details = () => {
               Add to Cart
             </Button>
           </div>
+          <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Sizes</h3>
           <div className='mb-5 flex gap-2'>
             {sizeOptions.map((size: any, index) => (
               <SizeOption
@@ -124,6 +149,17 @@ const Details = () => {
                 size={size}
                 isSelected={selectedSize === size}
                 onSelect={() => setSelectedSize(size)}
+              />
+            ))}
+          </div>
+          <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Colors</h3>
+          <div className='mb-5 flex gap-2'>
+            {colorOptions.map((color: any, index) => (
+              <ColorOption
+                key={index}
+                color={color}
+                isSelected={selectedColor === color}
+                onSelect={() => setSelectedColor(color)}
               />
             ))}
           </div>

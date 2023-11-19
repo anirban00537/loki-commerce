@@ -26,12 +26,6 @@ const CtaSection = () => {
                   adipiscing elit ut aliquam, purus sit amet luctus venenatis,
                   lectus magna fringilla urna.
                 </p>
-                <p className='mt-4 text-[#e0e0e0]'>
-                  Say goodbye to waiting! We take pride in delivering your
-                  orders within the blink of an eye. Shop now for a
-                  lightning-fast ecommerce experience that puts your
-                  satisfaction first.
-                </p>
               </div>
             </div>
 
