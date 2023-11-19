@@ -44,7 +44,7 @@ const TrendingProducts = () => {
   };
 
   return (
-    <div className='container mx-auto mt-28'>
+    <div className='container mx-auto mt-16'>
       <div className='mb-8 flex items-center justify-between '>
         <h2 className='text-4xl font-bold'>Trending Products</h2>
         <Link

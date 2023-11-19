@@ -8,7 +8,7 @@ type BrandCardProps = {
 
 export function BrandCard({ image, BrandName, description }: BrandCardProps) {
   return (
-    <a href='#' className='group relative mr-2  block bg-black '>
+    <a href='#' className='group relative     block bg-black '>
       <img
         alt='Developer'
         src={image}
