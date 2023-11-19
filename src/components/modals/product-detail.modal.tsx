@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
 const productFeatures = [
   'Made with premium, breathable materials for a high-quality and comfortable experience.',
@@ -47,11 +46,18 @@ function ProductDetailsModal({
   };
 
   return (
-    <>
+    <div
+      onClick={(e) => {
+        e.preventDefault();
+      }}
+    >
       <div className='flex flex-wrap gap-4'>
         <Button
           className='ml-2 w-full border bg-white text-black hover:bg-slate-100'
-          onClick={() => setOpenModal(true)}
+          onClick={(e) => {
+            e.preventDefault();
+            setOpenModal(true);
+          }}
         >
           <View className='mr-2' size={20} /> View
         </Button>
@@ -157,7 +163,7 @@ function ProductDetailsModal({
                   Add to Cart
                 </Button>
               </div>
-              <div className='flex items-center justify-between mb-5'>
+              <div className='mb-5 flex items-center justify-between'>
                 {sizeOptions.map((size: any, index) => (
                   <SizeOption
                     key={index}
@@ -183,7 +189,7 @@ function ProductDetailsModal({
           </div>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
 
