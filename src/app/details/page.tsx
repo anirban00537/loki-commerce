@@ -85,7 +85,7 @@ const Details = () => {
           </h2>
 
           <div className='my-6 flex items-center justify-between'>
-            <div className='mt-5 flex items-center '>
+            <div className='flex items-center '>
               <div className='text-heading pr-2 text-base font-bold md:pr-0 md:text-xl lg:pr-2 lg:text-2xl 2xl:pr-0 2xl:text-4xl'>
                 $40.00
               </div>

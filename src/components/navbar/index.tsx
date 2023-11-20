@@ -15,6 +15,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import CartSheet from '@/components/sheet/cart.sheet';
 function NavbarComp() {
   const [cartCount, setCartCount] = useState(0);
 
@@ -77,7 +78,7 @@ function NavbarComp() {
                   className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
                   onClick={() => console.log('Search clicked')}
                 />
-                <div className='relative ml-3'>
+                {/* <div className='relative ml-3'>
                   <RiShoppingCart2Line
                     className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
                     onClick={() => {
@@ -88,7 +89,8 @@ function NavbarComp() {
                   <div className='bg-primary text-white-background absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
                     {cartCount}
                   </div>
-                </div>
+                </div> */}
+                <CartSheet addToCart={addToCart} cartCount={cartCount} />
               </div>
             </div>
             <Navbar.Toggle />

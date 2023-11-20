@@ -1,7 +1,6 @@
 'use client';
-// Import necessary components and styles
-import { Modal } from 'flowbite-react';
-import { Plus, ShoppingCart, Star, View, X } from 'lucide-react';
+import { Modal, Rating } from 'flowbite-react';
+import { Plus, Star, View, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -24,6 +23,18 @@ const SizeOption = ({ size, isSelected, onSelect }: any) => (
     {size}
   </div>
 );
+const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
+
+const ColorOption = ({ color, isSelected, onSelect }: any) => (
+  <div
+    onClick={onSelect}
+    className={cn(
+      'mr-2 h-8 w-8 cursor-pointer rounded-full border border-gray-300',
+      isSelected ? `border-2 border-blue-500` : ''
+    )}
+    style={{ backgroundColor: color }}
+  ></div>
+);
 
 const productImages = [
   'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -36,6 +47,7 @@ function ProductDetailsModal({
 }: {
   placeModal: string;
 }) {
+  const [selectedColor, setSelectedColor] = useState(null);
   const [openModal, setOpenModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(productImages[0]);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -114,14 +126,25 @@ function ProductDetailsModal({
               </h2>
 
               <div className='my-6 flex items-center justify-between'>
-                <p className='text-xl font-semibold sm:text-4xl'>$99.99</p>
+                <div className='flex items-center '>
+                  <div className='text-heading pr-2 text-base font-bold md:pr-0 md:text-xl lg:pr-2 lg:text-2xl 2xl:pr-0 2xl:text-4xl'>
+                    $40.00
+                  </div>
+                  <span className='font-segoe pl-2 text-sm text-gray-400 line-through md:text-base lg:text-lg xl:text-xl'>
+                    $50.00
+                  </span>
+                </div>
                 <div className='flex items-center'>
-                  <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400 sm:text-base'>
-                    <Star className='mr-1' size={15} color='#f0932b' /> {5}
-                  </p>
-                  <p className='text-sm font-medium leading-none text-gray-400 sm:text-base'>
-                    ({55} reviews)
-                  </p>
+                  <Rating>
+                    <Rating.Star />
+                    <Rating.Star />
+                    <Rating.Star />
+                    <Rating.Star />
+                    <Rating.Star filled={false} />
+                    <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
+                      4.95 out of 5
+                    </p>
+                  </Rating>
                 </div>
               </div>
               <h3 className='mb-5 text-lg font-semibold sm:text-xl'>
@@ -133,7 +156,7 @@ function ProductDetailsModal({
                 clothing, footwear, lifestyle, accessories, makeup, hairstyle,
                 and body posture.
               </p>
-              <div className='mb-5 flex items-center justify-between'>
+              <div className='mb-5 flex gap-5'>
                 <div className='flex'>
                   <button
                     className='bg-slate-0 mr-2 cursor-pointer rounded-xl border p-2 px-4 text-lg sm:text-2xl'
@@ -158,11 +181,12 @@ function ProductDetailsModal({
                     +
                   </button>
                 </div>
-                <Button className='mr-2 rounded-xl px-6 py-3 text-base sm:text-base'>
+                <Button className='mr-2 rounded-xl px-6 py-6 text-base sm:text-base'>
                   <Plus className='mr-3' size={22} />
                   Add to Cart
                 </Button>
               </div>
+              <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Sizes</h3>
               <div className='mb-5 flex items-center justify-between'>
                 {sizeOptions.map((size: any, index) => (
                   <SizeOption
@@ -170,6 +194,17 @@ function ProductDetailsModal({
                     size={size}
                     isSelected={selectedSize === size}
                     onSelect={() => setSelectedSize(size)}
+                  />
+                ))}
+              </div>
+              <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Colors</h3>
+              <div className='mb-5 flex gap-2'>
+                {colorOptions.map((color: any, index) => (
+                  <ColorOption
+                    key={index}
+                    color={color}
+                    isSelected={selectedColor === color}
+                    onSelect={() => setSelectedColor(color)}
                   />
                 ))}
               </div>
