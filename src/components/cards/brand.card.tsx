@@ -8,11 +8,12 @@ type BrandCardProps = {
 
 export function BrandCard({ image, BrandName, description }: BrandCardProps) {
   return (
-    <a href='#' className='group relative     block bg-black '>
+    <a href='#' className='group relative block bg-green-200 overflow-hidden mx-1'>
       <img
         alt='Developer'
         src={image}
-        className='absolute inset-0 h-72 w-full object-cover opacity-75 transition-opacity group-hover:opacity-50'
+        className='absolute inset-0 h-72 w-full  object-cover opacity-75 transition-opacity group-hover:opacity-50'
+        style={{ borderRadius: '8px', transition: 'opacity 0.3s ease-in-out' }}
       />
       <div className='relative p-4 sm:p-6 lg:p-8'>
         <div className='mb-20 sm:mt-32 lg:mt-2'>

@@ -94,9 +94,6 @@ const Details = () => {
               </span>
             </div>
             <div className='flex items-center'>
-              {/* <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400 sm:text-base'>
-                <Star className='mr-1' size={15} color='#f0932b' /> {5}
-              </p> */}
               <Rating>
                 <Rating.Star />
                 <Rating.Star />

@@ -12,8 +12,8 @@ const page = () => {
   return (
     <div className=''>
       <HeroSection />
-      <TrendingProducts />
       <Brands />
+      <TrendingProducts />
       <About />
       <Products />
       <CtaSection />

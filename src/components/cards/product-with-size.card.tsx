@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/card';
 import ProductDetailsModal from '@/components/modals/product-detail.modal';
 import Link from 'next/link';
+import { Rating } from 'flowbite-react';
 
 type ProductCardWithSizeProps = {
   image: string;
@@ -88,14 +89,25 @@ export function ProductCardWithSize({
               </div>
             </div>
             <div className='flex items-center justify-between'>
-              <CardDescription>{price}</CardDescription>
+              <div className='flex items-center '>
+                <div className='text-heading pr-2 text-base font-bold md:pr-0 md:text-xl lg:pr-2 lg:text-2xl 2xl:pr-0 2xl:text-base'>
+                  $40.00
+                </div>
+                <span className='font-segoe pl-2 text-sm text-gray-400 line-through md:text-base lg:text-lg xl:text-base'>
+                  $50.00
+                </span>
+              </div>{' '}
               <div className='flex items-center'>
-                <p className='mr-2 flex items-center justify-center text-sm font-medium leading-none text-gray-400'>
-                  <Star className='mr-1' size={15} color='#f0932b' /> {rating}
-                </p>
-                <p className='text-sm font-medium leading-none text-gray-400'>
-                  ({reviews} reviews)
-                </p>
+                <Rating>
+                  <Rating.Star />
+                  <Rating.Star />
+                  <Rating.Star />
+                  <Rating.Star />
+                  <Rating.Star filled={false} />
+                  <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
+                    4.95
+                  </p>
+                </Rating>
               </div>
             </div>
           </CardHeader>

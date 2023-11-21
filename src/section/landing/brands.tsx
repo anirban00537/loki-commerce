@@ -43,45 +43,29 @@ const Brands = () => {
   return (
     <div className='container mx-auto mt-16'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-4xl font-bold'>Top Brand's</h2>
+        <h2 className='text-3xl font-bold uppercase text-slate-800'>
+          Shop By Top Brand's
+        </h2>
       </div>
-      <Slider {...settings}>
-        <div className='mr-3'>
-          <BrandCard
-            BrandName='Nike'
-            image='https://images.unsplash.com/photo-1577739832646-60024072118c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-          />
-        </div>
-        <div className='mr-3'>
-          <BrandCard
-            BrandName='Addidas'
-            image='https://images.unsplash.com/photo-1672116874916-3ed8b4ed6e38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-          />
-        </div>
-        <div className='mr-3'>
-          <BrandCard
-            BrandName='Prada'
-            image='https://images.unsplash.com/photo-1632815804501-c43dfd1a4578?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-          />
-        </div>
-        <div className='mr-3'>
-          <BrandCard
-            BrandName='luis vuitton'
-            image='https://images.unsplash.com/photo-1507486990559-1d65aaad9ba6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-          />
-        </div>
-        <div className='mr-3'>
-          <BrandCard
-            BrandName='Chanel'
-            image='https://images.unsplash.com/photo-1693665773176-e4609fa0da97?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-          />
-        </div>
-      </Slider>
+
+      <div className='flex'>
+        <BrandCard
+          BrandName='Nike'
+          image='https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
+        />
+
+        <BrandCard
+          BrandName='Prada'
+          image='https://images.unsplash.com/photo-1456379771252-03388b5adf1a?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
+        />
+        <BrandCard
+          BrandName='Prada'
+          image='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          description='loream ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
+        />
+      </div>
     </div>
   );
 };
