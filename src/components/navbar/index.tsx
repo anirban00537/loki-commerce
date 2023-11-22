@@ -64,13 +64,13 @@ function NavbarComp() {
     <div className='fixed top-0 z-10 flex w-full items-center justify-center border-b border-gray-100 bg-white'>
       <div className='container'>
         <Navbar fluid rounded>
-          <div>
+          <Link href='/'>
             <img
               src='/images/logo.png'
               className='mr-3 h-12'
               alt='LokiCommerce'
             />
-          </div>
+          </Link>
           <div className='flex md:order-2'>
             <div className='flex md:order-3'>
               <div className='flex items-center'>
@@ -78,18 +78,6 @@ function NavbarComp() {
                   className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
                   onClick={() => console.log('Search clicked')}
                 />
-                {/* <div className='relative ml-3'>
-                  <RiShoppingCart2Line
-                    className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
-                    onClick={() => {
-                      console.log('Cart clicked');
-                      addToCart();
-                    }}
-                  />
-                  <div className='bg-primary text-white-background absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
-                    {cartCount}
-                  </div>
-                </div> */}
                 <CartSheet addToCart={addToCart} cartCount={cartCount} />
               </div>
             </div>
@@ -101,12 +89,12 @@ function NavbarComp() {
               <NavigationMenuItem>
                 <Link href='/docs' legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Collections
+                    Fashion
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Trending</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className='grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
                     <li className='row-span-3'>
@@ -142,7 +130,7 @@ function NavbarComp() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Hot Deals</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
                     {components.map((component) => (
@@ -160,14 +148,14 @@ function NavbarComp() {
               <NavigationMenuItem>
                 <Link href='/docs' legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Collections
+                    About Us
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link href='/docs' legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Collections
+                    Blogs
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
