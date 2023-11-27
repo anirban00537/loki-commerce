@@ -71,7 +71,7 @@ const Collections = () => {
           </div>
         </div>
         <div className='lg:grid lg:grid-cols-12 lg:gap-x-6'>
-          <div className='hidden space-y-6 divide-y lg:col-span-3 lg:block'>
+          <div className='hidden space-y-6 divide-y lg:col-span-3 lg:block border-r'>
             {filters.map((filter) => (
               <div key={filter.id} className='pt-6'>
                 <h3 className='text-lg font-semibold text-gray-900'>
