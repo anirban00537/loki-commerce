@@ -52,7 +52,10 @@ export function ProductCardWithSize({
 
   return (
     <Link href='/details'>
-      <Card className={cn('relative w-[320px]', className)} {...props}>
+      <Card
+        className={cn('relative w-[320px] border-gray-100', className)}
+        {...props}
+      >
         <div className='group relative overflow-hidden p-2'>
           <img
             src={image}
@@ -75,7 +78,11 @@ export function ProductCardWithSize({
         </div>
         <CardContent className='mt-3 grid gap-4'>
           <CardHeader className='p-0'>
-            <CardTitle>{name}</CardTitle>
+            <CardTitle
+              className={cn('text-gray-600', className)}
+            >
+              {name}
+            </CardTitle>
             <div className='flex items-center '>
               <div className='my-2 flex'>
                 {sizeOptions.map((size: any, index) => (
