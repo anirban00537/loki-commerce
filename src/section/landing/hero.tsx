@@ -1,10 +1,15 @@
 'use client';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { motion } from 'framer-motion';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 const HeroSection = () => {
+  const slideVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <div className='relative m-10 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r'>
       <Carousel
@@ -15,55 +20,65 @@ const HeroSection = () => {
         interval={3000}
         showArrows={false}
       >
-        <div className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'>
-          <div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
+        <motion.div
+          initial={{ y: -900 }}
+          animate={{ y: 0 }}
+          className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
+        >
+          <motion.div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
+            <motion.h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
               Exclusive Collection for Everyone
-            </h1>
-            <p className='mt-6 text-left text-lg text-gray-600'>
+            </motion.h1>
+            <motion.p className='mt-6 text-left text-lg text-gray-600'>
               Discover the latest trends in fashion and explore our exclusive
               collection curated just for you. From timeless classics to the
               hottest styles of the season, we have something for every
               fashionista.
-            </p>
-            <div className='mt-10 flex items-center gap-x-6'>
-              <a
+            </motion.p>
+            <motion.div className='mt-10 flex items-center gap-x-6'>
+              <motion.a
                 href='#'
                 className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold text-teal-50 text-white shadow-sm hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
               >
                 Explore Now
-              </a>
-            </div>
-          </div>
-          <div className='flex items-start justify-center'>
-            <img src='/images/girl-model.png' alt='Fashion Model' />
-          </div>
-        </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
+          <motion.div className='flex items-start justify-center'>
+            <motion.img src='/images/girl-model.png' alt='Fashion Model' />
+          </motion.div>
+        </motion.div>
 
-        <div className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'>
-          <div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
+        <motion.div
+          variants={slideVariants}
+          initial='hidden'
+          animate='visible'
+          exit='hidden'
+          className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
+        >
+          <motion.div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
+            <motion.h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
               Exclusive Collection for Everyone
-            </h1>
-            <p className='mt-6 text-left text-lg text-gray-600'>
+            </motion.h1>
+            <motion.p className='mt-6 text-left text-lg text-gray-600'>
               Discover the latest trends in fashion and explore our exclusive
               collection curated just for you. From timeless classics to the
               hottest styles of the season, we have something for every
               fashionista.
-            </p>
-            <div className='mt-10 flex items-center gap-x-6'>
-              <a
+            </motion.p>
+            <motion.div className='mt-10 flex items-center gap-x-6'>
+              <motion.a
                 href='#'
                 className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold text-teal-50 text-white shadow-sm hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
               >
                 Explore Now
-              </a>
-            </div>
-          </div>
-          <div className='flex items-start justify-center'>
-            <img src='/images/girl-model.png' alt='Fashion Model' />
-          </div>
-        </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
+          <motion.div className='flex items-start justify-center'>
+            <motion.img src='/images/girl-model.png' alt='Fashion Model' />
+          </motion.div>
+        </motion.div>
       </Carousel>
     </div>
   );
