@@ -3,13 +3,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const SectionWrapper = ({ children, visible = false }: any) => {
-  const sectionRef = useRef(null);
+  const sectionRef: React.MutableRefObject<any> = useRef(null);
   const controls = useAnimation();
   const [isVisible, setIsVisible] = useState(visible);
 
   const handleScroll = () => {
     if (sectionRef.current) {
-      //@ts-ignore
       const boundingBox = sectionRef.current.getBoundingClientRect();
       // You can adjust the threshold value as needed
       setIsVisible(
