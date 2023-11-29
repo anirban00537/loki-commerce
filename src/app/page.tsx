@@ -15,9 +15,8 @@ const page = () => {
       <SectionWrapper visible={true}>
         <HeroSection />
       </SectionWrapper>
-      <SectionWrapper>
-        <Brands />
-      </SectionWrapper>
+
+      <Brands />
 
       <SectionWrapper>
         <TrendingProducts />
