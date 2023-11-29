@@ -72,7 +72,7 @@ function NavbarComp() {
                 <CartSheet addToCart={addToCart} cartCount={cartCount} />
               </div>
             </div>
-            <Navbar.Toggle />
+            <Navbar.Toggle className='ml-2'/>
           </div>
           <Navbar.Collapse>
             {/* Set the text color for Navbar links */}
@@ -95,7 +95,6 @@ function NavbarComp() {
               Account
             </Navbar.Link>
 
-            {/* Set the text color for Dropdown items */}
             <Dropdown label='Templates' inline>
               <Dropdown.Item className='text-gray-800'>Dashboard</Dropdown.Item>
               <Dropdown.Item className='text-gray-800'>Settings</Dropdown.Item>

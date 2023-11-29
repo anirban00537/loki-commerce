@@ -23,10 +23,10 @@ const HeroSection = () => {
         <motion.div
           initial={{ y: -900 }}
           animate={{ y: 0 }}
-          className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
+          className='mx-auto max-w-7xl px-6 py-10  lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
         >
           <motion.div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <motion.h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
+            <motion.h1 className='mt-2 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700  md:text-7xl'>
               Exclusive Collection for Everyone
             </motion.h1>
             <motion.p className='mt-6 text-left text-lg text-gray-600'>
@@ -38,26 +38,24 @@ const HeroSection = () => {
             <motion.div className='mt-10 flex items-center gap-x-6'>
               <motion.a
                 href='#'
-                className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold text-teal-50 text-white shadow-sm hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
+                className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold  text-white shadow-sm  hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
               >
                 Explore Now
               </motion.a>
             </motion.div>
           </motion.div>
-          <motion.div className='flex items-start justify-center'>
+          <motion.div className='mt-16 flex items-start justify-center md:mt-0'>
             <motion.img src='/images/girl-model.png' alt='Fashion Model' />
           </motion.div>
         </motion.div>
 
         <motion.div
-          variants={slideVariants}
-          initial='hidden'
-          animate='visible'
-          exit='hidden'
-          className='mx-auto max-w-7xl px-6 py-24 sm:py-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
+          initial={{ y: -900 }}
+          animate={{ y: 0 }}
+          className='mx-auto max-w-7xl px-6 py-10  lg:grid lg:grid-cols-2 lg:gap-x-10 lg:px-8 lg:py-16'
         >
           <motion.div className='mx-auto flex max-w-2xl flex-col items-start justify-start lg:mx-0'>
-            <motion.h1 className='mt-10 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700 sm:text-7xl'>
+            <motion.h1 className='mt-2 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700  md:text-7xl'>
               Exclusive Collection for Everyone
             </motion.h1>
             <motion.p className='mt-6 text-left text-lg text-gray-600'>
@@ -69,13 +67,13 @@ const HeroSection = () => {
             <motion.div className='mt-10 flex items-center gap-x-6'>
               <motion.a
                 href='#'
-                className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold text-teal-50 text-white shadow-sm hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
+                className='bg-primary focus:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold  text-white shadow-sm  hover:bg-indigo-500 focus:outline focus:outline-2 focus:outline-offset-2'
               >
                 Explore Now
               </motion.a>
             </motion.div>
           </motion.div>
-          <motion.div className='flex items-start justify-center'>
+          <motion.div className='mt-16 flex items-start justify-center md:mt-0'>
             <motion.img src='/images/girl-model.png' alt='Fashion Model' />
           </motion.div>
         </motion.div>
