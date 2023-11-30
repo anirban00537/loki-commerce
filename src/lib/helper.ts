@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function getFromLocalStorage(key: string): string | null {
   if (typeof window !== 'undefined') {
@@ -14,9 +14,19 @@ export function getFromSessionStorage(key: string): string | null {
   return null;
 }
 export const useScreenWidth = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const isClient = typeof window === 'object';
+
+  // Set initial width based on the environment
+  const initialWidth = isClient ? window.innerWidth : 0;
+
+  const [screenWidth, setScreenWidth] = useState(initialWidth);
 
   useEffect(() => {
+    if (!isClient) {
+      // If running on the server, return early and don't set up event listeners
+      return;
+    }
+
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
@@ -28,7 +38,7 @@ export const useScreenWidth = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []); // Empty dependency array ensures that effect runs only once on component mount
+  }, [isClient]); // Include isClient in the dependency array to handle changes in the environment
 
   return screenWidth;
 };

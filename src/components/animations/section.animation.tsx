@@ -24,9 +24,11 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   const handleScroll = () => {
     if (sectionRef.current) {
       const boundingBox = sectionRef.current.getBoundingClientRect();
-      setIsVisible(
-        boundingBox.top <= window.innerHeight * 0.5 && boundingBox.bottom >= 0
-      );
+      if (typeof window !== 'undefined') {
+        setIsVisible(
+          boundingBox.top <= window.innerHeight * 0.5 && boundingBox.bottom >= 0
+        );
+      }
     }
   };
 
