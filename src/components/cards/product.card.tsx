@@ -48,12 +48,18 @@ export function ProductCard({
   const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
 
   return (
-    <Card className={cn('relative w-[320px]', className)} {...props}>
+    <Card
+      className={cn(
+        'relative mb-2 w-[320px] border border-gray-100  shadow-sm',
+        className
+      )}
+      {...props}
+    >
       <div className='group relative overflow-hidden p-2'>
         <img
           src={image}
           alt={name}
-          className=' h-80 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
+          className='h-64 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
         />
         <button
           className='absolute right-4 top-4 rounded-full bg-white p-2'
@@ -106,7 +112,7 @@ export function ProductCard({
         </CardHeader>
       </CardContent>
       <CardFooter>
-        <Button className='w-full'>
+        <Button>
           <ShoppingCart className='mr-2' size={20} />
           Add to Cart
         </Button>

@@ -50,7 +50,7 @@ const TrendingProducts = () => {
           Trending Product's
         </h2>
         <Link
-          href='/all-products'
+          href='/collections'
           className='flex items-center justify-center rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-gray-200 hover:text-gray-700'
         >
           <CornerUpRight size={15} className='mr-2' />
@@ -60,8 +60,8 @@ const TrendingProducts = () => {
       <Slider {...settings}>
         <div className='mr-3'>
           <ProductCardWithSize
-            name='Fashion Bag'
-            image='https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            name='Long Legs Pants'
+            image='https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             price='33'
             rating={5}
             reviews={25}
@@ -69,8 +69,8 @@ const TrendingProducts = () => {
         </div>
         <div className='mr-3'>
           <ProductCardWithSize
-            name='Fashion Bag'
-            image='https://images.unsplash.com/photo-1667237346955-7b6cbb0815e4?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            name='Trendy Dress'
+            image='https://images.unsplash.com/photo-1520024146169-3240400354ae?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             price='33'
             rating={5}
             reviews={25}

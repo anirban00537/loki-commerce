@@ -50,7 +50,7 @@ const Products = () => {
           New Arrivals
         </h2>
         <Link
-          href='/all-products'
+          href='/collections'
           className='flex items-center justify-center rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-gray-200 hover:text-gray-700'
         >
           <CornerUpRight size={15} className='mr-2' />

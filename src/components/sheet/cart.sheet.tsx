@@ -55,7 +55,7 @@ const CartSheet = ({ addToCart, cartCount }: any) => {
       <SheetTrigger>
         <div className='relative ml-3'>
           <RiShoppingCart2Line className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500' />
-          <div className='bg-primary text-white-background absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
+          <div className='text-white-background absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-400 text-xs text-white'>
             {cartCount}
           </div>
         </div>

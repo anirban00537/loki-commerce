@@ -53,14 +53,17 @@ export function ProductCardWithSize({
   return (
     <Link href='/details'>
       <Card
-        className={cn('relative w-[320px] border-gray-100', className)}
+        className={cn(
+          'relative mb-2 w-[320px] border border-gray-100  shadow-sm',
+          className
+        )}
         {...props}
       >
         <div className='group relative overflow-hidden p-2'>
           <img
             src={image}
             alt={name}
-            className=' h-80 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
+            className='h-64 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
           />
           <button
             className='absolute right-4 top-4 rounded-full bg-white p-2'
@@ -78,9 +81,7 @@ export function ProductCardWithSize({
         </div>
         <CardContent className='mt-3 grid gap-4'>
           <CardHeader className='p-0'>
-            <CardTitle
-              className={cn('text-gray-600', className)}
-            >
+            <CardTitle className={cn('text-gray-600', className)}>
               {name}
             </CardTitle>
             <div className='flex items-center '>

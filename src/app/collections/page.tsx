@@ -45,9 +45,9 @@ const Collections = () => {
   return (
     <section className='w-full'>
       <div className='mx-auto mt-20 max-w-7xl px-2 py-10 lg:px-0'>
-        <div className='md:flex md:flex-row md:items-start md:justify-between'>
-          <div className='mb-10'>
-            <h1 className='text-4xl font-bold'>Products</h1>
+        <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
+          <div className='mb-4'>
+            <h1 className='text-4xl font-semibold'>Products</h1>
           </div>
           <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'>
             <button
@@ -71,7 +71,7 @@ const Collections = () => {
           </div>
         </div>
         <div className='lg:grid lg:grid-cols-12 lg:gap-x-6'>
-          <div className='hidden space-y-6 divide-y lg:col-span-3 lg:block border-r'>
+          <div className='hidden space-y-6 divide-y border-r lg:col-span-3 lg:block'>
             {filters.map((filter) => (
               <div key={filter.id} className='pt-6'>
                 <h3 className='text-lg font-semibold text-gray-900'>
@@ -89,11 +89,11 @@ const Collections = () => {
                           name={`${filter.id}[]`}
                           defaultValue={option.value}
                           type='checkbox'
-                          className='h-4 w-4 rounded border-gray-300 text-black focus:ring-black'
+                          className='h-4 w-4 rounded border-gray-300 text-gray-400 focus:ring-black'
                         />
                         <label
                           htmlFor={`${filter.id}-${option.value}`}
-                          className='ml-3 text-sm font-medium text-gray-900'
+                          className='ml-3 text-xs font-medium text-gray-500'
                         >
                           {option.label}
                         </label>
@@ -106,15 +106,15 @@ const Collections = () => {
           </div>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-9 lg:h-full xl:grid-cols-3'>
             <ProductCardWithSize
-              name='Fashion Bag'
-              image='https://images.unsplash.com/photo-1587131782738-de30ea91a542?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              name='Long Legs Pants'
+              image='https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               price='33'
               rating={5}
               reviews={25}
             />
             <ProductCardWithSize
-              name='Fashion Bag'
-              image='https://images.unsplash.com/photo-1667237346955-7b6cbb0815e4?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              name='Trendy Dress'
+              image='https://images.unsplash.com/photo-1520024146169-3240400354ae?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               price='33'
               rating={5}
               reviews={25}
