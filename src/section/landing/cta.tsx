@@ -10,7 +10,7 @@ const CtaSection = () => {
           className='mx-auto w-full max-w-7xl rounded-[18px] bg-cover bg-center bg-no-repeat py-20 text-white '
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+              'url("https://images.unsplash.com/photo-1627037558426-c2d07beda3af?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
           }}
         >
           <div className='mx-auto max-w-3xl text-center'>

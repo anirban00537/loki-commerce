@@ -54,13 +54,7 @@ const CartSheet = ({ addToCart, cartCount }: any) => {
     <Sheet>
       <SheetTrigger>
         <div className='relative ml-3'>
-          <RiShoppingCart2Line
-            className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500'
-            onClick={() => {
-              console.log('Cart clicked');
-              addToCart();
-            }}
-          />
+          <RiShoppingCart2Line className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500' />
           <div className='bg-primary text-white-background absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white'>
             {cartCount}
           </div>
@@ -123,12 +117,12 @@ const CartSheet = ({ addToCart, cartCount }: any) => {
           </div>
           <div className='flex justify-end space-x-4'>
             <Button className='w-1/2 border-2 border-black bg-white text-black'>
-              <ShoppingBasket className='mr-2' size={15}/>
+              <ShoppingBasket className='mr-2' size={15} />
               Continue
             </Button>
 
             <Button className='w-1/2'>
-              <ShoppingBagIcon className='mr-2' size={15}/>
+              <ShoppingBagIcon className='mr-2' size={15} />
               Check out
             </Button>
           </div>
