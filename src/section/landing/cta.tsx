@@ -7,7 +7,7 @@ const CtaSection = () => {
       <div className='px-5 py-16 md:px-10 md:py-24 lg:py-32'>
         {/* Component */}
         <div
-          className='mx-auto w-full max-w-7xl rounded-[48px] bg-cover bg-center bg-no-repeat py-20 text-white '
+          className='mx-auto w-full max-w-7xl rounded-[18px] bg-cover bg-center bg-no-repeat py-20 text-white '
           style={{
             backgroundImage:
               'url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
