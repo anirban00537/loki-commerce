@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { ProductCard } from '@/components/cards/product.card';
-import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
 
 const Products = () => {
   const settings = {

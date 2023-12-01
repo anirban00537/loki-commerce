@@ -6,7 +6,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { ProductCard } from '@/components/cards/product.card';
 import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
 
 const TrendingProducts = () => {
@@ -47,7 +46,7 @@ const TrendingProducts = () => {
     <div className='container mx-auto mt-16'>
       <div className='mb-8 flex items-center justify-between '>
         <h2 className='text-3xl font-bold uppercase text-slate-800'>
-          Trending Product's
+          Trending Product&apos;s
         </h2>
         <Link
           href='/collections'

@@ -6,10 +6,6 @@ import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 const HeroSection = () => {
-  const slideVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0 },
-  };
   return (
     <div className='relative m-10 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r'>
       <Carousel
