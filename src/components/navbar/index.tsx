@@ -196,20 +196,16 @@ function NavbarComp() {
               />
             )}
             {showSearch && <Search setShowSearch={setShowSearch} />}
-            <CartSheet addToCart={addToCart} cartCount={cartCount} />
-            <Link href='/register'>
-              <button className='btn btn-primary flex     items-center justify-center gap-2 rounded-lg border bg-white px-5 py-2 text-xs text-black lg:flex'>
-                Join Us
-              </button>
-            </Link>
-            {/* <Link href='/login'>
-                <button
-                  type='button'
-                  className='btn btn-primary hidden items-center gap-2 rounded-lg border-0 bg-black px-7 py-2 text-white lg:flex'
-                >
-                  Login
-                </button>
-              </Link> */}
+            {!showSearch && (
+              <>
+                <CartSheet addToCart={addToCart} cartCount={cartCount} />
+                <Link href='/register'>
+                  <button className='btn btn-primary flex items-center    justify-center gap-2 rounded-lg border bg-white px-5 py-2 text-xs text-black max-[991px]:hidden lg:flex'>
+                    Join Us
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
           <div
             className='relative float-right hidden cursor-pointer select-none p-3 text-2xl max-[991px]:z-[9999] max-[991px]:-mr-3 max-[991px]:block max-[991px]:text-black lg:p-[18px]'
@@ -291,7 +287,7 @@ function NavbarComp() {
                         <div className='ml-5 mt-2 flex flex-col gap-y-4'>
                           <Link href='/register'>
                             <button className='btn btn-outline-white block rounded-full shadow-none'>
-                              Sign Up
+                              join us
                             </button>
                           </Link>
                           <Link href='/dashboard'>

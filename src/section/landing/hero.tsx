@@ -7,7 +7,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 
 const HeroSection = () => {
   return (
-    <div className='relative m-10 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r'>
+    <div className='relative m-4 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r md:m-10 md:mt-24'>
       <Carousel
         showStatus={false}
         showThumbs={false}
@@ -25,7 +25,7 @@ const HeroSection = () => {
             <motion.h1 className='mt-2 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700  md:text-7xl'>
               Exclusive Collection for Everyone
             </motion.h1>
-            <motion.p className='mt-6 text-left text-lg text-gray-600'>
+            <motion.p className='mt-6 text-left text-xs text-gray-600  md:text-lg'>
               Discover the latest trends in fashion and explore our exclusive
               collection curated just for you. From timeless classics to the
               hottest styles of the season, we have something for every
@@ -54,12 +54,12 @@ const HeroSection = () => {
             <motion.h1 className='mt-2 max-w-xl text-left text-4xl font-bold tracking-tight text-gray-700  md:text-7xl'>
               Exclusive Collection for Everyone
             </motion.h1>
-            <motion.p className='mt-6 text-left text-lg text-gray-600'>
+            <motion.p className='mt-6 text-left text-xs text-gray-600  md:text-lg'>
               Discover the latest trends in fashion and explore our exclusive
               collection curated just for you. From timeless classics to the
               hottest styles of the season, we have something for every
               fashionista.
-            </motion.p>
+            </motion.p> 
             <motion.div className='mt-10 flex items-center gap-x-6'>
               <motion.a
                 href='#'
@@ -70,7 +70,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           <motion.div className='mt-16 flex items-start justify-center md:mt-0'>
-            <motion.img src='/images/girl-model.png' alt='Fashion Model' />
+            <motion.img src='/images/girl-model-1.png' alt='Fashion Model' />
           </motion.div>
         </motion.div>
       </Carousel>
