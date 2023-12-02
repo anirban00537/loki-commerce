@@ -1,4 +1,3 @@
-import { CornerUpRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
@@ -50,9 +49,8 @@ const Products = () => {
         </h2>
         <Link
           href='/collections'
-          className='flex items-center justify-center rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-gray-200 hover:text-gray-700'
+          className='flex items-center justify-center rounded-md border px-2 py-1 text-sm text-gray-600 hover:bg-gray-200 hover:text-gray-700'
         >
-          <CornerUpRight size={15} className='mr-2' />
           Show All
         </Link>
       </div>

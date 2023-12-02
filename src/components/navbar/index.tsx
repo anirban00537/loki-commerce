@@ -70,7 +70,7 @@ function NavbarComp() {
     setCartCount(cartCount + 1);
   };
   return (
-    <div className='false fixed left-0 top-0 z-[1000] block w-full border-b  border-gray-500 border-opacity-10  bg-white py-3 text-black lg:block'>
+    <div className='false  left-0 top-0 z-[1000] block w-full border-b  border-gray-500 border-opacity-10  bg-white py-3 text-black lg:block'>
       <div className='px-5 md:px-10'>
         <div className='mx-auto flex w-full max-w-screen-2xl auto-cols-auto grid-cols-[auto_max-content] items-center justify-between gap-[0px] lg:grid-cols-[176px_auto]'>
           <div className='flex w-9/12 items-center gap-x-4'>

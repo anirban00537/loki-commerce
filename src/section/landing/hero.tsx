@@ -7,7 +7,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 
 const HeroSection = () => {
   return (
-    <div className='relative m-4 mt-24 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r md:m-10 md:mt-24'>
+    <div className='relative m-4 mt-5 overflow-hidden rounded-3xl bg-pink-50 bg-gradient-to-r md:m-10 md:mt-5  '>
       <Carousel
         showStatus={false}
         showThumbs={false}
@@ -59,7 +59,7 @@ const HeroSection = () => {
               collection curated just for you. From timeless classics to the
               hottest styles of the season, we have something for every
               fashionista.
-            </motion.p> 
+            </motion.p>
             <motion.div className='mt-10 flex items-center gap-x-6'>
               <motion.a
                 href='#'
