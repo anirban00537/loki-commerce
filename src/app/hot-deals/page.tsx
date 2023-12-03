@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
+import Link from 'next/link';
 
 const HotDeals = () => {
   const products = [
@@ -84,14 +85,14 @@ const HotDeals = () => {
 
   return (
     <section className='w-full'>
-      <div className='mx-auto mt-20 max-w-7xl px-2 py-10 lg:px-0'>
+      <div className='mx-auto mt-5 max-w-7xl px-2 py-10 lg:px-0'>
         <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
           <div className='mb-4'>
             <h1 className='text-4xl font-semibold'>Hot Deals</h1>
           </div>
           <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'></div>
         </div>
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-9 lg:h-full xl:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {products.map((product, index) => (
             <ProductCardWithSize
               key={index}

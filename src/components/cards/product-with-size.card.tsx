@@ -54,7 +54,7 @@ export function ProductCardWithSize({
     <Link href='/details'>
       <Card
         className={cn(
-          'relative mb-2 w-[320px] border border-gray-100  shadow-sm',
+          'relative mb-2  border border-gray-100  shadow-sm',
           className
         )}
         {...props}

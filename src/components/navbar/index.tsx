@@ -64,6 +64,7 @@ function NavbarComp() {
   useEffect(() => {
     if (width >= 991) {
       setShowSearch(false);
+      setIsMobileNavOpen(false)
     }
   }, [width]);
   const addToCart = () => {
@@ -122,13 +123,13 @@ function NavbarComp() {
                           <Star className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
                         </div>
                         <div className='flex-auto'>
-                          <a
-                            href='#'
+                          <Link
+                            href='/hot-deals'
                             className='block font-semibold text-gray-900'
                           >
                             Hot Deals
                             <span className='absolute inset-0'></span>
-                          </a>
+                          </Link>
                           <p className='mt-1 text-gray-600'>
                             Get Hot deals here{' '}
                           </p>
@@ -170,7 +171,7 @@ function NavbarComp() {
                   </div>
                 </div>
                 <Link
-                  href='/testimonials'
+                  href='/hot-deals'
                   target='_self'
                   className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
                 >
@@ -309,7 +310,7 @@ function NavbarComp() {
         </div>
       </div>
       {isMobileNavOpen && (
-        <div className='fixed left-0 right-0 top-[65px] bg-black'>
+        <div className='left-0 right-0 top-[65px] bg-black'>
           <div className='my-4 overflow-hidden '>
             <nav className='relative float-left flex place-content-between max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:bg-black max-[991px]:py-1 max-[991px]:text-left'>
               <div className='mx-auto flex items-start text-base max-[991px]:flex-col lg:items-center'>
@@ -340,13 +341,13 @@ function NavbarComp() {
                 >
                   Pages
                 </a>
-                <a
-                  href='#hotdeals'
+                <Link
+                  href='/hot-deals'
                   target='_self'
                   className='px-5 py-2 text-white transition max-[991px]:block md:px-10 lg:px-4'
                 >
                   Hot Deals
-                </a>
+                </Link>
                 <a
                   href='#faqs'
                   target='_self'

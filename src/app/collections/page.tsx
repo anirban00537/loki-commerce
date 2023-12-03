@@ -44,7 +44,7 @@ const filters = [
 const Collections = () => {
   return (
     <section className='w-full'>
-      <div className='mx-auto mt-20 max-w-7xl px-2 py-10 lg:px-0'>
+      <div className='mx-auto mt-5 max-w-7xl px-2 py-10 lg:px-0'>
         <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
           <div className='mb-4'>
             <h1 className='text-4xl font-semibold'>Products</h1>

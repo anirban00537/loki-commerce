@@ -55,7 +55,7 @@ const Details = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.1 }}
-      className='container mt-28'
+      className='container mt-8'
     >
       <div className='grid grid-cols-1 gap-8 px-4  sm:grid-cols-2 sm:px-7'>
         <div className='h-auto'>
@@ -146,7 +146,7 @@ const Details = () => {
             lifestyle, accessories, makeup, hairstyle, and body posture.
           </motion.p>
           <motion.div
-            className='mb-5 flex gap-5'
+            className='mb-5 flex flex-wrap gap-5'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
@@ -189,7 +189,7 @@ const Details = () => {
             Sizes
           </motion.h3>
           <motion.div
-            className='mb-5 flex gap-2'
+            className='mb-5 flex gap-2 flex-wrap'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.6 }}

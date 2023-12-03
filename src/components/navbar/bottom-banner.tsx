@@ -14,7 +14,7 @@ const BottomBanner = () => {
         <div
           id='bottom-banner'
           tabIndex={-1}
-          className='fixed bottom-0 start-0 z-50 flex w-full justify-between border-t border-gray-200 bg-black p-4 dark:border-gray-600 dark:bg-black'
+          className='fixed bottom-0 start-0 z-50 flex w-full justify-between border-t border-gray-200 bg-black p-2   dark:border-gray-600 dark:bg-black'
         >
           <div className='mx-auto flex items-center'>
             <p className='flex items-center text-sm font-normal text-white dark:text-gray-400'>
