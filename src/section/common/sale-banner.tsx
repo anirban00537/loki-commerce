@@ -2,60 +2,239 @@ import React from 'react';
 
 const SaleBanner = () => {
   return (
-    <section className='container mx-auto'>
-      <div className='mx-auto mt-20 flex w-full  items-center justify-between rounded-2xl bg-gradient-to-br from-red-300 via-red-300 to-purple-200 p-6 text-white sm:p-10'>
-        <div className='flex flex-col gap-6'>
-          <div>
-            <span className='text-gray-200'>Black friday sale</span>
-            <br />
-            <span className='text-4xl font-semibold  text-white'>
-              20% off every Product
-            </span>
+    <section className='relative z-10 mt-40 overflow-hidden bg-red-400 px-8 py-16'>
+      <div className='container'>
+        <div className='-mx-4 flex flex-wrap items-center'>
+          <div className='w-full px-4 lg:w-1/2'>
+            <div className='text-center lg:text-left '>
+              <div className='mb-10 lg:mb-0 '>
+                <h1 className='mb-3 mt-0 text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight '>
+                  Black Friday Sale Get 50% Discount
+                </h1>
+                <p className='w-full text-base font-medium leading-relaxed text-white sm:text-lg sm:leading-relaxed'></p>
+              </div>
+            </div>
           </div>
-          <a
-            href='  '
-            target='_blank'
-            rel='noreferrer'
-            className='ease group flex w-fit items-center gap-1 rounded-lg  bg-white px-4 py-2 text-black duration-300 hover:bg-gray-50'
-          >
-            <span>Buy now</span>
-            <svg
-              data-v-e660a7a7
-              xmlns='http://www.w3.org/2000/svg'
-              xmlnsXlink='http://www.w3.org/1999/xlink'
-              aria-hidden='true'
-              role='img'
-              className='ease transition-transform duration-200 group-hover:translate-x-1'
-              width='1em'
-              height='1em'
-              viewBox='0 0 256 256'
-            >
-              <path
-                fill='currentColor'
-                d='m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z'
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <div>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='h-20 w-20 text-gray-100'
-            viewBox='0 0 15 15'
-          >
-            <path
-              fill='currentColor'
-              fillRule='evenodd'
-              d='M4.5 0A2.5 2.5 0 0 0 2 2.5v.286c0 .448.133.865.362 1.214H1.5A1.5 1.5 0 0 0 0 5.5v1A1.5 1.5 0 0 0 1.5 8H7V4h1v4h5.5A1.5 1.5 0 0 0 15 6.5v-1A1.5 1.5 0 0 0 13.5 4h-.862c.229-.349.362-.766.362-1.214V2.5A2.5 2.5 0 0 0 10.5 0c-1.273 0-2.388.68-3 1.696A3.498 3.498 0 0 0 4.5 0ZM8 4h2.786C11.456 4 12 3.456 12 2.786V2.5A1.5 1.5 0 0 0 10.5 1A2.5 2.5 0 0 0 8 3.5V4ZM7 4H4.214C3.544 4 3 3.456 3 2.786V2.5A1.5 1.5 0 0 1 4.5 1A2.5 2.5 0 0 1 7 3.5V4Z'
-              clipRule='evenodd'
-            />
-            <path
-              fill='currentColor'
-              d='M7 9H1v3.5A2.5 2.5 0 0 0 3.5 15H7V9Zm1 6h3.5a2.5 2.5 0 0 0 2.5-2.5V9H8v6Z'
-            ></path>
-          </svg>
+          <div className='w-full px-4 lg:w-1/2'>
+            <div className='text-center lg:text-right'>
+              <a
+                className='mx-auto inline-flex items-center justify-center rounded-lg bg-white px-9 py-4 font-semibold hover:bg-opacity-90'
+                href='#'
+              >
+                Buy Now
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+      <span className='absolute right-0 top-0 -z-10'>
+        <svg
+          width={388}
+          height={250}
+          viewBox='0 0 388 220'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            opacity='0.05'
+            d='M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z'
+            fill='url(#paint0_linear_971_6910)'
+          />
+          <defs>
+            <linearGradient
+              id='paint0_linear_971_6910'
+              x1='60.5'
+              y1={111}
+              x2={287}
+              y2={111}
+              gradientUnits='userSpaceOnUse'
+            >
+              <stop offset='0.520507' stopColor='white' />
+              <stop offset={1} stopColor='white' stopOpacity={0} />
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span className='absolute right-0 top-0 -z-10'>
+        <svg
+          width={324}
+          height={250}
+          viewBox='0 0 324 220'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            opacity='0.05'
+            d='M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z'
+            fill='url(#paint0_linear_971_6911)'
+          />
+          <defs>
+            <linearGradient
+              id='paint0_linear_971_6911'
+              x1='60.5'
+              y1={111}
+              x2={287}
+              y2={111}
+              gradientUnits='userSpaceOnUse'
+            >
+              <stop offset='0.520507' stopColor='white' />
+              <stop offset={1} stopColor='white' stopOpacity={0} />
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span className='absolute left-4 top-4 -z-10'>
+        <svg
+          width={43}
+          height={56}
+          viewBox='0 0 43 56'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <g opacity='0.5'>
+            <circle
+              cx='40.9984'
+              cy='1.49626'
+              r='1.49626'
+              transform='rotate(90 40.9984 1.49626)'
+              fill='white'
+            />
+            <circle
+              cx='27.8304'
+              cy='1.49626'
+              r='1.49626'
+              transform='rotate(90 27.8304 1.49626)'
+              fill='white'
+            />
+            <circle
+              cx='14.6644'
+              cy='1.49626'
+              r='1.49626'
+              transform='rotate(90 14.6644 1.49626)'
+              fill='white'
+            />
+            <circle
+              cx='1.49642'
+              cy='1.49626'
+              r='1.49626'
+              transform='rotate(90 1.49642 1.49626)'
+              fill='white'
+            />
+            <circle
+              cx='40.9984'
+              cy='14.6642'
+              r='1.49626'
+              transform='rotate(90 40.9984 14.6642)'
+              fill='white'
+            />
+            <circle
+              cx='27.8304'
+              cy='14.6642'
+              r='1.49626'
+              transform='rotate(90 27.8304 14.6642)'
+              fill='white'
+            />
+            <circle
+              cx='14.6644'
+              cy='14.6642'
+              r='1.49626'
+              transform='rotate(90 14.6644 14.6642)'
+              fill='white'
+            />
+            <circle
+              cx='1.49642'
+              cy='14.6642'
+              r='1.49626'
+              transform='rotate(90 1.49642 14.6642)'
+              fill='white'
+            />
+            <circle
+              cx='40.9984'
+              cy='27.8302'
+              r='1.49626'
+              transform='rotate(90 40.9984 27.8302)'
+              fill='white'
+            />
+            <circle
+              cx='27.8304'
+              cy='27.8302'
+              r='1.49626'
+              transform='rotate(90 27.8304 27.8302)'
+              fill='white'
+            />
+            <circle
+              cx='14.6644'
+              cy='27.8302'
+              r='1.49626'
+              transform='rotate(90 14.6644 27.8302)'
+              fill='white'
+            />
+            <circle
+              cx='1.49642'
+              cy='27.8302'
+              r='1.49626'
+              transform='rotate(90 1.49642 27.8302)'
+              fill='white'
+            />
+            <circle
+              cx='40.9984'
+              cy='40.9982'
+              r='1.49626'
+              transform='rotate(90 40.9984 40.9982)'
+              fill='white'
+            />
+            <circle
+              cx='27.8304'
+              cy='40.9963'
+              r='1.49626'
+              transform='rotate(90 27.8304 40.9963)'
+              fill='white'
+            />
+            <circle
+              cx='14.6644'
+              cy='40.9982'
+              r='1.49626'
+              transform='rotate(90 14.6644 40.9982)'
+              fill='white'
+            />
+            <circle
+              cx='1.49642'
+              cy='40.9963'
+              r='1.49626'
+              transform='rotate(90 1.49642 40.9963)'
+              fill='white'
+            />
+            <circle
+              cx='40.9984'
+              cy='54.1642'
+              r='1.49626'
+              transform='rotate(90 40.9984 54.1642)'
+              fill='white'
+            />
+            <circle
+              cx='27.8304'
+              cy='54.1642'
+              r='1.49626'
+              transform='rotate(90 27.8304 54.1642)'
+              fill='white'
+            />
+            <circle
+              cx='14.6644'
+              cy='54.1642'
+              r='1.49626'
+              transform='rotate(90 14.6644 54.1642)'
+              fill='white'
+            />
+            <circle
+              cx='1.49642'
+              cy='54.1642'
+              r='1.49626'
+              transform='rotate(90 1.49642 54.1642)'
+              fill='white'
+            />
+          </g>
+        </svg>
+      </span>
     </section>
   );
 };
