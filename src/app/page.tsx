@@ -10,6 +10,7 @@ import About from '@/section/landing/about';
 import SectionWrapper from '@/components/animations/section.animation';
 import BigCards from '@/section/landing/big-cards';
 import SaleBanner from '@/section/common/sale-banner';
+import QuickProducts from '@/section/common/quick-products';
 const page = () => {
   return (
     <div className=''>
@@ -20,8 +21,14 @@ const page = () => {
       <SectionWrapper>
         <TrendingProducts />
       </SectionWrapper>
+      <div className='mt-8'>
+        <SectionWrapper>
+          <SaleBanner />
+        </SectionWrapper>
+      </div>
+
       <SectionWrapper>
-        <SaleBanner />
+        <QuickProducts />
       </SectionWrapper>
       <SectionWrapper>
         <About />

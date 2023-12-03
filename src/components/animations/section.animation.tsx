@@ -56,7 +56,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
       }
     };
 
-    startAnimation();
+    isVisible &&   startAnimation();
   }, [isVisible, controls, delay]);
 
   return (

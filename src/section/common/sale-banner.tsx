@@ -1,17 +1,26 @@
-import React from 'react';
+import { Countdown } from '@/components/animations/timer.animation';
+import React, { useState, useEffect } from 'react';
 
-const SaleBanner = () => {
+const getEndTime = () => {
+  const now = new Date();
+  const endTime = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days later
+  return endTime;
+};
+const SaleBanner = ({ text = 'Black Friday Sale Get 50% Discount' }) => {
+  const endTime = getEndTime();
+
   return (
-    <section className='relative z-10 mt-40 overflow-hidden bg-red-400 px-8 py-16'>
+    <section className='relative z-10  overflow-hidden bg-black px-8 py-16'>
       <div className='container'>
         <div className='-mx-4 flex flex-wrap items-center'>
           <div className='w-full px-4 lg:w-1/2'>
             <div className='text-center lg:text-left '>
               <div className='mb-10 lg:mb-0 '>
                 <h1 className='mb-3 mt-0 text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-[40px] md:leading-tight '>
-                  Black Friday Sale Get 50% Discount
+                  {text}
                 </h1>
                 <p className='w-full text-base font-medium leading-relaxed text-white sm:text-lg sm:leading-relaxed'></p>
+                <Countdown endTime={endTime} />
               </div>
             </div>
           </div>

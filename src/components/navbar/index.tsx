@@ -64,7 +64,7 @@ function NavbarComp() {
   useEffect(() => {
     if (width >= 991) {
       setShowSearch(false);
-      setIsMobileNavOpen(false)
+      setIsMobileNavOpen(false);
     }
   }, [width]);
   const addToCart = () => {
@@ -87,21 +87,21 @@ function NavbarComp() {
             <nav className='relative float-right flex place-content-between max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:hidden max-[991px]:bg-black max-[991px]:py-1 max-[991px]:text-left'>
               <div className='mx-auto flex items-start text-base max-[991px]:flex-col lg:items-center'>
                 <Link
-                  href='/home'
+                  href='/'
                   target='_self'
                   className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
-                >
+            >
                   Home
                 </Link>
                 <Link
-                  href='/features'
+                  href='/collections'
                   target='_self'
                   className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
                 >
                   Shop
                 </Link>
                 <Link
-                  href='/how-it-works'
+                  href='/categories'
                   target='_self'
                   className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
                 >
@@ -178,7 +178,7 @@ function NavbarComp() {
                   Hot Deals
                 </Link>
                 <Link
-                  href='/faqs'
+                  href='/about'
                   target='_self'
                   className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
                 >

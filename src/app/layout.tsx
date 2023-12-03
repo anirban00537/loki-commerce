@@ -10,7 +10,7 @@ import Footer from '@/components/footer';
 import NavbarComp from '@/components/navbar';
 
 import { siteConfig } from '@/constant/config';
-import BottomBanner from '@/components/navbar/bottom-banner';
+import TopBanner from '@/components/navbar/top-banner';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html className={`${poppins.variable}`}>
       <body>
-        <BottomBanner />
+        <TopBanner />
         <NavbarComp />
         {children}
         <Footer />
