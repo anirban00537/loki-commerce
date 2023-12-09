@@ -11,7 +11,9 @@ const TopBanner = () => {
   return (
     <>
       {isVisible && (
-        <div className='bg-black'>
+        <div className='hidden bg-black sm:block'>
+          {' '}
+          {/* Use 'hidden sm:block' to hide on small screens */}
           <div className='mx-auto flex max-w-screen-xl items-start justify-between px-4 py-1 text-white sm:items-center md:px-8'>
             <div className='flex flex-1 items-start justify-center gap-x-4 sm:items-center'>
               <div className='flex flex-none items-center justify-center rounded-lg border border-gray-400 bg-black p-1 px-4 text-xs font-medium'>

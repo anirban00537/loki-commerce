@@ -2,6 +2,8 @@
 import React from 'react';
 import { ChevronDown, Home } from 'lucide-react';
 import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
+import RightPagination from '@/components/pagination/right-pagination';
+import { Dropdown } from 'flowbite-react';
 
 const filters = [
   {
@@ -122,29 +124,30 @@ const Collections = () => {
   return (
     <section className='w-full'>
       <div className='mx-auto mt-5 max-w-7xl px-2 py-10 lg:px-0'>
-        <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
+        <div className='mx-3 mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
           <div className='mb-4'>
             <h1 className='text-4xl font-semibold'>Products</h1>
           </div>
-          <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'>
-            <button
-              type='button'
-              className='inline-flex items-center rounded-md px-3 py-2 text-lg font-semibold text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:hidden'
-            >
-              Category <ChevronDown className='ml-2 h-4 w-4' />
-            </button>
-            <button
-              type='button'
-              className='inline-flex items-center rounded-md px-3 py-2 text-lg font-semibold text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:hidden'
-            >
-              Color <ChevronDown className='ml-2 h-4 w-4' />
-            </button>
-            <button
-              type='button'
-              className='inline-flex items-center rounded-md px-3 py-2 text-lg font-semibold text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black lg:hidden'
-            >
-              Size <ChevronDown className='ml-2 h-4 w-4' />
-            </button>
+          <div className='mb-5 mt-6 flex items-center gap-3  pt-2 md:mb-0 md:mt-0  md:space-x-4 md:pt-0 lg:hidden'>
+            {/* <Dropdown label='Color' inline>
+              <Dropdown.Item>Dashboard</Dropdown.Item>
+              <Dropdown.Item>Settings</Dropdown.Item>
+              <Dropdown.Item>Earnings</Dropdown.Item>
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Dropdown>
+            <Dropdown label='Category' inline>
+              <Dropdown.Item>Dashboard</Dropdown.Item>
+              <Dropdown.Item>Settings</Dropdown.Item>
+              <Dropdown.Item>Earnings</Dropdown.Item>
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Dropdown> */}
+            {filters.map((filter) => (
+              <Dropdown label={filter.name} inline>
+                {filter.options.map((option) => (
+                  <Dropdown.Item>{option.value}</Dropdown.Item>
+                ))}
+              </Dropdown>
+            ))}
           </div>
         </div>
         <div className='lg:grid lg:grid-cols-12 lg:gap-x-6'>
@@ -194,6 +197,7 @@ const Collections = () => {
             ))}
           </div>
         </div>
+        <RightPagination />
       </div>
     </section>
   );
