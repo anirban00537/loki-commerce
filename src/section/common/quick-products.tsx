@@ -11,41 +11,41 @@ interface Product {
 }
 
 const QuickProducts = () => {
-  const products: Product[] = [
-    {
-      url: '/images/bg-card-1.png',
-      color: 'red',
-      title: 'Blue Velvet Sofa',
-      description: 'A comfortable sofa with a stylish blue velvet finish.',
-      price: '$499.99',
-    },
-    {
-      url: '/images/bg-card-2.png',
-      color: 'purple',
-      title: 'Green Accent Chair',
-      description: 'A cozy accent chair with a vibrant green color.',
-      price: '$199.99',
-    },
-    {
-      url: '/images/bg-card-3.png',
-      color: 'green',
-      title: 'Modern Coffee Table',
-      description: 'A sleek and modern coffee table for your living room.',
-      price: '$129.99',
-    },
-    {
-      url: '/images/bg-card-4.png',
-      color: 'yellow',
-      title: 'Plush Pink Pillow Set',
-      description: 'A set of soft and plush pink pillows for added comfort.',
-      price: '$39.99',
-    },
-  ];
+const products: Product[] = [
+  {
+    url: '/images/bg-card-1.png',
+    color: 'red',
+    title: 'Elegant Red Evening Gown',
+    description: 'An elegant red evening gown for special occasions.',
+    price: '$499.99',
+  },
+  {
+    url: '/images/bg-card-2.png',
+    color: 'purple',
+    title: 'Chic Purple Cocktail Dress',
+    description: 'A chic purple cocktail dress perfect for parties.',
+    price: '$199.99',
+  },
+  {
+    url: '/images/bg-card-3.png',
+    color: 'green',
+    title: 'Modern Green Maxi Dress',
+    description: 'A modern green maxi dress for a trendy look.',
+    price: '$129.99',
+  },
+  {
+    url: '/images/bg-card-4.png',
+    color: 'yellow',
+    title: 'Yellow Floral Summer Dress',
+    description: 'A yellow floral summer dress for a vibrant style.',
+    price: '$39.99',
+  },
+];
 
   return (
-    <section className='container mx-auto p-10 px-0 md:p-8 md:px-0 md:py-12'>
+    <section className='container mx-auto p-10 px-0 md:p-8 md:px-0 md:py-12 mt-36'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-3xl font-bold uppercase text-slate-800'>
+        <h2 className='text-3xl font-medium uppercase text-slate-800'>
           Premium products
         </h2>
         <Link

@@ -21,7 +21,7 @@ const page = () => {
       <SectionWrapper>
         <TrendingProducts />
       </SectionWrapper>
-      <div className='mt-8'>
+      <div className='mt-36'>
         <SectionWrapper>
           <SaleBanner />
         </SectionWrapper>

@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Rating } from 'flowbite-react';
+import ProductDetailsModal from '@/components/modals/product-detail.modal';
 
 type ProductCardProps = {
   image: string;
@@ -76,7 +77,7 @@ export function ProductCard({
         <CardHeader className='p-0'>
           <CardTitle>{name}</CardTitle>
           <div className='flex items-center '>
-            <div className='my-2 flex'>
+            <div className='my-2 flex w-full '>
               {colorOptions.map((color: any, index) => (
                 <ColorOption
                   key={index}
@@ -99,10 +100,6 @@ export function ProductCard({
             <div className='flex items-center'>
               <Rating>
                 <Rating.Star />
-                <Rating.Star />
-                <Rating.Star />
-                <Rating.Star />
-                <Rating.Star filled={false} />
                 <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
                   4.95
                 </p>
@@ -112,13 +109,11 @@ export function ProductCard({
         </CardHeader>
       </CardContent>
       <CardFooter>
-        <Button>
+        <Button className='w-full border '>
           <ShoppingCart className='mr-2' size={20} />
           Add to Cart
         </Button>
-        <Button className='ml-2 w-full border bg-white text-black hover:bg-slate-100'>
-          <View className='mr-2' size={20} /> View
-        </Button>
+        <ProductDetailsModal placeModal='center' />
       </CardFooter>
     </Card>
   );

@@ -4,9 +4,9 @@ import SectionWrapper from '@/components/animations/section.animation';
 
 const Brands = () => {
   return (
-    <div className='container mx-auto mt-16'>
+    <div className='container mx-auto mt-36'>
       <div className='mb-8 flex items-center justify-between'>
-        <h2 className='text-2xl font-bold uppercase text-slate-800 md:text-3xl'>
+        <h2 className='text-2xl font-medium uppercase text-slate-800 md:text-3xl'>
           Shop By Top Brands
         </h2>
       </div>

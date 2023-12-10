@@ -81,11 +81,16 @@ export function ProductCardWithSize({
         </div>
         <CardContent className='mt-3 grid gap-4'>
           <CardHeader className='p-0'>
-            <CardTitle className={cn('mb-3 truncate text-gray-600', className)}>
-              {name}
-            </CardTitle>
+            <div className='flex justify-between'>
+              <CardTitle
+                className={cn('truncate pb-1 text-gray-600', className)}
+              >
+                {name}
+              </CardTitle>
+            </div>
+
             <div className='flex items-center '>
-              <div className='my-2 flex'>
+              <div className='my-2 flex w-full justify-between'>
                 {sizeOptions.map((size: any, index) => (
                   <SizeOption
                     key={index}
@@ -108,10 +113,6 @@ export function ProductCardWithSize({
               <div className='flex items-center'>
                 <Rating>
                   <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star filled={false} />
                   <p className='ml-2 text-sm font-medium text-gray-500 dark:text-gray-400'>
                     4.95
                   </p>
@@ -121,7 +122,7 @@ export function ProductCardWithSize({
           </CardHeader>
         </CardContent>
         <CardFooter>
-          <Button className='w-full bg-white text-black border'>
+          <Button className='w-full border '>
             <ShoppingCart className='mr-2' size={20} />
             Add to Cart
           </Button>

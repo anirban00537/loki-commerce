@@ -17,20 +17,52 @@ const BigCard: React.FC<BigCardProps> = ({
 }) => {
   return (
     <section
-      className={`grid grid-cols-1 md:grid-cols-2 bg-${color}-50 flex transform cursor-pointer items-center justify-center overflow-hidden rounded-lg p-5 py-10 shadow duration-500 hover:-translate-y-2`}
+      className={`bg-${color}-50 transform cursor-pointer p-5 py-10 text-center duration-500 hover:-translate-y-2`}
     >
-      <div className='mb-6 md:mb-0 md:pr-5'>
-        <img
-          src={url}
-          alt=''
-          className='h-64 w-full rounded-md object-cover md:h-full'
-        />
+      <img src={url} alt='' />
+      <div className='mt-10 flex justify-center space-x-1'>
+        <svg
+          className='text-yellow -600 mx-px h-4 w-4 fill-current'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 14 14'
+        >
+          <path d='M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z'></path>
+        </svg>
+        <svg
+          className='text-yellow -600 mx-px h-4 w-4 fill-current'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 14 14'
+        >
+          <path d='M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z'></path>
+        </svg>
+        <svg
+          className='text-yellow -600 mx-px h-4 w-4 fill-current'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 14 14'
+        >
+          <path d='M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z'></path>
+        </svg>
+        <svg
+          className='text-yellow -600 mx-px h-4 w-4 fill-current'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 14 14'
+        >
+          <path d='M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z'></path>
+        </svg>
+        <svg
+          className='mx-px h-4 w-4 fill-current text-gray-300'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 14 14'
+        >
+          <path d='M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z'></path>
+        </svg>
       </div>
-      <div className='flex flex-col'>
-        <h1 className='my-2 text-xl font-bold '>{title}</h1>
-        <p className='mb-4 text-sm text-gray-700'>{description}</p>
-        <h2 className='mb-2 text-xl font-semibold text-black'>{price}</h2>
-      </div>
+      <h1 className='my-5 text-3xl'>{title}</h1>
+      <p className='mb-5'>{description}</p>
+      <h2 className='mb-5 font-semibold'>{price}</h2>
+      <button className='rounded-md bg-black p-2 px-6 text-white hover:bg-black '>
+        Add To Cart
+      </button>
     </section>
   );
 };

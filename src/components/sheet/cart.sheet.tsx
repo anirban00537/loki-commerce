@@ -1,16 +1,10 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import React from 'react';
 import { Trash, Heart, ShoppingBagIcon, ShoppingBasket } from 'lucide-react';
 
 import { RiShoppingCart2Line } from 'react-icons/ri';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 const products = [
   {
     id: 1,
@@ -120,11 +114,12 @@ const CartSheet = ({ addToCart, cartCount }: any) => {
               <ShoppingBasket className='mr-2' size={15} />
               Continue
             </Button>
-
-            <Button className='w-1/2'>
-              <ShoppingBagIcon className='mr-2' size={15} />
-              Check out
-            </Button>
+            <Link href='/checkout' className='w-1/2'>
+              <Button className='w-full'>
+                <ShoppingBagIcon className='mr-2' size={15} />
+                Check out
+              </Button>
+            </Link>
           </div>
         </div>
       </SheetContent>

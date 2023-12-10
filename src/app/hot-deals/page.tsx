@@ -4,6 +4,7 @@ import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
 import Link from 'next/link';
 import SectionWrapper from '@/components/animations/section.animation';
 import SaleBanner from '@/section/common/sale-banner';
+import RightPagination from '@/components/pagination/right-pagination';
 
 const HotDeals = () => {
   const products = [
@@ -87,6 +88,7 @@ const HotDeals = () => {
 
   return (
     <section className='w-full'>
+      <div className='mt-12'></div>
       <SaleBanner text='Limited Time Sale Offer! Hurry up Stock is limited!' />
       <div className='mx-auto max-w-7xl px-2 py-10 lg:px-0'>
         <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
@@ -107,6 +109,7 @@ const HotDeals = () => {
             />
           ))}
         </div>
+        <RightPagination />
       </div>
     </section>
   );
