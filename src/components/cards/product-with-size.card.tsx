@@ -81,7 +81,7 @@ export function ProductCardWithSize({
         </div>
         <CardContent className='mt-3 grid gap-4'>
           <CardHeader className='p-0'>
-            <CardTitle className={cn('truncate text-gray-600', className)}>
+            <CardTitle className={cn('mb-3 truncate text-gray-600', className)}>
               {name}
             </CardTitle>
             <div className='flex items-center '>
@@ -121,7 +121,7 @@ export function ProductCardWithSize({
           </CardHeader>
         </CardContent>
         <CardFooter>
-          <Button className='w-full'>
+          <Button className='w-full bg-white text-black border'>
             <ShoppingCart className='mr-2' size={20} />
             Add to Cart
           </Button>
