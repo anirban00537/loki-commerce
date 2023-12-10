@@ -141,10 +141,10 @@ const Collections = () => {
               <Dropdown.Item>Earnings</Dropdown.Item>
               <Dropdown.Item>Sign out</Dropdown.Item>
             </Dropdown> */}
-            {filters.map((filter) => (
-              <Dropdown label={filter.name} inline>
-                {filter.options.map((option) => (
-                  <Dropdown.Item>{option.value}</Dropdown.Item>
+            {filters.map((filter, i) => (
+              <Dropdown key={i} label={filter.name} inline>
+                {filter.options.map((option, index) => (
+                  <Dropdown.Item key={index}>{option.value}</Dropdown.Item>
                 ))}
               </Dropdown>
             ))}

@@ -83,11 +83,11 @@ const page = () => {
 
   return (
     <div>
-      <section className='py-14'>
+      <section className=' py-14'>
         <div className='mx-auto max-w-screen-xl px-4 md:px-8'>
-          <div className='mx-auto max-w-xl sm:text-center'>
+          <div className='mx-auto max-w-xl text-center'>
             <h3 className='text-3xl font-semibold text-gray-800 sm:text-4xl'>
-              Our team
+              Meet Our Amazing Team
             </h3>
             <p className='mt-3 text-gray-600'>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -98,19 +98,27 @@ const page = () => {
           <div className='mt-12'>
             <ul className='grid gap-8 sm:grid-cols-2 md:grid-cols-3'>
               {team.map((item, idx) => (
-                <li key={idx}>
-                  <div className='h-60 w-full sm:h-52 md:h-56'>
+                <li
+                  key={idx}
+                  className='transform overflow-hidden rounded-xl bg-white shadow-lg transition-transform hover:scale-105'
+                >
+                  <div className='h-60 w-full overflow-hidden sm:h-52 md:h-56'>
                     <img
                       src={item.avatar}
-                      className='h-full w-full rounded-xl object-cover object-center shadow-md'
-                      alt=''
+                      className='h-full w-full rounded-t-xl object-cover object-center'
+                      alt={item.name}
                     />
                   </div>
-                  <div className='mt-4'>
-                    <h4 className='text-lg font-semibold text-gray-700'>
+                  <div className='p-4'>
+                    <h4 className='text-xl font-bold text-gray-900'>
                       {item.name}
                     </h4>
-                    <p className='text-indigo-600'>{item.title}</p>
+                    <p className='text-gray-600'>{item.title}</p>
+                    <div className='mt-4 flex items-center justify-between'>
+                      <button className='text-sm text-gray-600 hover:text-indigo-600 focus:outline-none'>
+                        View Profile
+                      </button>
+                    </div>
                   </div>
                 </li>
               ))}
@@ -118,6 +126,7 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section className='py-14'>
         <div className='mx-auto max-w-screen-xl px-4 md:px-8'>
           <div className='max-w-lg'>
