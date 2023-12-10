@@ -4,6 +4,7 @@ import { Plus, Star, View, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
 const productFeatures = [
@@ -92,12 +93,15 @@ function ProductDetailsModal({
 
           <div className='grid grid-cols-1 gap-8 px-4  sm:grid-cols-2 sm:px-7'>
             <div>
-              <div className='flex h-4/5 justify-center '>
-                <img
+              <div className='h-5/5 flex justify-center '>
+                <motion.img
                   src={selectedImage}
                   alt='Product'
                   className='w-full cursor-pointer rounded-lg object-contain'
                   onClick={() => console.log('Zoom or open full-size image')}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
                 />
               </div>
               <div className='mt-4'>
@@ -156,7 +160,12 @@ function ProductDetailsModal({
                 clothing, footwear, lifestyle, accessories, makeup, hairstyle,
                 and body posture.
               </p>
-              <div className='mb-5 flex gap-5'>
+              <motion.div
+                className='mb-5 flex flex-wrap gap-5'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 }}
+              >
                 <div className='flex'>
                   <button
                     className='bg-slate-0 mr-2 cursor-pointer rounded-xl border p-2 px-4 text-lg sm:text-2xl'
@@ -168,10 +177,14 @@ function ProductDetailsModal({
                   >
                     -
                   </button>
-                  <div className='flex items-center justify-center px-4 text-xl sm:text-4xl'>
+                  <motion.div
+                    className='flex items-center justify-center px-4 text-xl sm:text-4xl'
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                  >
                     {quantity}
-                  </div>
-
+                  </motion.div>
                   <button
                     className='bg-slate-0 ml-2 cursor-pointer rounded-xl border p-2 px-4 text-lg sm:text-2xl'
                     onClick={() =>
@@ -185,41 +198,87 @@ function ProductDetailsModal({
                   <Plus className='mr-3' size={22} />
                   Add to Cart
                 </Button>
-              </div>
-              <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Sizes</h3>
-              <div className='mb-5 flex items-center justify-between'>
+              </motion.div>
+              <motion.h3
+                className='mb-5 text-lg font-semibold sm:text-xl'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.4 }}
+              >
+                Sizes
+              </motion.h3>
+              <motion.div
+                className='mb-5 flex flex-wrap gap-2'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.6 }}
+              >
                 {sizeOptions.map((size: any, index) => (
-                  <SizeOption
+                  <motion.div
                     key={index}
-                    size={size}
-                    isSelected={selectedSize === size}
-                    onSelect={() => setSelectedSize(size)}
-                  />
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
+                  >
+                    <SizeOption
+                      size={size}
+                      isSelected={selectedSize === size}
+                      onSelect={() => setSelectedSize(size)}
+                    />
+                  </motion.div>
                 ))}
-              </div>
-              <h3 className='mb-5 text-lg font-semibold sm:text-xl'>Colors</h3>
-              <div className='mb-5 flex gap-2'>
+              </motion.div>
+              <motion.h3
+                className='mb-5 text-lg font-semibold sm:text-xl'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.8 }}
+              >
+                Colors
+              </motion.h3>
+              <motion.div
+                className='mb-5 flex gap-2'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.0 }}
+              >
                 {colorOptions.map((color: any, index) => (
-                  <ColorOption
+                  <motion.div
                     key={index}
-                    color={color}
-                    isSelected={selectedColor === color}
-                    onSelect={() => setSelectedColor(color)}
-                  />
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 2.0 + index * 0.1 }}
+                  >
+                    <ColorOption
+                      color={color}
+                      isSelected={selectedColor === color}
+                      onSelect={() => setSelectedColor(color)}
+                    />
+                  </motion.div>
                 ))}
-              </div>
-              <div>
-                <h2 className='mb-5 text-xl font-semibold sm:text-2xl'>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 2.2 }}
+              >
+                <motion.h2 className='mb-5 text-xl font-semibold sm:text-2xl'>
                   Product Features
-                </h2>
-                <ul className='ml-6 list-disc'>
+                </motion.h2>
+                <motion.ul className='ml-6 list-disc'>
                   {productFeatures.map((feature, index) => (
-                    <li key={index} className='mb-5 text-xs text-gray-600'>
+                    <motion.li
+                      key={index}
+                      className='mb-5 text-xs text-gray-600'
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 2.2 + index * 0.1 }}
+                    >
                       {feature}
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
-              </div>
+                </motion.ul>
+              </motion.div>
             </div>
           </div>
         </Modal.Body>

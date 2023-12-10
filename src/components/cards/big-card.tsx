@@ -17,16 +17,20 @@ const BigCard: React.FC<BigCardProps> = ({
 }) => {
   return (
     <section
-      className={`bg-${color}-50 transform cursor-pointer overflow-hidden rounded-lg p-5 py-10 text-center shadow-lg duration-500 hover:-translate-y-2`}
+      className={`grid grid-cols-1 md:grid-cols-2 bg-${color}-50 flex transform cursor-pointer items-center justify-center overflow-hidden rounded-lg p-5 py-10 shadow duration-500 hover:-translate-y-2`}
     >
-      <img src={url} alt='' className='mb-6  w-full rounded-md object-cover' />
-
-      <h1 className='my-2 text-2xl font-bold'>{title}</h1>
-      <p className='mb-4 text-gray-700'>{description}</p>
-      <h2 className='mb-2 text-xl font-semibold text-black'>{price}</h2>
-      <button className='rounded-md bg-black p-2 px-6 text-white transition duration-300 hover:bg-green-600'>
-        Add To Cart
-      </button>
+      <div className='mb-6 md:mb-0 md:pr-5'>
+        <img
+          src={url}
+          alt=''
+          className='h-64 w-full rounded-md object-cover md:h-full'
+        />
+      </div>
+      <div className='flex flex-col'>
+        <h1 className='my-2 text-xl font-bold '>{title}</h1>
+        <p className='mb-4 text-sm text-gray-700'>{description}</p>
+        <h2 className='mb-2 text-xl font-semibold text-black'>{price}</h2>
+      </div>
     </section>
   );
 };

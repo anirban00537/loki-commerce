@@ -128,19 +128,7 @@ const Collections = () => {
           <div className='mb-4'>
             <h1 className='text-4xl font-semibold'>Products</h1>
           </div>
-          <div className='mb-5 mt-6 flex items-center gap-3  pt-2 md:mb-0 md:mt-0  md:space-x-4 md:pt-0 lg:hidden'>
-            {/* <Dropdown label='Color' inline>
-              <Dropdown.Item>Dashboard</Dropdown.Item>
-              <Dropdown.Item>Settings</Dropdown.Item>
-              <Dropdown.Item>Earnings</Dropdown.Item>
-              <Dropdown.Item>Sign out</Dropdown.Item>
-            </Dropdown>
-            <Dropdown label='Category' inline>
-              <Dropdown.Item>Dashboard</Dropdown.Item>
-              <Dropdown.Item>Settings</Dropdown.Item>
-              <Dropdown.Item>Earnings</Dropdown.Item>
-              <Dropdown.Item>Sign out</Dropdown.Item>
-            </Dropdown> */}
+          <div className='mb-5 mt-6 flex items-center gap-3 pt-2 md:mb-0 md:mt-0 md:space-x-4 md:pt-0 lg:hidden'>
             {filters.map((filter, i) => (
               <Dropdown key={i} label={filter.name} inline>
                 {filter.options.map((option, index) => (
@@ -151,6 +139,7 @@ const Collections = () => {
           </div>
         </div>
         <div className='lg:grid lg:grid-cols-12 lg:gap-x-6'>
+          {/* Sidebar */}
           <div className='hidden space-y-6 divide-y border-r lg:col-span-3 lg:block'>
             {filters.map((filter) => (
               <div key={filter.id} className='pt-6'>
@@ -184,6 +173,7 @@ const Collections = () => {
               </div>
             ))}
           </div>
+          {/* Main Content */}
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-9 lg:h-full xl:grid-cols-3'>
             {products.map((product, index) => (
               <ProductCardWithSize

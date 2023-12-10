@@ -1,13 +1,40 @@
-import React from 'react'
+import React from 'react';
 import { X } from 'lucide-react';
+const CartItem = ({ product }: any) => (
+  <li className='flex items-center justify-between space-x-5 border-b border-gray-200 py-4'>
+    <div className='flex items-center space-x-4'>
+      <div className='h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg border border-gray-200 bg-white'>
+        <img
+          className='h-full w-full object-cover'
+          src={product.imageSrc}
+          alt={product.name}
+        />
+      </div>
+      <div>
+        <p className='text-base font-bold text-gray-900'>{product.name}</p>
+        <p className='text-sm text-gray-500'>{product.color}</p>
+      </div>
+    </div>
+    <div className='flex items-center space-x-4'>
+      <p className='text-base font-bold text-gray-900'>{product.price}</p>
+      <button
+        type='button'
+        className='text-gray-400 transition-all duration-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2'
+      >
+        <span className='sr-only'>Remove</span>
+        <X className='h-5 w-5' />
+      </button>
+    </div>
+  </li>
+);
 
 const products = [
   {
     id: 1,
     name: 'Nike Air Force 1 07 LV8',
     href: '#',
-    price: '₹47,199',
-    originalPrice: '₹48,900',
+    price: '$99',
+    originalPrice: '$900',
     discount: '5% Off',
     color: 'Orange',
     size: '8 UK',
@@ -18,8 +45,8 @@ const products = [
     id: 2,
     name: 'Nike Blazer Low 77 SE',
     href: '#',
-    price: '₹1,549',
-    originalPrice: '₹2,499',
+    price: '$1549',
+    originalPrice: '$2499',
     discount: '38% off',
     color: 'White',
     leadTime: '3-4 weeks',
@@ -31,8 +58,8 @@ const products = [
     id: 3,
     name: 'Nike Air Max 90',
     href: '#',
-    price: '₹2219 ',
-    originalPrice: '₹999',
+    price: '$2219 ',
+    originalPrice: '$999',
     discount: '78% off',
     color: 'Black',
     imageSrc:
@@ -41,48 +68,20 @@ const products = [
 ];
 const Checkout = () => {
   return (
-    <div className='mx-auto my-4 max-w-6xl md:my-6 md:mt-20 '>
+    <div className='container my-4 max-w-6xl md:my-6 md:mt-20 '>
+      <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
+        <div className='mb-4'>
+          <h1 className='text-4xl font-semibold'>Your Card</h1>
+        </div>
+        <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'></div>
+      </div>
       <div className='overflow-hidden  rounded-xl shadow'>
         <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div className='bg-gray-100 px-5 py-6 md:px-8'>
+          <div className='bg-white  px-5 py-6 md:px-8'>
             <div className='flow-root'>
               <ul className='-my-7 divide-y divide-gray-200'>
                 {products.map((product) => (
-                  <li
-                    key={product.id}
-                    className='flex items-stretch justify-between space-x-5 py-7'
-                  >
-                    <div className='flex flex-1 items-stretch'>
-                      <div className='flex-shrink-0'>
-                        <img
-                          className='h-20 w-20 rounded-lg border border-gray-200 bg-white object-contain'
-                          src={product.imageSrc}
-                          alt={product.imageSrc}
-                        />
-                      </div>
-                      <div className='ml-5 flex flex-col justify-between'>
-                        <div className='flex-1'>
-                          <p className='text-sm font-bold'>{product.name}</p>
-                          <p className='mt-1.5 text-sm font-medium text-gray-500'>
-                            {product.color}
-                          </p>
-                        </div>
-                        <p className='mt-4 text-xs font-medium '>x 1</p>
-                      </div>
-                    </div>
-                    <div className='ml-auto flex flex-col items-end justify-between'>
-                      <p className='text-right text-sm font-bold text-gray-900'>
-                        {product.price}
-                      </p>
-                      <button
-                        type='button'
-                        className='-m-2 inline-flex rounded p-2 text-gray-400 transition-all duration-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2'
-                      >
-                        <span className='sr-only'>Remove</span>
-                        <X className='h-5 w-5' />
-                      </button>
-                    </div>
-                  </li>
+                  <CartItem key={product.id} product={product} />
                 ))}
               </ul>
             </div>
@@ -109,11 +108,11 @@ const Checkout = () => {
             <ul className='mt-6 space-y-3'>
               <li className='flex items-center justify-between text-gray-600'>
                 <p className='text-sm font-medium'>Sub total</p>
-                <p className='text-sm font-medium'>₹1,14,399</p>
+                <p className='text-sm font-medium'>$399</p>
               </li>
               <li className='flex items-center justify-between text-gray-900'>
                 <p className='text-sm font-medium '>Total</p>
-                <p className='text-sm font-bold '>₹1,14,399</p>
+                <p className='text-sm font-bold '>$114</p>
               </li>
             </ul>
           </div>
@@ -329,6 +328,6 @@ const Checkout = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Checkout
+export default Checkout;
