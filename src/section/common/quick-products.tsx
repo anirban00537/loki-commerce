@@ -37,7 +37,7 @@ const QuickProducts = () => {
     {
       url: '/images/bg-card-3.png',
       color: 'yellow',
-      title: 'Yellow Floral Summer Dress',
+      title: 'Yellow Floral Dress',
       description: 'A yellow floral summer dress for a vibrant style.',
       price: '$39.99',
     },

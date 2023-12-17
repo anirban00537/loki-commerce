@@ -89,24 +89,34 @@ const HotDeals = () => {
   return (
     <section className='w-full'>
       <div className='mt-12'></div>
-      <SaleBanner text='Limited Time Sale Offer! Hurry up Stock is limited!' />
+      <SectionWrapper visible={true}>
+        <SaleBanner text='Limited Time Sale Offer! Hurry up Stock is limited!' />
+      </SectionWrapper>
       <div className='mx-auto max-w-7xl px-2 py-10 lg:px-0'>
         <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
-          <div className='mb-4'>
-            <h1 className='text-4xl font-semibold'>Hot Deals</h1>
-          </div>
+          <SectionWrapper visible={true}>
+            <div className='mb-4'>
+              <h1 className='text-4xl font-semibold'>Hot Deals</h1>
+            </div>
+          </SectionWrapper>
           <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'></div>
         </div>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {products.map((product, index) => (
-            <ProductCardWithSize
+            <SectionWrapper
               key={index}
-              name={product.name}
-              image={product.image}
-              price={product.price}
-              rating={product.rating}
-              reviews={product.reviews}
-            />
+              delay={parseFloat(`0.${index}`)}
+              visible={true}
+            >
+              <ProductCardWithSize
+                key={index}
+                name={product.name}
+                image={product.image}
+                price={product.price}
+                rating={product.rating}
+                reviews={product.reviews}
+              />
+            </SectionWrapper>
           ))}
         </div>
         <RightPagination />

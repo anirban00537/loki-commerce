@@ -1,16 +1,30 @@
 import { Countdown } from '@/components/animations/timer.animation';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const getEndTime = () => {
   const now = new Date();
   const endTime = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days later
   return endTime;
 };
-const SaleBanner = ({ text = 'Black Friday Sale Get 50% Discount' }) => {
+
+const SaleBanner = ({
+  text = 'Black Friday Sale Get 50% Discount',
+  backgroundImage = 'url("https://images.unsplash.com/photo-1499971442178-8c10fdf5f6ac?q=80&w=1982&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+}) => {
   const endTime = getEndTime();
 
+  const backgroundStyle = {
+    backgroundImage: backgroundImage,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
+
   return (
-    <section className='container rounded-2xl z-10  overflow-hidden bg-black px-8 py-16'>
+    <section
+      className='container z-10 overflow-hidden rounded-2xl bg-black px-8 py-16'
+      style={backgroundStyle}
+    >
       <div className='container'>
         <div className='-mx-4 flex flex-wrap items-center'>
           <div className='w-full px-4 lg:w-1/2'>
@@ -36,214 +50,18 @@ const SaleBanner = ({ text = 'Black Friday Sale Get 50% Discount' }) => {
           </div>
         </div>
       </div>
-      <span className='absolute right-0 top-0 -z-10'>
-        <svg
-          width={388}
-          height={250}
-          viewBox='0 0 388 220'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            opacity='0.05'
-            d='M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z'
-            fill='url(#paint0_linear_971_6910)'
-          />
-          <defs>
-            <linearGradient
-              id='paint0_linear_971_6910'
-              x1='60.5'
-              y1={111}
-              x2={287}
-              y2={111}
-              gradientUnits='userSpaceOnUse'
-            >
-              <stop offset='0.520507' stopColor='white' />
-              <stop offset={1} stopColor='white' stopOpacity={0} />
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span className='absolute right-0 top-0 -z-10'>
-        <svg
-          width={324}
-          height={250}
-          viewBox='0 0 324 220'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            opacity='0.05'
-            d='M203 -28.5L4.87819e-05 250.5L881.5 250.5L881.5 -28.5002L203 -28.5Z'
-            fill='url(#paint0_linear_971_6911)'
-          />
-          <defs>
-            <linearGradient
-              id='paint0_linear_971_6911'
-              x1='60.5'
-              y1={111}
-              x2={287}
-              y2={111}
-              gradientUnits='userSpaceOnUse'
-            >
-              <stop offset='0.520507' stopColor='white' />
-              <stop offset={1} stopColor='white' stopOpacity={0} />
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span className='absolute left-4 top-4 -z-10'>
-        <svg
-          width={43}
-          height={56}
-          viewBox='0 0 43 56'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <g opacity='0.5'>
-            <circle
-              cx='40.9984'
-              cy='1.49626'
-              r='1.49626'
-              transform='rotate(90 40.9984 1.49626)'
-              fill='white'
-            />
-            <circle
-              cx='27.8304'
-              cy='1.49626'
-              r='1.49626'
-              transform='rotate(90 27.8304 1.49626)'
-              fill='white'
-            />
-            <circle
-              cx='14.6644'
-              cy='1.49626'
-              r='1.49626'
-              transform='rotate(90 14.6644 1.49626)'
-              fill='white'
-            />
-            <circle
-              cx='1.49642'
-              cy='1.49626'
-              r='1.49626'
-              transform='rotate(90 1.49642 1.49626)'
-              fill='white'
-            />
-            <circle
-              cx='40.9984'
-              cy='14.6642'
-              r='1.49626'
-              transform='rotate(90 40.9984 14.6642)'
-              fill='white'
-            />
-            <circle
-              cx='27.8304'
-              cy='14.6642'
-              r='1.49626'
-              transform='rotate(90 27.8304 14.6642)'
-              fill='white'
-            />
-            <circle
-              cx='14.6644'
-              cy='14.6642'
-              r='1.49626'
-              transform='rotate(90 14.6644 14.6642)'
-              fill='white'
-            />
-            <circle
-              cx='1.49642'
-              cy='14.6642'
-              r='1.49626'
-              transform='rotate(90 1.49642 14.6642)'
-              fill='white'
-            />
-            <circle
-              cx='40.9984'
-              cy='27.8302'
-              r='1.49626'
-              transform='rotate(90 40.9984 27.8302)'
-              fill='white'
-            />
-            <circle
-              cx='27.8304'
-              cy='27.8302'
-              r='1.49626'
-              transform='rotate(90 27.8304 27.8302)'
-              fill='white'
-            />
-            <circle
-              cx='14.6644'
-              cy='27.8302'
-              r='1.49626'
-              transform='rotate(90 14.6644 27.8302)'
-              fill='white'
-            />
-            <circle
-              cx='1.49642'
-              cy='27.8302'
-              r='1.49626'
-              transform='rotate(90 1.49642 27.8302)'
-              fill='white'
-            />
-            <circle
-              cx='40.9984'
-              cy='40.9982'
-              r='1.49626'
-              transform='rotate(90 40.9984 40.9982)'
-              fill='white'
-            />
-            <circle
-              cx='27.8304'
-              cy='40.9963'
-              r='1.49626'
-              transform='rotate(90 27.8304 40.9963)'
-              fill='white'
-            />
-            <circle
-              cx='14.6644'
-              cy='40.9982'
-              r='1.49626'
-              transform='rotate(90 14.6644 40.9982)'
-              fill='white'
-            />
-            <circle
-              cx='1.49642'
-              cy='40.9963'
-              r='1.49626'
-              transform='rotate(90 1.49642 40.9963)'
-              fill='white'
-            />
-            <circle
-              cx='40.9984'
-              cy='54.1642'
-              r='1.49626'
-              transform='rotate(90 40.9984 54.1642)'
-              fill='white'
-            />
-            <circle
-              cx='27.8304'
-              cy='54.1642'
-              r='1.49626'
-              transform='rotate(90 27.8304 54.1642)'
-              fill='white'
-            />
-            <circle
-              cx='14.6644'
-              cy='54.1642'
-              r='1.49626'
-              transform='rotate(90 14.6644 54.1642)'
-              fill='white'
-            />
-            <circle
-              cx='1.49642'
-              cy='54.1642'
-              r='1.49626'
-              transform='rotate(90 1.49642 54.1642)'
-              fill='white'
-            />
-          </g>
-        </svg>
-      </span>
+      <div
+        className='absolute right-0 top-0 -z-10'
+        style={{ width: '388px', height: '250px' }}
+      ></div>
+      <div
+        className='absolute right-0 top-0 -z-10'
+        style={{ width: '324px', height: '250px' }}
+      ></div>
+      <div
+        className='absolute left-4 top-4 -z-10'
+        style={{ width: '43px', height: '56px' }}
+      ></div>
     </section>
   );
 };

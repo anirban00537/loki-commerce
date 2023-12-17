@@ -5,6 +5,7 @@ import { Plus } from 'lucide-react';
 import { Modal, Rating } from 'flowbite-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import TabDetails from '@/section/details/tab-details';
 
 const SizeOption = ({ size, isSelected, onSelect }: any) => (
   <div
@@ -32,7 +33,14 @@ const productFeatures = [
   'Ergonomically designed for a comfortable fit, providing support throughout the day.',
   'Built with durability in mind to withstand daily wear and tear.',
   'Featuring a stylish and modern design, making it a versatile addition to your wardrobe.',
+  'Versatile Styling Options: Designed to complement a variety of outfits, offering versatility for different occasions and personal styles.',
+  'Enhanced Functionality: Equipped with practical features that enhance usability, such as multiple pockets, easy-to-use closures, or convenient compartments.',
+  'Easy Maintenance: Simple to care for with low-maintenance requirements, ensuring your product stays in top condition with minimal effort.',
+  'Environmentally Conscious: Crafted with eco-friendly materials and sustainable practices, aligning with a commitment to environmental responsibility.',
+  'All-Day Comfort: Engineered for prolonged wear, providing maximum comfort for extended periods of use.',
+
 ];
+
 const productImages = [
   'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -189,7 +197,7 @@ const Details = () => {
             Sizes
           </motion.h3>
           <motion.div
-            className='mb-5 flex gap-2 flex-wrap'
+            className='mb-5 flex flex-wrap gap-2'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.6 }}
@@ -262,6 +270,7 @@ const Details = () => {
           </motion.div>
         </div>
       </div>
+      <TabDetails />
     </motion.div>
   );
 };

@@ -5,9 +5,9 @@ const BigCards = () => {
   return (
     <SectionWrapper>
       <section>
-        <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 mt-36'>
+        <div className='mx-auto mt-36 max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8'>
           <header className='text-start'>
-            <h2 className='text-3xl font-bold uppercase text-gray-900 sm:text-3xl'>
+            <h2 className='text-3xl font-medium uppercase text-slate-800'>
               Retro Collections
             </h2>
           </header>
@@ -23,9 +23,7 @@ const BigCards = () => {
                   <h3 className='text-xl font-medium text-white'>
                     Casual Trainers
                   </h3>
-                  <span className='mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'>
-                    Shop Now
-                  </span>
+                  
                 </div>
               </a>
             </li>
@@ -40,9 +38,7 @@ const BigCards = () => {
                   <h3 className='text-xl font-medium text-white'>
                     Winter Jumpers
                   </h3>
-                  <span className='mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'>
-                    Shop Now
-                  </span>
+                  
                 </div>
               </a>
             </li>
@@ -57,9 +53,7 @@ const BigCards = () => {
                   <h3 className='text-xl font-medium text-white'>
                     Skinny Jeans Blue
                   </h3>
-                  <span className='mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'>
-                    Shop Now
-                  </span>
+                  
                 </div>
               </a>
             </li>
@@ -74,9 +68,7 @@ const BigCards = () => {
                   <h3 className='text-xl font-medium text-white'>
                     Casual Trainers
                   </h3>
-                  <span className='mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'>
-                    Shop Now
-                  </span>
+                  
                 </div>
               </a>
             </li>
@@ -91,9 +83,7 @@ const BigCards = () => {
                   <h3 className='text-xl font-medium text-white'>
                     Winter Jumpers
                   </h3>
-                  <span className='mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white'>
-                    Shop Now
-                  </span>
+                  
                 </div>
               </a>
             </li>
