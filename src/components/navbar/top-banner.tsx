@@ -11,7 +11,7 @@ const TopBanner = () => {
   return (
     <>
       {isVisible && (
-        <div className='hidden bg-gray-200 sm:block'>
+        <div className='hidden bg-black sm:block'>
           <div className='mx-auto flex max-w-screen-xl items-start justify-between px-4  text-white sm:items-center md:px-8'>
             <div className='flex flex-1 items-start justify-center gap-x-4 sm:items-center'>
               <div className='flex flex-none items-center justify-center rounded-lg border border-gray-400 bg-gray-500 p-1 px-4 text-xs font-medium'>
