@@ -44,6 +44,7 @@ const productImages = [
   'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1595780662105-fa76460ddb04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1623580674393-edf6eb7090f8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 ];
 const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
@@ -66,41 +67,18 @@ const Details = () => {
     >
       <div className='grid grid-cols-1 gap-8 px-4  sm:grid-cols-2 sm:px-7'>
         <div className='h-auto'>
-          <div className='flex gap-2'>
-            <div className='grid gap-4'>
-              <div>
-                <motion.img
-                  src={selectedImage}
-                  alt='Product'
-                  className='w-full cursor-pointer rounded-lg object-contain'
-                  onClick={() => console.log('Zoom or open full-size image')}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-              <div className='grid grid-cols-5 gap-4'>
-                {productImages.map((image, index) => (
-                  <motion.img
-                    key={index}
-                    src={image}
-                    alt={`Product Thumbnail ${index}`}
-                    className={`h-auto max-w-full rounded-lg  ${
-                      image === selectedImage ? 'border-2 border-blue-500' : ''
-                    }`}
-                    onClick={() => handleImageClick(image)}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  />
+          <div className=''>
+            <div className='flex gap-2'>
+              <div className='grid grid-cols-2 gap-2'>
+                {productImages.map((image) => (
+                  <div>
+                    <img
+                      className='h-auto max-w-full rounded-lg'
+                      src={image}
+                      alt=''
+                    />
+                  </div>
                 ))}
-                {/* <div>
-                  <img
-                    className='h-auto max-w-full rounded-lg'
-                    src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg'
-                    alt=''
-                  />
-                </div> */}
               </div>
             </div>
           </div>
