@@ -1,10 +1,12 @@
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import React from 'react';
 import { Trash, Heart, ShoppingBagIcon, ShoppingBasket } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 import { RiShoppingCart2Line } from 'react-icons/ri';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import SectionWrapper from '@/components/animations/section.animation';
 const products = [
   {
     id: 1,
@@ -44,63 +46,82 @@ const products = [
   },
 ];
 const CartSheet = ({ addToCart, cartCount }: any) => {
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <Sheet>
       <SheetTrigger>
-        <div className='relative ml-3'>
-          <RiShoppingCart2Line className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500' />
-          <div className='text-white-background absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-400 text-xs text-white'>
-            {cartCount}
+        <motion.div
+          className='relative ml-3'
+          initial='hidden'
+          animate='visible'
+          variants={variants}
+        >
+          <div className='relative ml-3'>
+            <RiShoppingCart2Line className='h-6 w-6 cursor-pointer text-gray-500 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-500' />
+            <div className='text-white-background absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-400 text-xs text-white'>
+              {cartCount}
+            </div>
           </div>
-        </div>
+        </motion.div>
       </SheetTrigger>
       <SheetContent>
         <div className='mx-auto flex max-w-3xl flex-col space-y-4 p-6 px-2 sm:p-10 sm:px-2'>
           <h2 className='text-3xl font-bold'>Your cart</h2>
 
           <ul className='flex flex-col divide-y divide-gray-200'>
-            {products.map((product) => (
-              <li
-                key={product.id}
-                className='flex flex-col py-6 sm:flex-row sm:justify-between'
+            {products.map((product, index) => (
+              <SectionWrapper
+                key={index}
+                delay={parseFloat(`0.${index}`)}
+                visible={true}
               >
-                <div className='flex w-full space-x-2 sm:space-x-4'>
-                  <img
-                    className=' h-6 w-6 flex-shrink-0 rounded object-contain outline-none dark:border-transparent sm:h-16 sm:w-16'
-                    src={product.imageSrc}
-                    alt={product.name}
-                  />
-                  <div className='flex w-full flex-col justify-between pb-4'>
-                    <div className='flex w-full justify-between space-x-2 pb-2'>
-                      <div className='space-y-1'>
-                        <h3 className='text-lg font-semibold leading-snug sm:pr-8'>
-                          {product.name}
-                        </h3>
-                        <p className='text-sm'>{product.color}</p>
+                <li
+                  key={product.id}
+                  className='flex flex-col py-6 sm:flex-row sm:justify-between'
+                >
+                  <div className='flex w-full space-x-2 sm:space-x-4'>
+                    <img
+                      className=' h-6 w-6 flex-shrink-0 rounded object-contain outline-none dark:border-transparent sm:h-16 sm:w-16'
+                      src={product.imageSrc}
+                      alt={product.name}
+                    />
+                    <div className='flex w-full flex-col justify-between pb-4'>
+                      <div className='flex w-full justify-between space-x-2 pb-2'>
+                        <div className='space-y-1'>
+                          <h3 className='text-lg font-semibold leading-snug sm:pr-8'>
+                            {product.name}
+                          </h3>
+                          <p className='text-sm'>{product.color}</p>
+                        </div>
+                        <div className='text-right'>
+                          <p className='text-lg font-semibold'>
+                            {product.price}
+                          </p>
+                        </div>
                       </div>
-                      <div className='text-right'>
-                        <p className='text-lg font-semibold'>{product.price}</p>
+                      <div className='flex divide-x text-sm'>
+                        <button
+                          type='button'
+                          className='flex items-center space-x-2 px-2 py-1 pl-0'
+                        >
+                          <Trash size={16} />
+                          <span>Remove</span>
+                        </button>
+                        <button
+                          type='button'
+                          className='flex items-center space-x-2 px-2 py-1 text-xs'
+                        >
+                          <Heart size={16} />
+                          <span>Add to favorites</span>
+                        </button>
                       </div>
-                    </div>
-                    <div className='flex divide-x text-sm'>
-                      <button
-                        type='button'
-                        className='flex items-center space-x-2 px-2 py-1 pl-0'
-                      >
-                        <Trash size={16} />
-                        <span>Remove</span>
-                      </button>
-                      <button
-                        type='button'
-                        className='flex items-center space-x-2 px-2 py-1 text-xs'
-                      >
-                        <Heart size={16} />
-                        <span>Add to favorites</span>
-                      </button>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </SectionWrapper>
             ))}
           </ul>
           <div className='space-y-1 text-right'>

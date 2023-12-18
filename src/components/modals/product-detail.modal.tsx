@@ -66,7 +66,7 @@ function ProductDetailsModal({
     >
       <div className='flex flex-wrap gap-4'>
         <Button
-          className='ml-2 w-full border bg-white text-black hover:bg-slate-100'
+          className='ml-2 w-full rounded-2xl border bg-white text-xs text-black opacity-60 hover:bg-slate-100'
           onClick={(e) => {
             e.preventDefault();
             setOpenModal(true);

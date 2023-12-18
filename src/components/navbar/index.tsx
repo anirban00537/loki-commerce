@@ -20,7 +20,10 @@ import { useScreenWidth } from '@/lib/helper';
 interface SearchProps {
   setShowSearch: Dispatch<SetStateAction<boolean>>;
 }
-
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 function Search({ setShowSearch }: SearchProps) {
   const handleClearSearch = () => {
     setShowSearch(false);
@@ -84,127 +87,150 @@ function NavbarComp() {
                 />
               </div>
             </Link>
-            <nav className='relative float-right flex place-content-between max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:hidden max-[991px]:bg-black max-[991px]:py-1 max-[991px]:text-left'>
-              <div className='mx-auto flex items-start text-base max-[991px]:flex-col lg:items-center'>
-                <Link
-                  href='/'
-                  target='_self'
-                  className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
+            <motion.div
+              className='relative ml-3'
+              initial='hidden'
+              animate='visible'
+              variants={variants}
             >
-                  Home
-                </Link>
-                <Link
-                  href='/collections'
-                  target='_self'
-                  className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
-                >
-                  Shop
-                </Link>
-                <Link
-                  href='/categories'
-                  target='_self'
-                  className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
-                >
-                  Categories
-                </Link>
-                <div className='group relative'>
-                  <button
-                    type='button'
-                    className='flex items-center px-2 py-2 leading-6 text-black'
+              <nav className='relative float-right flex place-content-between max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:hidden max-[991px]:bg-black max-[991px]:py-1 max-[991px]:text-left'>
+                <div className='mx-auto flex items-start text-base max-[991px]:flex-col lg:items-center'>
+                  <Link
+                    href='/'
+                    target='_self'
+                    className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
                   >
-                    Product
-                    <ChevronDown className='h-5 w-5 flex-none text-gray-400' />
-                  </button>
+                    Home
+                  </Link>
+                  <Link
+                    href='/collections'
+                    target='_self'
+                    className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
+                  >
+                    Shop
+                  </Link>
+                  <Link
+                    href='/categories'
+                    target='_self'
+                    className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
+                  >
+                    Categories
+                  </Link>
+                  <div className='group relative'>
+                    <button
+                      type='button'
+                      className='flex items-center px-2 py-2 leading-6 text-black'
+                    >
+                      Product
+                      <ChevronDown className='h-5 w-5 flex-none text-gray-400' />
+                    </button>
 
-                  <div className='absolute -left-8 top-full z-10 hidden w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 group-hover:block'>
-                    <div className=''>
-                      <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
-                        <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-                          <Star className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
+                    <div className='absolute -left-8 top-full z-10 hidden w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 group-hover:block'>
+                      <div className=''>
+                        <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
+                          <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                            <Star className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
+                          </div>
+                          <div className='flex-auto'>
+                            <Link
+                              href='/hot-deals'
+                              className='block font-semibold text-gray-900'
+                            >
+                              Hot Deals
+                              <span className='absolute inset-0'></span>
+                            </Link>
+                            <p className='mt-1 text-gray-600'>
+                              Get Hot deals here{' '}
+                            </p>
+                          </div>
                         </div>
-                        <div className='flex-auto'>
-                          <Link
-                            href='/hot-deals'
-                            className='block font-semibold text-gray-900'
-                          >
-                            Hot Deals
-                            <span className='absolute inset-0'></span>
-                          </Link>
-                          <p className='mt-1 text-gray-600'>
-                            Get Hot deals here{' '}
-                          </p>
+
+                        <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
+                          <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                            <Sun className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
+                          </div>
+                          <div className='flex-auto'>
+                            <a
+                              href='#'
+                              className='block font-semibold text-gray-900'
+                            >
+                              Winter Deals
+                              <span className='absolute inset-0'></span>
+                            </a>
+                            <p className='mt-1 text-gray-600'>
+                              Get Winter Deals
+                            </p>
+                          </div>
                         </div>
                       </div>
-
-                      <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
-                        <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-                          <Sun className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
-                        </div>
-                        <div className='flex-auto'>
-                          <a
-                            href='#'
-                            className='block font-semibold text-gray-900'
-                          >
-                            Winter Deals
-                            <span className='absolute inset-0'></span>
-                          </a>
-                          <p className='mt-1 text-gray-600'>Get Winter Deals</p>
-                        </div>
+                      <div className='grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50'>
+                        <a
+                          href='#'
+                          className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
+                        >
+                          <Sun className='h-5 w-5 flex-none text-gray-400' />
+                          Summer Deals
+                        </a>
+                        <a
+                          href='#'
+                          className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
+                        >
+                          <Snowflake className='h-5 w-5 flex-none text-gray-400' />
+                          Winter Deals
+                        </a>
                       </div>
-                    </div>
-                    <div className='grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50'>
-                      <a
-                        href='#'
-                        className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
-                      >
-                        <Sun className='h-5 w-5 flex-none text-gray-400' />
-                        Summer Deals
-                      </a>
-                      <a
-                        href='#'
-                        className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
-                      >
-                        <Snowflake className='h-5 w-5 flex-none text-gray-400' />
-                        Winter Deals
-                      </a>
                     </div>
                   </div>
+                  <Link
+                    href='/hot-deals'
+                    target='_self'
+                    className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
+                  >
+                    Hot Deals
+                  </Link>
+                  <Link
+                    href='/about'
+                    target='_self'
+                    className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
+                  >
+                    About
+                  </Link>
                 </div>
-                <Link
-                  href='/hot-deals'
-                  target='_self'
-                  className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
-                >
-                  Hot Deals
-                </Link>
-                <Link
-                  href='/about'
-                  target='_self'
-                  className='px-5 py-2 text-black transition max-[991px]:block md:px-10 lg:px-4'
-                >
-                  About
-                </Link>
-              </div>
-            </nav>
+              </nav>
+            </motion.div>
           </div>
           <div className='flex items-center gap-x-4 '>
             {!showSearch && (
-              <RiSearchLine
-                className='hover:text-black-700 dark:hover:text-black-500 h-6 w-6 cursor-pointer text-gray-500 dark:text-gray-400'
-                onClick={() => {
-                  setShowSearch(true);
-                }}
-              />
+              <motion.div
+                className='relative ml-3'
+                initial='hidden'
+                animate='visible'
+                variants={variants}
+              >
+                <RiSearchLine
+                  className='hover:text-black-700 dark:hover:text-black-500 h-6 w-6 cursor-pointer text-gray-500 dark:text-gray-400'
+                  onClick={() => {
+                    setShowSearch(true);
+                  }}
+                />
+              </motion.div>
             )}
             {showSearch && <Search setShowSearch={setShowSearch} />}
             {!showSearch && (
               <>
                 <CartSheet addToCart={addToCart} cartCount={cartCount} />
-                <Link href='/register'>
-                  <button className='btn btn-primary flex items-center    justify-center gap-2 rounded-lg border bg-white px-5 py-2 text-xs text-black max-[991px]:hidden lg:flex'>
-                    Join Us
-                  </button>
-                </Link>
+                <motion.div
+                  className='relative ml-3'
+                  initial='hidden'
+                  animate='visible'
+                  variants={variants}
+                >
+                  <Link href='/register'>
+                    <button className='btn btn-primary flex items-center    justify-center gap-2 rounded-lg border bg-white px-5 py-2 text-xs text-black max-[991px]:hidden lg:flex'>
+                      Join Us
+                    </button>
+                  </Link>
+                </motion.div>
               </>
             )}
           </div>
