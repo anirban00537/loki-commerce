@@ -9,7 +9,7 @@ const getEndTime = () => {
 
 const SaleBanner = ({
   text = 'Black Friday Sale Get 50% Discount',
-  backgroundImage = 'url("https://images.unsplash.com/photo-1499971442178-8c10fdf5f6ac?q=80&w=1982&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+  backgroundImage = 'url("https://images.unsplash.com/photo-1535478044878-3ed83d5456ef?q=80&w=2091&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
 }) => {
   const endTime = getEndTime();
 
