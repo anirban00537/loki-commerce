@@ -47,7 +47,7 @@ const HeroSection = () => {
 
   return (
     <div className='relative m-4 mt-5 overflow-hidden rounded-3xl bg-orange-100 bg-gradient-to-r md:m-10 md:mt-5'>
-      <AnimatePresence>
+      <div>
         <motion.div
           key={slideIndex}
           variants={slideAnimation}
@@ -98,7 +98,7 @@ const HeroSection = () => {
             />
           </motion.div>
         </motion.div>
-      </AnimatePresence>
+      </div>
     </div>
   );
 };
