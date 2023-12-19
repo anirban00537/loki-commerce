@@ -70,8 +70,8 @@ const Details = () => {
           <div className=''>
             <div className='flex gap-2'>
               <div className='grid grid-cols-2 gap-2'>
-                {productImages.map((image) => (
-                  <div>
+                {productImages.map((image, index) => (
+                  <div key={index}>
                     <img
                       className='h-auto max-w-full rounded-lg'
                       src={image}
