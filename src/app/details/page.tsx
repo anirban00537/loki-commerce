@@ -262,16 +262,16 @@ const Details = () => {
             <motion.h2 className='mb-5 text-xl font-semibold sm:text-2xl'>
               Product Features
             </motion.h2>
-            <motion.ul className='ml-6 list-disc'>
+            <motion.ul className='list-disc space-y-2 pl-4 text-sm'>
               {productFeatures.map((feature, index) => (
                 <motion.li
                   key={index}
-                  className='mb-5 text-xs text-gray-600'
+                  className='text-gray-400'
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 + index * 0.1 }}
                 >
-                  {feature}
+                  <span className='text-gray-600'>{feature}</span>
                 </motion.li>
               ))}
             </motion.ul>

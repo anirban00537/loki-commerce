@@ -72,25 +72,62 @@ const TabDetails = () => {
         <Tabs.Content key={idx} className='py-6' value={item.name}>
           {item.name === 'Product Details' && (
             <div>
-              <div className='grid grid-cols-2 gap-4'>
+              <div className='py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6'>
+                {/* Description and details */}
                 <div>
-                  <p className='mb-2 text-xl font-bold'>White t-shirt</p>
-                  <p className='mb-4 text-sm text-gray-700'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam non justo at nunc bibendum tincidunt id a nisi.
-                    Quisque commodo, nulla vitae varius vulputate, est tortor
-                    blandit urna, ut sagittis nisl mi in turpis. Morbi bibendum
-                    varius arcu, vel fermentum augue molestie id. Aliquam erat
-                    volutpat. Vestibulum ac orci ex.
-                  </p>
-                  <div>
-                    <ul className='list-inside list-disc'>
-                      <li>High-quality materials for durability</li>
-                      <li>Ergonomically designed for maximum comfort</li>
-                      <li>Advanced technology integration</li>
-                      <li>Multiple color options available</li>
-                      <li>Compatible with various devices</li>
+                  <h3 className='sr-only'>Description</h3>
+                  <div className='space-y-6'>
+                    <p className='text-base text-gray-900'>
+                      The Basic Tee 6-Pack allows you to fully express your
+                      vibrant personality with three grayscale options. Feeling
+                      adventurous? Put on a heather gray tee. Want to be a
+                      trendsetter? Try our exclusive colorway: "Black". Need to
+                      add an extra pop of color to your outfit? Our white tee
+                      has you covered.
+                    </p>
+                  </div>
+                </div>
+                <div className='mt-10'>
+                  <h3 className='text-sm font-medium text-gray-900'>
+                    Highlights
+                  </h3>
+                  <div className='mt-4'>
+                    <ul
+                      role='list'
+                      className='list-disc space-y-2 pl-4 text-sm'
+                    >
+                      <li className='text-gray-400'>
+                        <span className='text-gray-600'>
+                          Hand cut and sewn locally
+                        </span>
+                      </li>
+                      <li className='text-gray-400'>
+                        <span className='text-gray-600'>
+                          Dyed with our proprietary colors
+                        </span>
+                      </li>
+                      <li className='text-gray-400'>
+                        <span className='text-gray-600'>
+                          Pre-washed &amp; pre-shrunk
+                        </span>
+                      </li>
+                      <li className='text-gray-400'>
+                        <span className='text-gray-600'>
+                          Ultra-soft 100% cotton
+                        </span>
+                      </li>
                     </ul>
+                  </div>
+                </div>
+                <div className='mt-10'>
+                  <h2 className='text-sm font-medium text-gray-900'>Details</h2>
+                  <div className='mt-4 space-y-6'>
+                    <p className='text-sm text-gray-600'>
+                      The 6-Pack includes two black, two white, and two heather
+                      gray Basic Tees. Sign up for our subscription service and
+                      be the first to get new, exciting colors, like our
+                      upcoming "Charcoal Gray" limited release.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -100,12 +137,12 @@ const TabDetails = () => {
             <div>
               <h2 className='mb-4 text-lg font-semibold'>Product Review</h2>
               <div className='grid grid-cols-1 gap-4'>
-                <div className='rounded-md bg-white p-4 border-b'>
+                <div className='rounded-md border-b bg-white p-4'>
                   <div className='flex items-start'>
                     <img
                       src='https://images.unsplash.com/photo-1514136649217-b627b4b9cfb2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt='User Avatar'
-                      className='mr-2 rounded-full h-8 w-8'
+                      className='mr-2 h-8 w-8 rounded-full'
                     />
                     <div>
                       <p className='text-sm font-semibold'>Alex Johnson</p>
@@ -120,7 +157,7 @@ const TabDetails = () => {
                           4.95 out of 5
                         </p>
                       </Rating>
-                      <p className='mb-2 text-gray-700 text-sm'>
+                      <p className='mb-2 text-sm text-gray-700'>
                         "Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur.
                         Excepteur sint occaecat cupidatat non proident, sunt in
@@ -130,12 +167,12 @@ const TabDetails = () => {
                   </div>
                 </div>
 
-                <div className='rounded-md bg-white p-4 border-b'>
+                <div className='rounded-md border-b bg-white p-4'>
                   <div className='flex items-start'>
                     <img
                       src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt='User Avatar'
-                      className='mr-2 rounded-full h-8 w-8'
+                      className='mr-2 h-8 w-8 rounded-full'
                     />
                     <div>
                       <p className='text-sm font-semibold'>Alex Johnson</p>
@@ -150,7 +187,7 @@ const TabDetails = () => {
                           4.95 out of 5
                         </p>
                       </Rating>
-                      <p className='mb-2 text-gray-700 text-sm'>
+                      <p className='mb-2 text-sm text-gray-700'>
                         "Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur.
                         Excepteur sint occaecat cupidatat non proident, sunt in
@@ -159,12 +196,12 @@ const TabDetails = () => {
                     </div>
                   </div>
                 </div>
-                <div className='rounded-md bg-white p-4 border-b'>
+                <div className='rounded-md border-b bg-white p-4'>
                   <div className='flex items-start'>
                     <img
                       src='https://images.unsplash.com/photo-1517988125222-aa07cf3ba98b?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt='User Avatar'
-                      className='mr-2 rounded-full h-8 w-8'
+                      className='mr-2 h-8 w-8 rounded-full'
                     />
                     <div>
                       <p className='text-sm font-semibold'>Alex Johnson</p>
@@ -179,7 +216,7 @@ const TabDetails = () => {
                           4.95 out of 5
                         </p>
                       </Rating>
-                      <p className='mb-2 text-gray-700 text-sm'>
+                      <p className='mb-2 text-sm text-gray-700'>
                         "Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur.
                         Excepteur sint occaecat cupidatat non proident, sunt in
