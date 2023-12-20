@@ -9,9 +9,19 @@ import { cn } from '@/lib/utils';
 
 import CartSheet from '@/components/sheet/cart.sheet';
 import {
+  ArrowDownRightSquare,
+  Barcode,
   ChevronDown,
+  FileMinus,
+  Flame,
+  Info,
+  Package2Icon,
+  Paperclip,
+  ScanEye,
+  ScanFace,
   SearchCode,
   SearchXIcon,
+  ShieldQuestion,
   Snowflake,
   Star,
   Sun,
@@ -121,63 +131,184 @@ function NavbarComp() {
                       type='button'
                       className='flex items-center px-2 py-2 leading-6 text-black'
                     >
-                      Product
+                      Pages
                       <ChevronDown className='h-5 w-5 flex-none text-gray-400' />
                     </button>
 
                     <div className='absolute -left-8 top-full z-10 hidden w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5 group-hover:block'>
-                      <div className=''>
-                        <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
-                          <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-                            <Star className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
+                      <div className='flex'>
+                        <div className='w-1/2'>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Paperclip className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Landing Page
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
                           </div>
-                          <div className='flex-auto'>
-                            <Link
-                              href='/hot-deals'
-                              className='block font-semibold text-gray-900'
-                            >
-                              Hot Deals
-                              <span className='absolute inset-0'></span>
-                            </Link>
-                            <p className='mt-1 text-gray-600'>
-                              Get Hot deals here{' '}
-                            </p>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Package2Icon className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/collections'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Collections
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Package2Icon className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/collections-two'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Collections Two
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Info className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/about'
+                                className='block font-semibold text-gray-900'
+                              >
+                                About
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Barcode className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/categories'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Categories
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <ArrowDownRightSquare className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/checkout'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Checkout
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
                           </div>
                         </div>
-
-                        <div className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'>
-                          <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-                            <Sun className='h-6 w-6 text-gray-600 group-hover:text-indigo-600' />
+                        <div className='w-1/2'>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <FileMinus className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/details'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Details
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
                           </div>
-                          <div className='flex-auto'>
-                            <a
-                              href='#'
-                              className='block font-semibold text-gray-900'
-                            >
-                              Winter Deals
-                              <span className='absolute inset-0'></span>
-                            </a>
-                            <p className='mt-1 text-gray-600'>
-                              Get Winter Deals
-                            </p>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <FileMinus className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/details-two'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Details Two
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <ShieldQuestion  className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/faq'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Faq
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <Flame  className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/hot-deals'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Hot Deals
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <ScanEye   className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/register'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Register
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
+                          </div>
+                          <div className='group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50'>
+                            <div className='flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
+                              <ScanFace   className='h-6 w-6 text-gray-600 group-hover:text-pink-600' />
+                            </div>
+                            <div className='flex-auto'>
+                              <Link
+                                href='/signin'
+                                className='block font-semibold text-gray-900'
+                              >
+                                Signin
+                                <span className='absolute inset-0'></span>
+                              </Link>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className='grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50'>
-                        <a
-                          href='#'
-                          className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
-                        >
-                          <Sun className='h-5 w-5 flex-none text-gray-400' />
-                          Summer Deals
-                        </a>
-                        <a
-                          href='#'
-                          className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
-                        >
-                          <Snowflake className='h-5 w-5 flex-none text-gray-400' />
-                          Winter Deals
-                        </a>
                       </div>
                     </div>
                   </div>

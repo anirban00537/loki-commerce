@@ -1,6 +1,7 @@
 import React from 'react';
 import BigCard from '@/components/cards/big-card';
 import Link from 'next/link';
+import SectionWrapper from '@/components/animations/section.animation';
 
 interface Product {
   url: string;
@@ -14,14 +15,14 @@ const QuickProducts = () => {
   const products: Product[] = [
     {
       url: '/images/bg-card-1.png',
-      color: 'red',
+      color: '',
       title: 'Elegant Red Evening Gown',
       description: 'An elegant red evening gown for special occasions.',
       price: '$499.99',
     },
     {
       url: '/images/bg-card-4.png',
-      color: 'purple',
+      color: '',
       title: 'Chic Purple Cocktail Dress',
       description: 'A chic purple cocktail dress perfect for parties.',
       price: '$199.99',
@@ -29,14 +30,14 @@ const QuickProducts = () => {
     {
       url: '/images/bg-card-2.png',
 
-      color: 'green',
+      color: '',
       title: 'Modern Green Maxi Dress',
       description: 'A modern green maxi dress for a trendy look.',
       price: '$129.99',
     },
     {
       url: '/images/bg-card-3.png',
-      color: 'yellow',
+      color: '',
       title: 'Yellow Floral Dress',
       description: 'A yellow floral summer dress for a vibrant style.',
       price: '$39.99',
@@ -56,9 +57,11 @@ const QuickProducts = () => {
           Show All
         </Link>
       </div>
-      <section className='grid grid-cols-1 items-start gap-10 p-5 sm:grid-cols-1 md:grid-cols-2 md:p-0 xl:grid-cols-3 2xl:grid-cols-4 '>
+      <section className='grid grid-cols-1 items-start gap-10 rounded-3xl p-5 sm:grid-cols-1 md:grid-cols-2 md:p-0 xl:grid-cols-3 2xl:grid-cols-4'>
         {products.map((product, index) => (
-          <BigCard key={index} {...product} />
+          <SectionWrapper visible={true} key={index} delay={index * 0.2}>
+            <BigCard key={index} {...product} />
+          </SectionWrapper>
         ))}
       </section>
     </section>
