@@ -6,7 +6,9 @@ export function getFromLocalStorage(key: string): string | null {
   }
   return null;
 }
-
+export function classNames(...classes:any) {
+  return classes.filter(Boolean).join(' ');
+}
 export function getFromSessionStorage(key: string): string | null {
   if (typeof sessionStorage !== 'undefined') {
     return sessionStorage.getItem(key);

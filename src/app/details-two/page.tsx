@@ -114,7 +114,7 @@ const Details = () => {
         <div className='mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8'>
           <div className='aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block'>
             <img
-              src='https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg'
+              src='https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               alt='Two each of gray, white, and black shirts laying flat.'
               className='h-full w-full object-cover object-center'
             />
@@ -122,14 +122,14 @@ const Details = () => {
           <div className='hidden lg:grid lg:grid-cols-1 lg:gap-y-8'>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg'
+                src='https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 alt='Model wearing plain black basic tee.'
                 className='h-full w-full object-cover object-center'
               />
             </div>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg'
+                src='https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 alt='Model wearing plain gray basic tee.'
                 className='h-full w-full object-cover object-center'
               />
@@ -137,7 +137,7 @@ const Details = () => {
           </div>
           <div className='aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg'>
             <img
-              src='https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg'
+              src='https://images.unsplash.com/photo-1622445275992-e7efb32d2257?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg'
               alt='Model wearing plain white basic tee.'
               className='h-full w-full object-cover object-center'
             />
@@ -224,7 +224,7 @@ const Details = () => {
                 <p className='sr-only'>4 out of 5 stars</p>
                 <a
                   href='#'
-                  className='ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500'
+                  className='ml-3 text-sm font-medium text-black hover:text-black'
                 >
                   117 reviews
                 </a>
@@ -306,7 +306,7 @@ const Details = () => {
                   <h3 className='text-sm font-medium text-gray-900'>Size</h3>
                   <a
                     href='#'
-                    className='text-sm font-medium text-indigo-600 hover:text-indigo-500'
+                    className='text-sm font-medium text-black hover:text-black'
                   >
                     Size guide
                   </a>
@@ -314,7 +314,7 @@ const Details = () => {
                 <fieldset className='mt-4'>
                   <legend className='sr-only'>Choose a size</legend>
                   <div className='grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4'>
-                    {/* Active: "ring-2 ring-indigo-500" */}
+                    {/* Active: "ring-2 ring-black" */}
                     <label className='group relative flex cursor-not-allowed items-center justify-center rounded-md border bg-gray-50 px-4 py-3 text-sm font-medium uppercase text-gray-200 hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -345,7 +345,7 @@ const Details = () => {
                         </svg>
                       </span>
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
+                    {/* Active: "ring-2 ring-black" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -357,14 +357,14 @@ const Details = () => {
                       <span id='size-choice-1-label'>XS</span>
                       {/*
               Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
+              Checked: "border-black", Not Checked: "border-transparent"
             */}
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
+                    {/* Active: "ring-2 ring-black" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -374,16 +374,12 @@ const Details = () => {
                         aria-labelledby='size-choice-2-label'
                       />
                       <span id='size-choice-2-label'>S</span>
-                      {/*
-              Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
-            */}
+
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -393,16 +389,12 @@ const Details = () => {
                         aria-labelledby='size-choice-3-label'
                       />
                       <span id='size-choice-3-label'>M</span>
-                      {/*
-              Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
-            */}
+
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -412,16 +404,13 @@ const Details = () => {
                         aria-labelledby='size-choice-4-label'
                       />
                       <span id='size-choice-4-label'>L</span>
-                      {/*
-              Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
-            */}
+
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
+                    {/* Active: "ring-2 ring-black" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -433,14 +422,13 @@ const Details = () => {
                       <span id='size-choice-5-label'>XL</span>
                       {/*
               Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
+              Checked: "border-black", Not Checked: "border-transparent"
             */}
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -450,16 +438,13 @@ const Details = () => {
                         aria-labelledby='size-choice-6-label'
                       />
                       <span id='size-choice-6-label'>2XL</span>
-                      {/*
-              Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
-            */}
+
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
                         aria-hidden='true'
                       />
                     </label>
-                    {/* Active: "ring-2 ring-indigo-500" */}
+                    {/* Active: "ring-2 ring-black" */}
                     <label className='group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'>
                       <input
                         type='radio'
@@ -471,7 +456,7 @@ const Details = () => {
                       <span id='size-choice-7-label'>3XL</span>
                       {/*
               Active: "border", Not Active: "border-2"
-              Checked: "border-indigo-500", Not Checked: "border-transparent"
+              Checked: "border-black", Not Checked: "border-transparent"
             */}
                       <span
                         className='pointer-events-none absolute -inset-px rounded-md'
@@ -483,7 +468,7 @@ const Details = () => {
               </div>
               <button
                 type='submit'
-                className='mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                className='mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
               >
                 Add to bag
               </button>
@@ -543,6 +528,7 @@ const Details = () => {
             </div>
           </div>
         </div>
+        <TabDetails />
       </div>
     </div>
   );

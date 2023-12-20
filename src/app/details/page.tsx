@@ -94,13 +94,6 @@ const Details = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   />
                 ))}
-                {/* <div>
-                  <img
-                    className='h-auto max-w-full rounded-lg'
-                    src='https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg'
-                    alt=''
-                  />
-                </div> */}
               </div>
             </div>
           </div>
@@ -271,7 +264,7 @@ const Details = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 + index * 0.1 }}
                 >
-                  <span className='text-gray-600'>{feature}</span>
+                  <span className='text-gray-600 text-xs'>{feature}</span>
                 </motion.li>
               ))}
             </motion.ul>
