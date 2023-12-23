@@ -58,7 +58,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Bag'
-            image='https://images.unsplash.com/photo-1625064703163-075e503d3793?q=80&w=1967&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D '
+            image='/images/product1.jpg'
             price='33'
             rating={5}
             reviews={25}
@@ -67,7 +67,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Bag'
-            image='https://images.unsplash.com/photo-1583496702414-c3372525c6ce?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image='/images/product7.jpg'
             price='33'
             rating={5}
             reviews={25}
@@ -76,7 +76,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Cup'
-            image='https://images.unsplash.com/photo-1590588503756-08a4b2be5eb9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image='/images/product6.jpg'
             price='33'
             rating={5}
             reviews={25}
@@ -85,7 +85,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Ball With curve'
-            image='https://images.unsplash.com/photo-1587754568293-1d042d43fff5?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image='/images/product3.jpg'
             price='33'
             rating={5}
             reviews={25}
@@ -94,7 +94,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Airpod'
-            image='https://images.unsplash.com/photo-1588189408846-30ad110a0f4c?q=80&w=2105&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image='/images/product4.jpg'
             price='33'
             rating={5}
             reviews={25}
@@ -103,7 +103,7 @@ const Products = () => {
         <div className=''>
           <ProductCard
             name='Fashion Chair'
-            image='https://images.unsplash.com/photo-1608234807905-4466023792f5?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            image='/images/product5.jpg'
             price='33'
             rating={5}
             reviews={25}

@@ -1,9 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
-import { Modal, Rating } from 'flowbite-react';
-import { Button } from '@/components/ui/button';
+
 import { cn } from '@/lib/utils';
 import TabDetails from '@/section/details/tab-details';
 
@@ -28,93 +26,30 @@ const ColorOption = ({ color, isSelected, onSelect }: any) => (
     style={{ backgroundColor: color }}
   ></div>
 );
-const productFeatures = [
-  'Made with premium, breathable materials for a high-quality and comfortable experience.',
-  'Ergonomically designed for a comfortable fit, providing support throughout the day.',
-  'Built with durability in mind to withstand daily wear and tear.',
-  'Featuring a stylish and modern design, making it a versatile addition to your wardrobe.',
-  'Versatile Styling Options: Designed to complement a variety of outfits, offering versatility for different occasions and personal styles.',
-  'Enhanced Functionality: Equipped with practical features that enhance usability, such as multiple pockets, easy-to-use closures, or convenient compartments.',
-  'Easy Maintenance: Simple to care for with low-maintenance requirements, ensuring your product stays in top condition with minimal effort.',
-  'Environmentally Conscious: Crafted with eco-friendly materials and sustainable practices, aligning with a commitment to environmental responsibility.',
-  'All-Day Comfort: Engineered for prolonged wear, providing maximum comfort for extended periods of use.',
-];
 
-const productImages = [
-  'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1595780662105-fa76460ddb04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1623580674393-edf6eb7090f8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-];
-const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
-const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
 const Details = () => {
-  const [selectedColor, setSelectedColor] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(productImages[0]);
-  const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(1);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+  };
 
-  const handleImageClick = (image: string) => {
-    setSelectedImage(image);
+  const productInfoVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.8 } },
   };
 
   return (
-    <div className='bg-white'>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      className='bg-white'
+    >
       <div className='pt-6'>
-        <nav aria-label='Breadcrumb'>
-          <ol
-            role='list'
-            className='mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8'
-          >
-            <li>
-              <div className='flex items-center'>
-                <a href='#' className='mr-2 text-sm font-medium text-gray-900'>
-                  Men
-                </a>
-                <svg
-                  width={16}
-                  height={20}
-                  viewBox='0 0 16 20'
-                  fill='currentColor'
-                  aria-hidden='true'
-                  className='h-5 w-4 text-gray-300'
-                >
-                  <path d='M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z' />
-                </svg>
-              </div>
-            </li>
-            <li>
-              <div className='flex items-center'>
-                <a href='#' className='mr-2 text-sm font-medium text-gray-900'>
-                  Clothing
-                </a>
-                <svg
-                  width={16}
-                  height={20}
-                  viewBox='0 0 16 20'
-                  fill='currentColor'
-                  aria-hidden='true'
-                  className='h-5 w-4 text-gray-300'
-                >
-                  <path d='M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z' />
-                </svg>
-              </div>
-            </li>
-            <li className='text-sm'>
-              <a
-                href='#'
-                aria-current='page'
-                className='font-medium text-gray-500 hover:text-gray-600'
-              >
-                Basic Tee 6-Pack
-              </a>
-            </li>
-          </ol>
-        </nav>
         <div className='mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8'>
           <div className='aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block'>
             <img
-              src='https://images.unsplash.com/photo-1622445275463-afa2ab738c34?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              src='/images/my-product-24.jpg'
               alt='Two each of gray, white, and black shirts laying flat.'
               className='h-full w-full object-cover object-center'
             />
@@ -122,14 +57,14 @@ const Details = () => {
           <div className='hidden lg:grid lg:grid-cols-1 lg:gap-y-8'>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='/images/my-product-25.jpg'
                 alt='Model wearing plain black basic tee.'
                 className='h-full w-full object-cover object-center'
               />
             </div>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='/images/my-product-26.jpg'
                 alt='Model wearing plain gray basic tee.'
                 className='h-full w-full object-cover object-center'
               />
@@ -137,24 +72,27 @@ const Details = () => {
           </div>
           <div className='aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg'>
             <img
-              src='https://images.unsplash.com/photo-1622445275992-e7efb32d2257?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg'
+              src='/images/my-product-27.jpg'
               alt='Model wearing plain white basic tee.'
               className='h-full w-full object-cover object-center'
             />
           </div>
         </div>
-        {/* Product info */}
-        <div className='mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16'>
+        <motion.div
+          variants={productInfoVariants}
+          initial='hidden'
+          animate='visible'
+          className='mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16'
+        >
           <div className='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'>
             <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
               Basic Tee 6-Pack
             </h1>
           </div>
-          {/* Options */}
+
           <div className='mt-4 lg:row-span-3 lg:mt-0'>
             <h2 className='sr-only'>Product information</h2>
             <p className='text-3xl tracking-tight text-gray-900'>$192</p>
-            {/* Reviews */}
             <div className='mt-6'>
               <h3 className='sr-only'>Reviews</h3>
               <div className='flex items-center'>
@@ -237,10 +175,6 @@ const Details = () => {
                 <fieldset className='mt-4'>
                   <legend className='sr-only'>Choose a color</legend>
                   <div className='flex items-center space-x-3'>
-                    {/*
-            Active and Checked: "ring ring-offset-1"
-            Not Active and Checked: "ring-2"
-          */}
                     <label className='relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 ring-gray-400 focus:outline-none'>
                       <input
                         type='radio'
@@ -527,10 +461,10 @@ const Details = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <TabDetails />
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Details;

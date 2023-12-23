@@ -27,7 +27,7 @@ export function BrandCard({ image, BrandName, description }: BrandCardProps) {
             </div>
           </div>
           <div>
-            <p className='text-sm font-medium uppercase tracking-widest text-green-400'>
+            <p className='text-sm font-medium uppercase tracking-widest text-pink-400'>
               Brand
             </p>
             <p className='text-xl font-bold text-white sm:text-2xl'>
