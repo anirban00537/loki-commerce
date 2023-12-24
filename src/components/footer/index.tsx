@@ -24,7 +24,7 @@
             type='email'
             placeholder='john@doe.com'
           />
-          <button className='absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-white transition hover:bg-primary'>
+          <button className='bg-primary hover:bg-primary absolute end-1 top-1/2 -translate-y-1/2 rounded-full px-5 py-3 text-sm font-medium text-white transition'>
             Subscribe
           </button>
         </div>
@@ -140,7 +140,7 @@
                 className='text-gray-700 transition hover:text-gray-700/75'
                 href='/'
               >
-                Marketing
+                Fashion
               </a>
             </li>
             <li>
@@ -148,7 +148,7 @@
                 className='text-gray-700 transition hover:text-gray-700/75'
                 href='/'
               >
-                Graphic Design
+                Kids Fashion
               </a>
             </li>
             <li>
@@ -156,7 +156,7 @@
                 className='text-gray-700 transition hover:text-gray-700/75'
                 href='/'
               >
-                App Development
+                Men Fashion
               </a>
             </li>
             <li>
@@ -164,7 +164,7 @@
                 className='text-gray-700 transition hover:text-gray-700/75'
                 href='/'
               >
-                Web Development
+                Cool Fashion
               </a>
             </li>
           </ul>
@@ -239,17 +239,7 @@
     </div>
     <div className='mt-16 border-t border-gray-100 pt-8'>
       <p className='text-center text-xs/relaxed text-gray-500'>
-        © Company 2022. All rights reserved.
-        <br />
-        Created with
-        <a className='text-gray-700 underline transition hover:text-gray-700/75'>
-          Laravel
-        </a>
-        and
-        <a className='text-gray-700 underline transition hover:text-gray-700/75'>
-          Laravel Livewire
-        </a>
-        .
+        © Company 2023  . All rights reserved .
       </p>
     </div>
   </div>
@@ -277,7 +267,7 @@ const Footer = () => {
                   type='email'
                   placeholder='john@doe.com'
                 />
-                <button className='bg-primary absolute end-1 top-1/2 -translate-y-1/2 rounded-full px-5 py-3 text-sm font-medium text-white transition hover:bg-primary'>
+                <button className='bg-primary hover:bg-primary absolute end-1 top-1/2 -translate-y-1/2 rounded-full px-5 py-3 text-sm font-medium text-white transition'>
                   Subscribe
                 </button>
               </div>
@@ -396,7 +386,7 @@ const Footer = () => {
                       className='text-gray-700 transition hover:text-gray-700/75'
                       href='/'
                     >
-                      Marketing
+                      Fashion
                     </a>
                   </li>
                   <li>
@@ -404,7 +394,7 @@ const Footer = () => {
                       className='text-gray-700 transition hover:text-gray-700/75'
                       href='/'
                     >
-                      Graphic Design
+                      Kids Fashion
                     </a>
                   </li>
                   <li>
@@ -412,7 +402,7 @@ const Footer = () => {
                       className='text-gray-700 transition hover:text-gray-700/75'
                       href='/'
                     >
-                      App Development
+                      Men Fashion
                     </a>
                   </li>
                   <li>
@@ -420,7 +410,7 @@ const Footer = () => {
                       className='text-gray-700 transition hover:text-gray-700/75'
                       href='/'
                     >
-                      Web Development
+                      Cool Fashion
                     </a>
                   </li>
                 </ul>
@@ -495,17 +485,7 @@ const Footer = () => {
           </div>
           <div className='mt-16 border-t border-gray-100 pt-8'>
             <p className='text-center text-xs/relaxed text-gray-500'>
-              © Company 2022. All rights reserved.
-              <br />
-              Created with
-              <a className='text-gray-700 underline transition hover:text-gray-700/75'>
-                Laravel
-              </a>
-              and
-              <a className='text-gray-700 underline transition hover:text-gray-700/75'>
-                Laravel Livewire
-              </a>
-              .
+              © Company 2023. All rights reserved. .
             </p>
           </div>
         </div>

@@ -19,7 +19,7 @@ const BigCard: React.FC<BigCardProps> = ({
     <section
       className={`bg-${color}-50 transform cursor-pointer p-5 py-10 text-center duration-500 hover:-translate-y-2`}
     >
-      <img src={url} alt='' />
+      <img src={url} alt='' className='mx-auto h-auto max-w-full' />
       <div className='mt-10 flex justify-center space-x-1'>
         <svg
           className='text-yellow -600 mx-px h-4 w-4 fill-current'

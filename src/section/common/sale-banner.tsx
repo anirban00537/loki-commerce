@@ -22,7 +22,7 @@ const SaleBanner = ({
 
   return (
     <section
-      className='container z-10 overflow-hidden rounded-2xl bg-black px-8 py-16'
+      className='container z-10 rounded-none overflow-hidden lg:rounded-2xl bg-black px-8 py-16'
       style={backgroundStyle}
     >
       <div className='container'>

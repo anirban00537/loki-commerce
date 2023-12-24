@@ -107,7 +107,7 @@ export function ProductCardWithSize({
             </div>
 
             <div className='flex items-center '>
-              <div className='my-2 flex w-full flex-wrap justify-start gap-1.5'>
+              <div className='my-2 flex w-full flex-wrap justify-start gap-1'>
                 {sizeOptions.map((size: any, index) => (
                   <SizeOption
                     key={index}

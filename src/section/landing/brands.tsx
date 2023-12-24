@@ -39,7 +39,7 @@ const Brands = () => {
           </h2>
         </div>
 
-        <div className='grid grid-cols-1   md:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-2 md:grid-cols-4  lg:gap-0'>
           {products.map((product, index) => (
             <SectionWrapper
               key={index}
