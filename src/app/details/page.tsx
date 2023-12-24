@@ -41,9 +41,9 @@ const productFeatures = [
 ];
 
 const productImages = [
-  'https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'https://images.unsplash.com/photo-1595780662105-fa76460ddb04?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  '/images/pro-1.avif',
+  '/images/pro-2.avif',
+  '/images/pro-3.avif',
 ];
 const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];
@@ -264,7 +264,7 @@ const Details = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 + index * 0.1 }}
                 >
-                  <span className='text-gray-600 text-xs'>{feature}</span>
+                  <span className='text-xs text-gray-600'>{feature}</span>
                 </motion.li>
               ))}
             </motion.ul>

@@ -47,8 +47,8 @@ const QuickProducts = () => {
   return (
     <section className='container mx-auto mt-36 p-10 px-0 md:p-8 md:px-0 md:py-12'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-3xl font-medium uppercase text-slate-800'>
-          Premium products
+        <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+          Premium product&apos;s
         </h2>
         <Link
           href='/collections'

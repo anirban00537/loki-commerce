@@ -6,10 +6,10 @@ import RightPagination from '@/components/pagination/right-pagination';
 import { Dropdown } from 'flowbite-react';
 import SectionWrapper from '@/components/animations/section.animation';
 const colors = [
-  { bg: 'bg-[#2563EB]', ring: 'ring-[#2563EB]' },
-  { bg: 'bg-[#8B5CF6]', ring: 'ring-[#8B5CF6]' },
-  { bg: 'bg-[#DB2777]', ring: 'ring-[#DB2777]' },
-  { bg: 'bg-[#475569]', ring: 'ring-[#475569]' },
+  { bg: 'bg-[#fbc531]', ring: 'ring-[#fbc531]' },
+  { bg: 'bg-[#00a8ff]', ring: 'ring-[#00a8ff]' },
+  { bg: 'bg-[#ffbe76]', ring: 'ring-[#ffbe76]' },
+  { bg: 'bg-[#ff7979]', ring: 'ring-[#ff7979]' },
   { bg: 'bg-[#EA580C]', ring: 'ring-[#EA580C]' },
 ];
 

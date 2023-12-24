@@ -44,7 +44,7 @@ const Products = () => {
   return (
     <div className='container mx-auto mt-36'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-3xl font-medium uppercase text-slate-800'>
+        <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
           New Arrivals
         </h2>
         <Link

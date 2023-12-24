@@ -1,39 +1,58 @@
 import React from 'react';
 import { BrandCard } from '@/components/cards/brand.card';
 import SectionWrapper from '@/components/animations/section.animation';
+const products = [
+  {
+    name: 'Gown',
+    image: '/images/cat1.jpeg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+  },
+  {
+    name: 'Watch',
+    image: '/images/cat2.jpeg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+  },
+
+  {
+    name: 'Fashion Ball With curve',
+    image: '/images/cat4.jpeg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+  },
+  {
+    name: 'Floral Maxi Dress',
+    image: '/images/cat5.jpeg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+  },
+];
 
 const Brands = () => {
   return (
-    <SectionWrapper >
+    <SectionWrapper>
       <div className='container mx-auto mt-36'>
         <div className='mb-8 flex items-center justify-between'>
-          <h2 className='text-2xl font-medium uppercase text-slate-800 md:text-3xl'>
-            Shop By Top Brands
+          <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+            Shop By Top Categorie&apos;s
           </h2>
         </div>
 
-        <div className='grid grid-cols-1 gap-4   md:grid-cols-3'>
-          <SectionWrapper delay={0.1}>
-            <BrandCard
-              BrandName='Lipstick'
-              image='https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-            />
-          </SectionWrapper>
-          <SectionWrapper delay={0.2}>
-            <BrandCard
-              BrandName='Tops'
-              image='https://images.unsplash.com/photo-1589810635657-232948472d98?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-            />
-          </SectionWrapper>
-          <SectionWrapper delay={0.3}>
-            <BrandCard
-              BrandName='Bags'
-              image='https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab'
-            />
-          </SectionWrapper>
+        <div className='grid grid-cols-1   md:grid-cols-4'>
+          {products.map((product, index) => (
+            <SectionWrapper
+              key={index}
+              delay={parseFloat(`0.${index}`)}
+              visible={true}
+            >
+              <BrandCard
+                BrandName={product.name}
+                image={product.image}
+                description={product.description}
+              />
+            </SectionWrapper>
+          ))}
         </div>
       </div>
     </SectionWrapper>

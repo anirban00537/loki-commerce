@@ -7,10 +7,10 @@ import { Dropdown } from 'flowbite-react';
 import SectionWrapper from '@/components/animations/section.animation';
 import { ProductCard } from '@/components/cards/product.card';
 const colors = [
-  { bg: 'bg-[#2563EB]', ring: 'ring-[#2563EB]' },
-  { bg: 'bg-[#8B5CF6]', ring: 'ring-[#8B5CF6]' },
-  { bg: 'bg-[#DB2777]', ring: 'ring-[#DB2777]' },
-  { bg: 'bg-[#475569]', ring: 'ring-[#475569]' },
+  { bg: 'bg-[#fbc531]', ring: 'ring-[#fbc531]' },
+  { bg: 'bg-[#00a8ff]', ring: 'ring-[#00a8ff]' },
+  { bg: 'bg-[#ffbe76]', ring: 'ring-[#ffbe76]' },
+  { bg: 'bg-[#ff7979]', ring: 'ring-[#ff7979]' },
   { bg: 'bg-[#EA580C]', ring: 'ring-[#EA580C]' },
 ];
 
@@ -42,40 +42,39 @@ const filters = [
 const products = [
   {
     name: 'Long Legs Pants',
-    image:
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product12.jpg',
     price: '33',
     rating: 5,
     reviews: 25,
   },
   {
     name: 'Trendy Dress',
-    image:
-      'https://images.unsplash.com/photo-1520024146169-3240400354ae?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product13.jpg',
+
     price: '521',
     rating: 2.6,
     reviews: 215,
   },
   {
     name: 'Fashion Cup',
-    image:
-      'https://images.unsplash.com/photo-1536238202089-6ce355328a96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product14.jpg',
+
     price: '58',
     rating: 4.6,
     reviews: 26,
   },
   {
     name: 'Fashion Ball With curve',
-    image:
-      'https://images.unsplash.com/photo-1510172951991-856a654063f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product15.jpg',
+
     price: '40',
     rating: 4.6,
     reviews: 89,
   },
   {
     name: 'Floral Maxi Dress',
-    image:
-      'https://images.unsplash.com/photo-1509087859087-a384654eca4d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product16.jpg',
+
     price: '65',
     rating: 4.4,
     reviews: 32,
@@ -85,8 +84,8 @@ const products = [
   },
   {
     name: 'Lace Midi Dress',
-    image:
-      'https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product17.jpg',
+
     price: '80',
     rating: 4.6,
     reviews: 40,
@@ -96,8 +95,8 @@ const products = [
   },
   {
     name: 'Velvet Evening Gown',
-    image:
-      'https://images.unsplash.com/photo-1460402642842-fa689e470581?q=80&w=1732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ',
+    image: '/images/product18.jpg',
+
     price: '120',
     rating: 4.8,
     reviews: 55,
@@ -107,8 +106,17 @@ const products = [
   },
   {
     name: 'Striped Summer Dress',
-    image:
-      'https://images.unsplash.com/photo-1502163140606-888448ae8cfe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/product19.jpg',
+    price: '45',
+    rating: 4.2,
+    reviews: 28,
+    category: 'Summer Dresses',
+    color: 'Striped',
+    size: 'XL',
+  },
+  {
+    name: 'Striped Summer Dress',
+    image: '/images/product20.jpeg',
     price: '45',
     rating: 4.2,
     reviews: 28,

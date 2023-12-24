@@ -104,7 +104,7 @@ const TabDetails = () => {
                   <h3 className='sr-only'>Description</h3>
                   <div className='space-y-6'>
                     <p className='text-base text-gray-900'>
-                      The Basic Tee 6-Pack allows you to fully express your
+                      Pure White Cotton T-shirt allows you to fully express your
                       vibrant personality with three grayscale options. Feeling
                       adventurous? Put on a heather gray tee. Want to be a
                       trendsetter? Try our exclusive colorway: "Black". Need to
