@@ -61,10 +61,7 @@ export function ProductCard({
   return (
     <Link href='/details'>
       <Card
-        className={cn(
-          'relative mb-2 w-[320px] border border-gray-100',
-          className
-        )}
+        className={cn('relative mb-2  border border-gray-100', className)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         {...props}

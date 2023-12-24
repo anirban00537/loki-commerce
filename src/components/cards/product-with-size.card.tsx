@@ -1,12 +1,4 @@
-import {
-  Heart,
-  LucideTrendingUp,
-  ShoppingCart,
-  Star,
-  TrendingDown,
-  TrendingUp,
-  View,
-} from 'lucide-react';
+import { Heart, LucideTrendingUp, ShoppingCart } from 'lucide-react';
 import React, { useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -63,7 +55,7 @@ export function ProductCardWithSize({
     <Link href='/details'>
       <Card
         className={cn(
-          'relative mb-2 w-[320px] border border-gray-100 ',
+          'relative mb-2 border border-gray-100 ',
           className
         )}
         onMouseEnter={() => setIsHovered(true)}
