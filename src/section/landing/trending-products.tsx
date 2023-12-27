@@ -1,21 +1,64 @@
 import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import { ProductCardWithSize } from '@/components/cards/product-with-size.card';
 
 const TrendingProducts = () => {
+  const cardDetails = [
+    {
+      name: 'Long Legs Pants',
+      image: '/images/product33.jpg',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+    {
+      name: 'Trendy Dress',
+      image: '/images/product34.jpg',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+    {
+      name: 'Fashion Ball With curve',
+      image: '/images/product36.jpg',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+    {
+      name: 'Fashion Airpod',
+      image: '/images/product37.jpg',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+    {
+      name: 'Fashion Chair',
+      image: '/images/product21.jpg',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+    {
+      name: 'Fashion Chair',
+      image: '/images/product39.webp',
+      price: '33',
+      rating: 5,
+      reviews: 25,
+    },
+  ];
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Set autoplay speed in milliseconds (3 seconds in this case)
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -55,61 +98,11 @@ const TrendingProducts = () => {
         </Link>
       </div>
       <Slider {...settings}>
-        <div className=''>
-          <ProductCardWithSize
-            name='Long Legs Pants'
-            image='/images/product33.jpg'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-        <div className=''>
-          <ProductCardWithSize
-            name='Trendy Dress'
-            image='/images/product34.jpg'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-
-        <div className=''>
-          <ProductCardWithSize
-            name='Fashion Ball With curve'
-            image='/images/product36.jpg'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-        <div className=''>
-          <ProductCardWithSize
-            name='Fashion Airpod'
-            image='/images/product37.jpg'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-        <div className=''>
-          <ProductCardWithSize
-            name='Fashion Chair'
-            image='/images/product38.jpg'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
-        <div className=''>
-          <ProductCardWithSize
-            name='Fashion Chair'
-            image='/images/product39.webp'
-            price='33'
-            rating={5}
-            reviews={25}
-          />
-        </div>
+        {cardDetails.map((card, index) => (
+          <div key={index} className='px-2'>
+            <ProductCardWithSize {...card} />
+          </div>
+        ))}
       </Slider>
     </div>
   );

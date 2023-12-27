@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Register = () => {
@@ -8,12 +9,13 @@ const Register = () => {
           <img src='/images/logo-white.png' width={150} />
           <div className=' mt-16 space-y-3'>
             <h3 className='text-3xl font-bold text-white'>
-              Elevate Your Style, Embrace Your Confidence.
+              Discover Exquisite Styles and Unleash Your Confidence.
             </h3>
             <p className='text-white'>
-              Embrace your natural beauty with our premium skincare and beauty
-              products. Nourish your skin, enhance your features, and let your
-              inner radiance shine through.
+              Elevate your look with our curated collection of fashion and
+              accessories. Explore the latest trends, express your unique style,
+              and embrace the confidence that comes with wearing premium quality
+              clothing and accessories.
             </p>
             <div className='flex items-center -space-x-2 overflow-hidden'>
               <img
@@ -65,12 +67,12 @@ const Register = () => {
               </h3>
               <p className=''>
                 Already have an account?{' '}
-                <a
-                  href='javascript:void(0)'
+                <Link
+                  href='/signin'
                   className='font-medium text-black hover:text-black'
                 >
                   Log in
-                </a>
+                </Link>
               </p>
             </div>
           </div>

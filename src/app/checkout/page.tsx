@@ -1,154 +1,537 @@
 'use client';
-import React, { useState } from 'react';
-import { X } from 'lucide-react';
-const CartItem = ({ product }: any) => {
-  const [quantity, setQuantity] = useState(1);
-
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  return (
-    <li className='flex items-center justify-between space-x-5 border-b border-gray-300 py-4'>
-      <div className='flex items-start space-x-4'>
-        <div className='h-28 w-28 flex-shrink-0 overflow-hidden rounded-lg'>
-          <img
-            className='h-full w-full object-cover'
-            src={product.imageSrc}
-            alt={product.name}
-          />
-        </div>
-        <div className=''>
-          <p className='text-base font-bold text-gray-900'>{product.name}</p>
-          <p className='text-sm text-gray-500'>{product.color}</p>
-          <p className='text-xl font-bold text-gray-500'>{product.price}</p>
-        </div>
-      </div>
-      <div className='flex items-center'>
-        <div className='flex items-center'>
-          <button
-            className='rounded-lg border px-4 py-2 text-sm'
-            onClick={decreaseQuantity}
-          >
-            -
-          </button>
-          <div className='mx-5'>{quantity}</div>
-          <button
-            className=' rounded-lg border px-4 py-2 text-sm'
-            onClick={increaseQuantity}
-          >
-            +
-          </button>
-        </div>
-        <button className='ml-4 rounded-lg border  px-4 py-2 text-xs'>
-          Remove
-        </button>
-      </div>
-    </li>
-  );
-};
+import { useState } from 'react';
+import { RadioGroup } from '@headlessui/react';
+import { CheckCheckIcon, Trash2Icon } from 'lucide-react';
+import { classNames } from '@/lib/helper';
 
 const products = [
   {
     id: 1,
-    name: 'Nike Air Force 1 07 LV8',
+    title: 'Basic Tee',
     href: '#',
-    price: '$99',
-    originalPrice: '$900',
-    discount: '5% Off',
-    color: 'Orange',
-    size: '8 UK',
-    imageSrc:
-      'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/54a510de-a406-41b2-8d62-7f8c587c9a7e/air-force-1-07-lv8-shoes-9KwrSk.png',
-  },
-  {
-    id: 2,
-    name: 'Nike Blazer Low 77 SE',
-    href: '#',
-    price: '$1549',
-    originalPrice: '$2499',
-    discount: '38% off',
-    color: 'White',
-    leadTime: '3-4 weeks',
-    size: '8 UK',
-    imageSrc:
-      'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e48d6035-bd8a-4747-9fa1-04ea596bb074/blazer-low-77-se-shoes-0w2HHV.png',
-  },
-  {
-    id: 3,
-    name: 'Nike Air Max 90',
-    href: '#',
-    price: '$2219 ',
-    originalPrice: '$999',
-    discount: '78% off',
+    price: '$32.00',
     color: 'Black',
+    size: 'Large',
     imageSrc:
-      'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fd17b420-b388-4c8a-aaaa-e0a98ddf175f/dunk-high-retro-shoe-DdRmMZ.png',
+      'https://tailwindui.com/img/ecommerce-images/checkout-page-02-product-01.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
   },
+  // More products...
 ];
-const Checkout = () => {
-  return (
-    <div className='container my-4  md:my-6 md:mt-20 '>
-      <div className='mb-10 border-b md:flex md:flex-row md:items-start md:justify-between'>
-        <div className='mb-16'>
-          <h1 className='text-4xl font-semibold'>Your Cart</h1>
-        </div>
-        <div className='mt-6 flex items-center  pt-2 md:mt-0 md:space-x-4  md:pt-0'></div>
-      </div>
-      <div className='overflow-hidden  rounded-xl shadow'>
-        <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div className='bg-white  px-5 py-6 md:px-8'>
-            <div className='flow-root'>
-              <ul className='-my-7 divide-y divide-gray-200'>
-                {products.map((product) => (
-                  <CartItem key={product.id} product={product} />
-                ))}
-              </ul>
-            </div>
-            <hr className='mt-6 border-gray-200' />
-          </div>
-          <div className='container px-5 py-6 text-gray-900 md:px-8'>
-            <div className='flow-root'>
-              <div className='-my-6 divide-y divide-gray-200'>
-                <div className='  '>
-                  <p className='text-base font-bold text-gray-900'>Total</p>
+const deliveryMethods = [
+  {
+    id: 1,
+    title: 'Standard',
+    turnaround: '4–10 business days',
+    price: '$5.00',
+  },
+  { id: 2, title: 'Express', turnaround: '2–5 business days', price: '$16.00' },
+];
+const paymentMethods = [
+  { id: 'credit-card', title: 'Credit card' },
+  { id: 'paypal', title: 'PayPal' },
+  { id: 'etransfer', title: 'eTransfer' },
+];
 
-                  <ul className='mt-6 space-y-3'>
-                    <li className='flex items-center justify-between border-b py-5 text-gray-400'>
-                      <p className='text-sm font-medium'>Sub total</p>
-                      <p className='text-sm font-bold text-gray-800  '>$399</p>
-                    </li>
-                    <li className='flex items-center justify-between border-b py-5 text-gray-400 '>
-                      <p className='text-sm font-medium '>Tax</p>
-                      <p className='text-sm font-bold text-gray-800'>$114</p>
-                    </li>
-                    <li className='flex items-center justify-between  py-5 text-gray-400 '>
-                      <p className='text-sm font-bold text-gray-950  '>
-                        Order Total
-                      </p>
-                      <p className='text-sm font-bold text-gray-950'>$514</p>
-                    </li>
-                    <button
-                      type='button'
-                      className='w-full rounded-2xl  bg-black p-4 text-xl font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black'
+export default function Example() {
+  const [selectedDeliveryMethod, setSelectedDeliveryMethod] = useState(
+    deliveryMethods[0]
+  );
+
+  return (
+    <div className='bg-white'>
+      <div className='mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8'>
+        <div className='mb-16'>
+          <h1 className='text-4xl font-medium text-gray-900'>Checkout</h1>
+        </div>
+
+        <form className='lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16'>
+          <div>
+            <div>
+              <h2 className='text-lg font-medium text-gray-900'>
+                Contact information
+              </h2>
+
+              <div className='mt-4'>
+                <label
+                  htmlFor='email-address'
+                  className='block text-sm font-medium text-gray-700'
+                >
+                  Email address
+                </label>
+                <div className='mt-1'>
+                  <input
+                    type='email'
+                    id='email-address'
+                    name='email-address'
+                    autoComplete='email'
+                    className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className='mt-10 border-t border-gray-200 pt-10'>
+              <h2 className='text-lg font-medium text-gray-900'>
+                Shipping information
+              </h2>
+
+              <div className='mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4'>
+                <div>
+                  <label
+                    htmlFor='first-name'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    First name
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      id='first-name'
+                      name='first-name'
+                      autoComplete='given-name'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='last-name'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Last name
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      id='last-name'
+                      name='last-name'
+                      autoComplete='family-name'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='sm:col-span-2'>
+                  <label
+                    htmlFor='company'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Company
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='company'
+                      id='company'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='sm:col-span-2'>
+                  <label
+                    htmlFor='address'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Address
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='address'
+                      id='address'
+                      autoComplete='street-address'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='sm:col-span-2'>
+                  <label
+                    htmlFor='apartment'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Apartment, suite, etc.
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='apartment'
+                      id='apartment'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='city'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    City
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='city'
+                      id='city'
+                      autoComplete='address-level2'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='region'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    State / Province
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='region'
+                      id='region'
+                      autoComplete='address-level1'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='postal-code'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Postal code
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='postal-code'
+                      id='postal-code'
+                      autoComplete='postal-code'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='sm:col-span-2'>
+                  <label
+                    htmlFor='phone'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Phone
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='phone'
+                      id='phone'
+                      autoComplete='tel'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className='mt-10 border-t border-gray-200 pt-10'>
+              <RadioGroup
+                value={selectedDeliveryMethod}
+                onChange={setSelectedDeliveryMethod}
+              >
+                <RadioGroup.Label className='text-lg font-medium text-gray-900'>
+                  Delivery method
+                </RadioGroup.Label>
+
+                <div className='mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4'>
+                  {deliveryMethods.map((deliveryMethod) => (
+                    <RadioGroup.Option
+                      key={deliveryMethod.id}
+                      value={deliveryMethod}
+                      className={({ checked, active }) =>
+                        classNames(
+                          checked ? 'border-transparent' : 'border-gray-300',
+                          active ? 'ring-2 ring-black' : '',
+                          'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none'
+                        )
+                      }
                     >
-                      Checkout
-                    </button>
-                  </ul>
+                      {({ checked, active }) => (
+                        <>
+                          <span className='flex flex-1'>
+                            <span className='flex flex-col'>
+                              <RadioGroup.Label
+                                as='span'
+                                className='block text-sm font-medium text-gray-900'
+                              >
+                                {deliveryMethod.title}
+                              </RadioGroup.Label>
+                              <RadioGroup.Description
+                                as='span'
+                                className='mt-1 flex items-center text-sm text-gray-500'
+                              >
+                                {deliveryMethod.turnaround}
+                              </RadioGroup.Description>
+                              <RadioGroup.Description
+                                as='span'
+                                className='mt-6 text-sm font-medium text-gray-900'
+                              >
+                                {deliveryMethod.price}
+                              </RadioGroup.Description>
+                            </span>
+                          </span>
+                          {checked ? (
+                            <CheckCheckIcon
+                              className='h-5 w-5 text-black'
+                              aria-hidden='true'
+                            />
+                          ) : null}
+                          <span
+                            className={classNames(
+                              active ? 'border' : 'border-2',
+                              checked ? 'border-black' : 'border-transparent',
+                              'pointer-events-none absolute -inset-px rounded-lg'
+                            )}
+                            aria-hidden='true'
+                          />
+                        </>
+                      )}
+                    </RadioGroup.Option>
+                  ))}
+                </div>
+              </RadioGroup>
+            </div>
+
+            {/* Payment */}
+            <div className='mt-10 border-t border-gray-200 pt-10'>
+              <h2 className='text-lg font-medium text-gray-900'>Payment</h2>
+
+              <fieldset className='mt-4'>
+                <legend className='sr-only'>Payment type</legend>
+                <div className='space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0'>
+                  {paymentMethods.map((paymentMethod, paymentMethodIdx) => (
+                    <div key={paymentMethod.id} className='flex items-center'>
+                      {paymentMethodIdx === 0 ? (
+                        <input
+                          id={paymentMethod.id}
+                          name='payment-type'
+                          type='radio'
+                          defaultChecked
+                          className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                        />
+                      ) : (
+                        <input
+                          id={paymentMethod.id}
+                          name='payment-type'
+                          type='radio'
+                          className='h-4 w-4 border-gray-300 text-black focus:ring-black'
+                        />
+                      )}
+
+                      <label
+                        htmlFor={paymentMethod.id}
+                        className='ml-3 block text-sm font-medium text-gray-700'
+                      >
+                        {paymentMethod.title}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </fieldset>
+
+              <div className='mt-6 grid grid-cols-4 gap-x-4 gap-y-6'>
+                <div className='col-span-4'>
+                  <label
+                    htmlFor='card-number'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Card number
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      id='card-number'
+                      name='card-number'
+                      autoComplete='cc-number'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='col-span-4'>
+                  <label
+                    htmlFor='name-on-card'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Name on card
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      id='name-on-card'
+                      name='name-on-card'
+                      autoComplete='cc-name'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div className='col-span-3'>
+                  <label
+                    htmlFor='expiration-date'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    Expiration date (MM/YY)
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='expiration-date'
+                      id='expiration-date'
+                      autoComplete='cc-exp'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='cvc'
+                    className='block text-sm font-medium text-gray-700'
+                  >
+                    CVC
+                  </label>
+                  <div className='mt-1'>
+                    <input
+                      type='text'
+                      name='cvc'
+                      id='cvc'
+                      autoComplete='csc'
+                      className='mt-2 w-full rounded-lg border bg-transparent px-3 py-2 text-gray-500 shadow-sm outline-none focus:border-black'
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
+          {/* Order summary */}
+          <div className='mt-10 lg:mt-0'>
+            <h2 className='text-lg font-medium text-gray-900'>Order summary</h2>
+
+            <div className='mt-4 rounded-lg border border-gray-200 bg-white shadow-sm'>
+              <h3 className='sr-only'>Items in your cart</h3>
+              <ul role='list' className='divide-y divide-gray-200'>
+                {products.map((product) => (
+                  <li key={product.id} className='flex px-4 py-6 sm:px-6'>
+                    <div className='flex-shrink-0'>
+                      <img
+                        src={product.imageSrc}
+                        alt={product.imageAlt}
+                        className='w-20 rounded-md'
+                      />
+                    </div>
+
+                    <div className='ml-6 flex flex-1 flex-col'>
+                      <div className='flex'>
+                        <div className='min-w-0 flex-1'>
+                          <h4 className='text-sm'>
+                            <a
+                              href={product.href}
+                              className='font-medium text-gray-700 hover:text-gray-800'
+                            >
+                              {product.title}
+                            </a>
+                          </h4>
+                          <p className='mt-1 text-sm text-gray-500'>
+                            {product.color}
+                          </p>
+                          <p className='mt-1 text-sm text-gray-500'>
+                            {product.size}
+                          </p>
+                        </div>
+
+                        <div className='ml-4 flow-root flex-shrink-0'>
+                          <button
+                            type='button'
+                            className='-m-2.5 flex items-center justify-center bg-white p-2.5 text-gray-400 hover:text-gray-500'
+                          >
+                            <span className='sr-only'>Remove</span>
+                            <Trash2Icon
+                              className='h-5 w-5'
+                              aria-hidden='true'
+                            />
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className='flex flex-1 items-end justify-between pt-2'>
+                        <p className='mt-1 text-sm font-medium text-gray-900'>
+                          {product.price}
+                        </p>
+
+                        <div className='ml-4'>
+                          <label htmlFor='quantity' className='sr-only'>
+                            Quantity
+                          </label>
+                          <select
+                            id='quantity'
+                            name='quantity'
+                            className='rounded-md border border-gray-300 text-left text-base font-medium text-gray-700 shadow-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm'
+                          >
+                            <option value={1}>1</option>
+                            <option value={2}>2</option>
+                            <option value={3}>3</option>
+                            <option value={4}>4</option>
+                            <option value={5}>5</option>
+                            <option value={6}>6</option>
+                            <option value={7}>7</option>
+                            <option value={8}>8</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <dl className='space-y-6 border-t border-gray-200 px-4 py-6 sm:px-6'>
+                <div className='flex items-center justify-between'>
+                  <dt className='text-sm'>Subtotal</dt>
+                  <dd className='text-sm font-medium text-gray-900'>$64.00</dd>
+                </div>
+                <div className='flex items-center justify-between'>
+                  <dt className='text-sm'>Shipping</dt>
+                  <dd className='text-sm font-medium text-gray-900'>$5.00</dd>
+                </div>
+                <div className='flex items-center justify-between'>
+                  <dt className='text-sm'>Taxes</dt>
+                  <dd className='text-sm font-medium text-gray-900'>$5.52</dd>
+                </div>
+                <div className='flex items-center justify-between border-t border-gray-200 pt-6'>
+                  <dt className='text-base font-medium'>Total</dt>
+                  <dd className='text-base font-medium text-gray-900'>
+                    $75.52
+                  </dd>
+                </div>
+              </dl>
+
+              <div className='border-t border-gray-200 px-4 py-6 sm:px-6'>
+                <button
+                  type='submit'
+                  className='w-full rounded-md border border-transparent bg-black px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 focus:ring-offset-gray-50'
+                >
+                  Confirm order
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
-};
-
-export default Checkout;
+}

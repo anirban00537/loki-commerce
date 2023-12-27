@@ -16,7 +16,7 @@ const Categories = () => {
     },
     {
       name: 'Watch',
-      image: '/images/cat2.jpeg',
+      image: '/images/big-img3.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
@@ -28,7 +28,7 @@ const Categories = () => {
     },
     {
       name: 'Fashion Ball With curve',
-      image: '/images/cat4.jpeg',
+      image: '/images/big-img4.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
@@ -40,7 +40,7 @@ const Categories = () => {
     },
     {
       name: 'Lace Midi Dress',
-      image: '/images/cat6.jpeg',
+      image: '/images/big-img2.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
@@ -52,7 +52,7 @@ const Categories = () => {
     },
     {
       name: 'Striped Summer Dress',
-      image: '/images/cat8.jpg',
+      image: '/images/big-img1.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },

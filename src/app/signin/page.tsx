@@ -1,9 +1,12 @@
-import React from 'react'
+import Signin from '@/section/auth/signin';
+import React from 'react';
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <Signin />
+    </div>
+  );
+};
 
-export default page
+export default page;

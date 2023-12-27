@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const TopBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const hideBanner = () => {
     setIsVisible(false);

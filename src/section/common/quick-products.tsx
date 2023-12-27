@@ -16,14 +16,14 @@ const QuickProducts = () => {
     {
       url: '/images/bg-card-1.png',
       color: '',
-      title: 'Elegant Red Evening Gown',
+      title: 'Elegant Red Gown',
       description: 'An elegant red evening gown for special occasions.',
       price: '$499.99',
     },
     {
       url: '/images/bg-card-4.png',
       color: '',
-      title: 'Chic Purple Cocktail Dress',
+      title: 'Chic Purple Dress',
       description: 'A chic purple cocktail dress perfect for parties.',
       price: '$199.99',
     },
