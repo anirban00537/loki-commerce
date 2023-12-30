@@ -14,21 +14,21 @@ interface Product {
 const QuickProducts = () => {
   const products: Product[] = [
     {
-      url: '/images/bg-card-1.png',
+      url: '/images/product25.jpeg',
       color: '',
       title: 'Elegant Red Gown',
       description: 'An elegant red evening gown for special occasions.',
       price: '$499.99',
     },
     {
-      url: '/images/bg-card-4.png',
+      url: '/images/product26.jpeg',
       color: '',
       title: 'Chic Purple Dress',
       description: 'A chic purple cocktail dress perfect for parties.',
       price: '$199.99',
     },
     {
-      url: '/images/bg-card-2.png',
+      url: '/images/product27.jpeg',
 
       color: '',
       title: 'Modern Green Maxi Dress',
@@ -36,7 +36,7 @@ const QuickProducts = () => {
       price: '$129.99',
     },
     {
-      url: '/images/bg-card-3.png',
+      url: '/images/product28.jpeg',
       color: '',
       title: 'Yellow Floral Dress',
       description: 'A yellow floral summer dress for a vibrant style.',
@@ -47,7 +47,7 @@ const QuickProducts = () => {
   return (
     <div className='container mx-auto mt-36'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+        <h2 className='text-2xl font-semibold uppercase text-black md:text-3xl'>
           Premium product&apos;s
         </h2>
         <Link

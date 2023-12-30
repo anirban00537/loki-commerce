@@ -41,9 +41,9 @@ const productFeatures = [
 ];
 
 const productImages = [
-  '/images/pro-1.avif',
-  '/images/pro-2.avif',
-  '/images/pro-3.avif',
+  '/images/product25.jpeg',
+  '/images/product26.jpeg',
+  '/images/product27.jpeg',
 ];
 const colorOptions = ['#fbc531', '#00a8ff', '#ffbe76', '#ff7979'];
 const sizeOptions = ['S', 'M', 'XL', '2XL', '3XL'];

@@ -10,19 +10,19 @@ const Categories = () => {
   const products = [
     {
       name: 'Gown',
-      image: '/images/cat1.jpeg',
+      image: '/images/big-img1.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
     {
       name: 'Watch',
-      image: '/images/big-img3.jpg',
+      image: '/images/big-img2.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
     {
       name: 'Fashion Cup',
-      image: '/images/cat6.jpeg',
+      image: '/images/big-img3.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
@@ -34,25 +34,49 @@ const Categories = () => {
     },
     {
       name: 'Floral Maxi Dress',
-      image: '/images/cat5.jpeg',
+      image: '/images/big-img5.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
     {
       name: 'Lace Midi Dress',
-      image: '/images/big-img2.jpg',
+      image: '/images/big-img6.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
     {
       name: 'Velvet Evening Gown',
-      image: '/images/cat7.jpeg',
+      image: '/images/big-img7.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },
     {
       name: 'Striped Summer Dress',
-      image: '/images/big-img1.jpg',
+      image: '/images/big-img8.jpg',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+    },
+    {
+      name: 'Denim Jacket',
+      image: '/images/big-img9.jpg',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+    },
+    {
+      name: 'Leather Boots',
+      image: '/images/big-img10.jpg',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+    },
+    {
+      name: 'Straw Hat',
+      image: '/images/big-img11.jpg',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
+    },
+    {
+      name: 'Suede Loafers',
+      image: '/images/big-img12.jpg',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam excepturi harum quae aspernatur ratione quod officiis necessitatibus dolorum optio? Placeat, delectus. Nobis pariatur enim doloribus cumque doloremque magni repellat blanditiis!',
     },

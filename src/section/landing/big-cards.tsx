@@ -7,7 +7,7 @@ const BigCards = () => {
       <section>
         <div className='mx-auto mt-36 max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8'>
           <header className='text-start'>
-            <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+            <h2 className='text-2xl font-semibold uppercase text-black md:text-3xl'>
               Retro Collections
             </h2>
           </header>

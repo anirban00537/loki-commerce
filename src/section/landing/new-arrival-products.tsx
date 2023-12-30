@@ -9,42 +9,42 @@ const Products = () => {
   const cardDetails = [
     {
       name: 'Fashion Bag',
-      image: '/images/product1.jpg',
+      image: '/images/product1.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Bag',
-      image: '/images/product7.jpg',
+      image: '/images/product7.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Cup',
-      image: '/images/product6.jpg',
+      image: '/images/product6.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Ball With curve',
-      image: '/images/product3.jpg',
+      image: '/images/product3.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Airpod',
-      image: '/images/product4.jpg',
+      image: '/images/product4.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Chair',
-      image: '/images/product5.jpg',
+      image: '/images/product5.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
@@ -87,7 +87,7 @@ const Products = () => {
   return (
     <div className='container mx-auto mt-36'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+        <h2 className='text-2xl font-semibold uppercase text-black md:text-3xl'>
           New Arrivals
         </h2>
         <Link

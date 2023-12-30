@@ -38,9 +38,9 @@ const ColorOption = ({ color, isSelected, onSelect }: any) => (
 );
 
 const productImages = [
-  '/images/pro-1.avif',
-  '/images/pro-2.avif',
-  '/images/pro-3.avif',
+  '/images/product25.jpeg',
+  '/images/product26.jpeg',
+  '/images/product27.jpeg',
 ];
 
 function ProductDetailsModal({

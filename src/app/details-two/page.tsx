@@ -54,7 +54,7 @@ const Details = () => {
         <div className='mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8'>
           <div className='aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block'>
             <img
-              src='/images/t-shirt-1.jpg'
+              src='/images/product17.jpeg'
               alt='Two each of gray, white, and black shirts laying flat.'
               className='h-full w-full object-cover object-center'
             />
@@ -62,14 +62,14 @@ const Details = () => {
           <div className='hidden lg:grid lg:grid-cols-1 lg:gap-y-8'>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='/images/t-shirt-2.jpg'
+                src='/images/product18.jpeg'
                 alt='Model wearing plain black basic tee.'
                 className='h-full w-full object-cover object-center'
               />
             </div>
             <div className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg'>
               <img
-                src='/images/t-shirt-4.jpg'
+                src='/images/product19.jpeg'
                 alt='Model wearing plain gray basic tee.'
                 className='h-full w-full object-cover object-center'
               />
@@ -77,7 +77,7 @@ const Details = () => {
           </div>
           <div className='aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg'>
             <img
-              src='/images/t-shirt-3.jpg'
+              src='/images/product20.jpeg'
               alt='Model wearing plain white basic tee.'
               className='h-full w-full object-cover object-center'
             />
@@ -91,7 +91,7 @@ const Details = () => {
         >
           <div className='lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8'>
             <h1 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl'>
-             Pure White Cotton t-shirt
+              Pure White Cotton t-shirt
             </h1>
           </div>
 
@@ -187,11 +187,12 @@ const Details = () => {
               <h3 className='sr-only'>Description</h3>
               <div className='space-y-6'>
                 <p className='text-base text-gray-900'>
-                  The Pure White Cotton T-shirt allows you to fully express your vibrant
-                  personality with three grayscale options. Feeling adventurous?
-                  Put on a heather gray tee. Want to be a trendsetter? Try our
-                  exclusive colorway: "Black". Need to add an extra pop of color
-                  to your outfit? Our white tee has you covered.
+                  The Pure White Cotton T-shirt allows you to fully express your
+                  vibrant personality with three grayscale options. Feeling
+                  adventurous? Put on a heather gray tee. Want to be a
+                  trendsetter? Try our exclusive colorway: "Black". Need to add
+                  an extra pop of color to your outfit? Our white tee has you
+                  covered.
                 </p>
               </div>
             </div>

@@ -18,37 +18,33 @@ const calculateTimeLeft = (endTime: any) => {
 
   return timeLeft;
 };
+
 export const Countdown = ({ endTime }: any) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(endTime));
   const controls = useAnimation();
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const updateCountdown = () => {
       const timeRemaining = calculateTimeLeft(endTime);
       setTimeLeft(timeRemaining);
+    };
 
-      // You can add animation logic here using Framer Motion controls
-      controls.start({
-        opacity: 1,
-        scale: [1, 1.1, 1], // Example animation
-        transition: {
-          duration: 0.5,
-        },
-      });
-    }, 1000);
+    // Update the countdown immediately on the client side after hydration
+    updateCountdown();
+
+    // Set up an interval to update the countdown every second
+    const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
-  }, [controls, endTime]);
+  }, [endTime]);
 
   const { days, hours, minutes, seconds }: any = timeLeft;
 
   return (
-    <div>
-      <motion.div animate={controls} initial={{ opacity: 0 }}>
-        <p className='text-white'>
-          {days}d {hours}h {minutes}m {seconds}s
-        </p>
-      </motion.div>
-    </div>
+    <motion.div animate={controls} initial={{ opacity: 0 }}>
+      <div className='text-white'>
+        {days}d {hours}h {minutes}m {seconds}s
+      </div>
+    </motion.div>
   );
 };

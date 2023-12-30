@@ -70,7 +70,7 @@ export function ProductCard({
           <img
             src={image}
             alt={name}
-            className='h-64 w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
+            className='h-auto w-full transform rounded-sm object-cover transition-transform duration-300 group-hover:scale-105'
           />
           <button
             className='absolute right-4 top-4 rounded-full bg-white p-2'

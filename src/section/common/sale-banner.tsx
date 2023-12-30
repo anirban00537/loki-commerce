@@ -34,7 +34,7 @@ const SaleBanner = ({
                   {text}
                 </h1>
                 <p className='w-full text-base font-medium leading-relaxed text-white sm:text-lg sm:leading-relaxed'></p>
-                <Countdown endTime={endTime} />
+                {/* <Countdown endTime={endTime} /> */}
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ const products = [
     originalPrice: '$999',
     discount: '78% off',
     size: '8 UK',
-    imageSrc: '/images/product19.jpg',
+    imageSrc: '/images/product19.jpeg',
   },
 ];
 const CartSheet = ({ addToCart, cartCount }: any) => {

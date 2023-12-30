@@ -10,7 +10,7 @@ const HotDeals = () => {
   const products = [
     {
       name: 'Long Legs Pants',
-      image: '/images/cat1.jpeg',
+      image: '/images/product1.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
@@ -18,7 +18,7 @@ const HotDeals = () => {
     {
       name: 'Trendy Dress',
 
-      image: '/images/cat2.jpeg',
+      image: '/images/product2.jpeg',
 
       price: '521',
       rating: 2.6,
@@ -26,7 +26,7 @@ const HotDeals = () => {
     },
     {
       name: 'Fashion Cup',
-      image: '/images/cat3.jpeg',
+      image: '/images/product3.jpeg',
 
       price: '58',
       rating: 4.6,
@@ -34,7 +34,7 @@ const HotDeals = () => {
     },
     {
       name: 'Fashion Ball With curve',
-      image: '/images/cat4.jpeg',
+      image: '/images/product4.jpeg',
 
       price: '40',
       rating: 4.6,
@@ -42,7 +42,7 @@ const HotDeals = () => {
     },
     {
       name: 'Floral Maxi Dress',
-      image: '/images/cat5.jpeg',
+      image: '/images/product5.jpeg',
 
       price: '65',
       rating: 4.4,
@@ -53,7 +53,7 @@ const HotDeals = () => {
     },
     {
       name: 'Lace Midi Dress',
-      image: '/images/cat6.jpeg',
+      image: '/images/product6.jpeg',
 
       price: '80',
       rating: 4.6,
@@ -64,7 +64,7 @@ const HotDeals = () => {
     },
     {
       name: 'Velvet Evening Gown',
-      image: '/images/cat7.jpeg',
+      image: '/images/product7.jpeg',
 
       price: '120',
       rating: 4.8,
@@ -75,7 +75,7 @@ const HotDeals = () => {
     },
     {
       name: 'Striped Summer Dress',
-      image: '/images/cat8.jpg',
+      image: '/images/product8.jpeg',
 
       price: '45',
       rating: 4.2,

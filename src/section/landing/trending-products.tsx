@@ -9,42 +9,42 @@ const TrendingProducts = () => {
   const cardDetails = [
     {
       name: 'Long Legs Pants',
-      image: '/images/product33.jpg',
+      image: '/images/product33.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Trendy Dress',
-      image: '/images/product34.jpg',
+      image: '/images/product34.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Ball With curve',
-      image: '/images/product36.jpg',
+      image: '/images/product26.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Airpod',
-      image: '/images/product37.jpg',
+      image: '/images/product37.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Chair',
-      image: '/images/product21.jpg',
+      image: '/images/product24.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
     },
     {
       name: 'Fashion Chair',
-      image: '/images/product39.webp',
+      image: '/images/product36.jpeg',
       price: '33',
       rating: 5,
       reviews: 25,
@@ -87,7 +87,7 @@ const TrendingProducts = () => {
   return (
     <div className='container mx-auto mt-36'>
       <div className='mb-8 flex items-center justify-between '>
-        <h2 className='text-2xl font-semibold uppercase text-gray-500  md:text-4xl'>
+        <h2 className='text-2xl font-semibold uppercase text-black md:text-3xl'>
           Trending Product&apos;s
         </h2>
         <Link

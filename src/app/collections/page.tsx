@@ -41,14 +41,14 @@ const filters = [
 const products = [
   {
     name: 'Long Legs Pants',
-    image: '/images/product1.jpg',
+    image: '/images/product1.jpeg',
     price: '33',
     rating: 5,
     reviews: 25,
   },
   {
     name: 'Trendy Dress',
-    image: '/images/product19.jpg',
+    image: '/images/product19.jpeg',
 
     price: '521',
     rating: 2.6,
@@ -56,7 +56,7 @@ const products = [
   },
   {
     name: 'Fashion Cup',
-    image: '/images/product3.jpg',
+    image: '/images/product3.jpeg',
 
     price: '58',
     rating: 4.6,
@@ -64,7 +64,7 @@ const products = [
   },
   {
     name: 'Fashion Ball With curve',
-    image: '/images/product4.jpg',
+    image: '/images/product4.jpeg',
 
     price: '40',
     rating: 4.6,
@@ -72,7 +72,7 @@ const products = [
   },
   {
     name: 'Floral Maxi Dress',
-    image: '/images/product5.jpg',
+    image: '/images/product5.jpeg',
 
     price: '65',
     rating: 4.4,
@@ -83,7 +83,7 @@ const products = [
   },
   {
     name: 'Lace Midi Dress',
-    image: '/images/product6.jpg',
+    image: '/images/product6.jpeg',
 
     price: '80',
     rating: 4.6,
@@ -94,7 +94,7 @@ const products = [
   },
   {
     name: 'Velvet Evening Gown',
-    image: '/images/product7.jpg',
+    image: '/images/product7.jpeg',
 
     price: '120',
     rating: 4.8,
