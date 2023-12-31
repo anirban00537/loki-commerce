@@ -9,7 +9,7 @@ const getEndTime = () => {
 
 const SaleBanner = ({
   text = 'Black Friday Sale Get 50% Discount',
-  backgroundImage = 'url("https://images.unsplash.com/photo-1535478044878-3ed83d5456ef?q=80&w=2091&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+  backgroundImage = 'url("/images/background.jpg")',
 }) => {
   const endTime = getEndTime();
 
@@ -22,7 +22,7 @@ const SaleBanner = ({
 
   return (
     <section
-      className='container z-10 rounded-none overflow-hidden lg:rounded-2xl bg-black px-8 py-16'
+      className='container z-10 overflow-hidden rounded-none bg-black px-8 py-16 lg:rounded-2xl'
       style={backgroundStyle}
     >
       <div className='container'>

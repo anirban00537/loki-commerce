@@ -13,74 +13,84 @@ const BigCards = () => {
           </header>
           <ul className='mt-8 grid grid-cols-1 gap-4 lg:grid-cols-4'>
             <li>
-              <a href='#' className='group relative block'>
-                <img
-                  src='/images/big-img1.jpg'
-                  alt=''
-                  className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
-                />
-                <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
-                  <h3 className='text-xl font-medium text-white'>
-                    Casual Trainers
-                  </h3>
-                </div>
-              </a>
+              <SectionWrapper delay={parseFloat(`0.2`)} visible={true}>
+                <a href='#' className='group relative block'>
+                  <img
+                    src='/images/big-img1.jpg'
+                    alt=''
+                    className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
+                  />
+                  <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
+                    <h3 className='text-xl font-medium text-white'>
+                      Casual Trainers
+                    </h3>
+                  </div>
+                </a>
+              </SectionWrapper>
             </li>
             <li>
-              <a href='#' className='group relative block'>
-                <img
-                  src='/images/big-img2.jpg'
-                  alt=''
-                  className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
-                />
-                <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
-                  <h3 className='text-xl font-medium text-white'>
-                    Winter Jumpers
-                  </h3>
-                </div>
-              </a>
+              <SectionWrapper delay={parseFloat(`0.3`)} visible={true}>
+                <a href='#' className='group relative block'>
+                  <img
+                    src='/images/big-img2.jpg'
+                    alt=''
+                    className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
+                  />
+                  <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
+                    <h3 className='text-xl font-medium text-white'>
+                      Winter Jumpers
+                    </h3>
+                  </div>
+                </a>
+              </SectionWrapper>
             </li>
             <li className='lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1'>
-              <a href='#' className='group relative block'>
-                <img
-                  src='/images/big-img5.jpg'
-                  alt=''
-                  className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
-                />
-                <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
-                  <h3 className='text-xl font-medium text-white'>
-                    Skinny Jeans Blue
-                  </h3>
-                </div>
-              </a>
+              <SectionWrapper delay={parseFloat(`0.4`)} visible={true}>
+                <a href='#' className='group relative block'>
+                  <img
+                    src='/images/big-img5.jpg'
+                    alt=''
+                    className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
+                  />
+                  <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
+                    <h3 className='text-xl font-medium text-white'>
+                      Skinny Jeans Blue
+                    </h3>
+                  </div>
+                </a>
+              </SectionWrapper>
             </li>
             <li>
-              <a href='#' className='group relative block'>
-                <img
-                  src='/images/big-img4.jpg'
-                  alt=''
-                  className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
-                />
-                <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
-                  <h3 className='text-xl font-medium text-white'>
-                    Casual Trainers
-                  </h3>
-                </div>
-              </a>
+              <SectionWrapper delay={parseFloat(`0.5`)} visible={true}>
+                <a href='#' className='group relative block'>
+                  <img
+                    src='/images/big-img4.jpg'
+                    alt=''
+                    className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
+                  />
+                  <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
+                    <h3 className='text-xl font-medium text-white'>
+                      Casual Trainers
+                    </h3>
+                  </div>
+                </a>
+              </SectionWrapper>
             </li>
             <li>
-              <a href='#' className='group relative block'>
-                <img
-                  src='/images/big-img3.jpg'
-                  alt=''
-                  className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
-                />
-                <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
-                  <h3 className='text-xl font-medium text-white'>
-                    Winter Jumpers
-                  </h3>
-                </div>
-              </a>
+              <SectionWrapper delay={parseFloat(`0.6`)} visible={true}>
+                <a href='#' className='group relative block'>
+                  <img
+                    src='/images/big-img3.jpg'
+                    alt=''
+                    className='aspect-square w-full object-cover transition duration-500 group-hover:opacity-90'
+                  />
+                  <div className='absolute inset-0 flex flex-col items-start justify-end p-6'>
+                    <h3 className='text-xl font-medium text-white'>
+                      Winter Jumpers
+                    </h3>
+                  </div>
+                </a>
+              </SectionWrapper>
             </li>
           </ul>
         </div>
